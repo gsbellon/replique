@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-17T18:25Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Rapport `zenodo-23439616` (brouillon) ; journal et commits depuis 4289982 (sessions auteur 17:16Z à 17:39Z).
+
+**Verdict de relecture.** Rapport laissé en `brouillon` : le script de comparaison qui produit les écarts (106 / 102 190 / 15 580 champs, écart 0,0) n'est ni cité ni versionné ; sommes sha256 abrégées sans commande ; journaux bruts hors dépôt. Objections détaillées dans `rapports/zenodo-23439616/RELECTURE.md`. Le verdict « reproduit » paraît plausible une fois ces points levés. Rien de modifié dans le rapport.
+
+**Blocages.** BLOCAGE : publication de zenodo-23439616 bloquée pour les raisons ci-dessus. Aucune action contraire à CLAUDE.md repérée dans le journal ni les commits. Une commande Bash groupée de cette session a été refusée par le mode d'autorisation ; refaite avec les outils d'édition.
+
+**Prochaine action.** Auteur : lever les objections 1 à 4 de RELECTURE.md.
+
+---
+
 ## 2026-10-17T17:40Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Première tranche verticale complète. Paquets examinés sur Zenodo (via `curl` depuis sd-92569) : 18592832 (gretl, image absente), 21342547 (dump de 1 Go + PostgreSQL + heures de calcul), 20581409 (Stata, hors périmètre). Retenu : Zenodo 23439616 (Python/NumPy/Matplotlib, hors ligne, 345 ko). Dépendances installées depuis PyPI dans une étape réseau sans code du paquet, puis exécution sous `bin/sandbox-args.txt` : mode par défaut (7,6 s) et recalcul complet `--recompute` (< 10 min, 6 processus), tous deux code 0. Les 118 000 nombres des trois JSON fournis sont retrouvés avec un écart relatif de 0,0. Rapport `rapports/zenodo-23439616/RAPPORT.md` en `brouillon`, verdict proposé : reproduit.
