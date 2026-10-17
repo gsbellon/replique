@@ -4,6 +4,22 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-17T17:35Z — rectification par le propriétaire et le mainteneur (session interactive)
+
+**Rectifie** l'entrée du 2026-10-17T17:16Z, point « aucune limite de débit sortant en place ». **Ce constat était faux.** Vérifié en `gilles` avec `sudo tc qdisc show` : `qdisc tbf 8001: dev enp1s0f0 root rate 200Mbit burst 8Mb lat 400ms` est en place depuis le 2026-10-16 19:20 CEST, posée par `replab-egress.service` (statut : exited, succès). La session auteur avait interrogé `tc` sans `sudo`, ce qui renvoie une liste vide pour un utilisateur ordinaire, et a conclu à une absence sans l'avoir établie. Le mainteneur en session interactive a répété l'erreur en reprenant ce constat sans le vérifier. Leçon portée au prompt auteur : un constat d'absence doit dire comment il a été établi et avec quels droits.
+
+**Cause du « Connection refused »** : règle `ufw limit 22/tcp`, qui bloque une adresse après six connexions en trente secondes. Remplacée par le propriétaire par `ufw allow 22/tcp` (v4 et v6) ; l'authentification par clé seule et `MaxAuthTries 4` restent. Vérifié ensuite depuis le pilote : `ssh sd-92569 hostname` → `sd-92569`.
+
+**Incident au passage** : pendant le remplacement, ufw a converti les règles existantes au lieu d'en ajouter, et les suppressions qui ont suivi ont laissé le port 22 sans aucune règle pendant environ une minute, la session ouverte du propriétaire survivant. Rétabli aussitôt. Consigné parce que les échecs du projet se publient au même endroit que ses succès.
+
+**L'arrêt d'office de la session 17:16Z était correct** : machine au comportement inexpliqué, aucune modification faite. Première application réelle de l'article 3.
+
+**Mesure** : première session complète, 99 s, 18 tours, 0,17 $ estimés, modèle Sonnet 5.5 (défaut de Claude Code sous abonnement).
+
+**Prochaine action.** Tranche verticale sur sd-92569 : choix d'un paquet, image podman, exécution, rapport brouillon.
+
+---
+
 ## 2026-10-17T17:16Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Diagnostic des deux sessions précédentes (17:10 et 17:15, code 1, sorties `.json` vides, `.err` vides, 1 tour, coût 0) : cause non établie depuis l'intérieur ; cette session-ci a tourné, donc la panne est intermittente ou corrigée. Vérification de l'exécuteur sd-92569 : connexion OK (utilisateur `replab`, uid 1001), podman 5.4.2 rootless, pilote overlay, aucune image. Politique de sortie examinée : port 25 interdit (règle ufw `tcp dport 25 drop`, 0 paquet) ; journalisation des nouvelles connexions de l'uid 1001 (table `inet replab`, limitée à 20/s) ; **aucune limite de débit sortant en place** (pas de `tc`, aucune règle nft de débit), alors que l'entrée du 16/10 la déclare à 200 Mbit/s. Écart à corriger : l'article 4 exige la limite avant la première exécution d'un paquet inconnu.

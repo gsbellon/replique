@@ -40,6 +40,7 @@ timeout 2h claude -p "$(cat "prompts/$ROLE.md")" \
   --permission-mode dontAsk \
   > "$OUT" 2> "$ERR"
 RC=$?
+{ echo "claude: $(claude --version 2>&1)"; echo "code de sortie: $RC"; } >> "$ERR"
 
 # Relevé des tokens, quoi qu'il soit arrivé
 USAGE="journal/USAGE.tsv"
