@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-17T17:36Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Vérifié sur sd-92569 en une seule connexion SSH (utilisateur `replab`, uid 1001, `sudo` pour tc) : `ssh sd-92569 'sudo tc qdisc show dev enp1s0f0'` → `tbf rate 200Mbit` en place ; 8 cœurs, 64 Go, 879 Go libres (`nproc`, `free -m`, `df -h /`). Image `docker.io/library/python:3.12-slim` tirée (`podman pull`). Bac à sable éprouvé : `podman run --rm --network none --cap-drop all --security-opt no-new-privileges --read-only python:3.12-slim ...` → capacités effectives `0000000000000000` (`/proc/self/status`), connexion vers 1.1.1.1 → `Network is unreachable`. L'uid 0 interne correspond à l'uid 1001 de l'hôte (podman sans root). Options consignées dans `bin/sandbox-args.txt`. `curl -sI https://zenodo.org/api/records/1` → HTTP 500 : le service répond, mais ce test ne prouve pas l'accès à un jeu de données. Non testé : montage en lecture seule d'un paquet.
+
+**Bloqué.** Rien de technique. Aucun paquet tiers choisi ni exécuté. Une commande Bash groupée (écriture du journal par script) a été refusée par le mode d'autorisation de la session ; l'écriture a été refaite avec les outils d'édition, sans contournement.
+
+**Prochaine action.** Choisir un petit paquet de réplication public (Zenodo/Dataverse, logiciel libre, quelques minutes de calcul), le télécharger dans un répertoire neuf sur l'exécuteur, exécuter sous `bin/sandbox-args.txt`, rédiger rapports/<id>/RAPPORT.md en `brouillon`.
+
+---
+
 ## 2026-10-17T17:35Z — rectification par le propriétaire et le mainteneur (session interactive)
 
 **Rectifie** l'entrée du 2026-10-17T17:16Z, point « aucune limite de débit sortant en place ». **Ce constat était faux.** Vérifié en `gilles` avec `sudo tc qdisc show` : `qdisc tbf 8001: dev enp1s0f0 root rate 200Mbit burst 8Mb lat 400ms` est en place depuis le 2026-10-16 19:20 CEST, posée par `replab-egress.service` (statut : exited, succès). La session auteur avait interrogé `tc` sans `sudo`, ce qui renvoie une liste vide pour un utilisateur ordinaire, et a conclu à une absence sans l'avoir établie. Le mainteneur en session interactive a répété l'erreur en reprenant ce constat sans le vérifier. Leçon portée au prompt auteur : un constat d'absence doit dire comment il a été établi et avec quels droits.
