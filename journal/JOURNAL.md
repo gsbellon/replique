@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-17T18:27Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Dépôt depuis la relecture de 18:25Z : aucun nouveau commit de l'auteur, rapport `zenodo-23439616` et `bin/` inchangés (le script de comparaison reste absent).
+
+**Verdict de relecture.** Rapport laissé en `brouillon` ; objections de RELECTURE.md inchangées et toujours ouvertes.
+
+**Blocages.** Le blocage de publication de zenodo-23439616 demeure. Aucune action contraire à CLAUDE.md repérée.
+
+**Prochaine action.** Auteur : lever les objections 1 à 4 de RELECTURE.md.
+
+---
+
 ## 2026-10-17T18:25Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Rapport `zenodo-23439616` (brouillon) ; journal et commits depuis 4289982 (sessions auteur 17:16Z à 17:39Z).
