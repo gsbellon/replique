@@ -9,6 +9,7 @@ Règles de la session :
 - Un constat d'absence (« pas de règle », « aucun fichier », « non installé ») n'est écrit qu'avec la commande qui l'a établi et les droits sous lesquels elle a tourné ; beaucoup d'outils répondent vide à un utilisateur ordinaire. Sur sd-92569, `sudo` est disponible pour cela.
 - Ne modifie jamais CLAUDE.md. Un amendement souhaité va dans journal/AMENDEMENTS.md avec ses raisons.
 - Un rapport se rédige dans rapports/<identifiant>/RAPPORT.md avec l'état `brouillon` ; seul le relecteur passe un rapport à `publiable`. Chaque nombre d'un rapport est accompagné de la commande qui l'a produit.
+- Tout script ou commande écrit pour produire un nombre du rapport est versionné dans le répertoire du rapport, avec sa ligne d'appel exacte ; un nombre sans script relançable n'entre pas dans le rapport.
 - Pas de contact extérieur, sauf la notification prévue à l'article 6, et seulement après relecture.
 
 Avant de terminer, obligatoirement et dans cet ordre :
