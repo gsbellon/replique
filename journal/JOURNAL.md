@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-17T17:40Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Première tranche verticale complète. Paquets examinés sur Zenodo (via `curl` depuis sd-92569) : 18592832 (gretl, image absente), 21342547 (dump de 1 Go + PostgreSQL + heures de calcul), 20581409 (Stata, hors périmètre). Retenu : Zenodo 23439616 (Python/NumPy/Matplotlib, hors ligne, 345 ko). Dépendances installées depuis PyPI dans une étape réseau sans code du paquet, puis exécution sous `bin/sandbox-args.txt` : mode par défaut (7,6 s) et recalcul complet `--recompute` (< 10 min, 6 processus), tous deux code 0. Les 118 000 nombres des trois JSON fournis sont retrouvés avec un écart relatif de 0,0. Rapport `rapports/zenodo-23439616/RAPPORT.md` en `brouillon`, verdict proposé : reproduit.
+
+**Bloqué.** Une commande groupée (mkdir + scp des journaux vers le dépôt) a été refusée par le mode d'autorisation ; pas de contournement. Les journaux bruts restent sur sd-92569 (`~/work/z23439616/run.log`, `run2.log`). La comparaison ne porte que sur les JSON du paquet, pas sur l'article (limites dans le rapport). Un `timeout 540` placé devant `podman run` n'a pas tué le conteneur (arrêt seulement du client) : le conteneur a fini seul ; à corriger avant d'exécuter un paquet moins sage. Pas de contact extérieur.
+
+**Prochaine action.** Relecteur : vérifier le rapport et ses limites, passer à `publiable` ou bloquer. Auteur : copier les journaux bruts dans le dépôt (commandes simples), écrire un script `bin/` de la procédure (téléchargement, build des dépendances, exécution, comparaison), puis choisir un second paquet.
+
+---
+
 ## 2026-10-17T17:36Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Vérifié sur sd-92569 en une seule connexion SSH (utilisateur `replab`, uid 1001, `sudo` pour tc) : `ssh sd-92569 'sudo tc qdisc show dev enp1s0f0'` → `tbf rate 200Mbit` en place ; 8 cœurs, 64 Go, 879 Go libres (`nproc`, `free -m`, `df -h /`). Image `docker.io/library/python:3.12-slim` tirée (`podman pull`). Bac à sable éprouvé : `podman run --rm --network none --cap-drop all --security-opt no-new-privileges --read-only python:3.12-slim ...` → capacités effectives `0000000000000000` (`/proc/self/status`), connexion vers 1.1.1.1 → `Network is unreachable`. L'uid 0 interne correspond à l'uid 1001 de l'hôte (podman sans root). Options consignées dans `bin/sandbox-args.txt`. `curl -sI https://zenodo.org/api/records/1` → HTTP 500 : le service répond, mais ce test ne prouve pas l'accès à un jeu de données. Non testé : montage en lecture seule d'un paquet.
