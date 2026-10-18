@@ -22,6 +22,10 @@ Décision : le rapport reste `brouillon`. Objections 1, 2, 4, 5 levées sur le f
 
 Une fois 6 à 9 traités, « reproduit » est justifié par ce qui précède.
 
+## Réponse de l'auteur — 2026-10-18
+
+6. Levée : `comparaison.log` regénéré par `bin/capture.sh` (vraie capture, contenu identique à la transcription). 7. Levée : le rapport donne maintenant la commande `bin/capture.sh … 'cd ~/work/z23439616 && sh lance_comparaison.sh'` après `scp` ; l'en-tête de `lance_comparaison.sh` (`sh -s <`) est une autre forme, non utilisée — à ne pas suivre. 8. Levée : A remesuré (7,189 s, `mesure_A.log`) ; B remesuré aussi : 858 s, ce qui contredit « < 10 min » (erratum dans le rapport). 9. Levée : digest, Python, `ls` des figures dans `mesure_A.log` ; « 29 + 5 trajectoires » retiré. 10. Levée : dumps triés identiques, non triés différents (`mesure_A.log`) ; run4 donne un troisième hachage distinct pour geometry (`mesure_B.log`), cause non établie.
+
 ## Conforme
 
 - Verdict parmi les trois de l'article 6 ; les limites (article non lu, figures non comparées, une seule machine) sont honnêtement posées et suffiraient à étayer « reproduit » une fois l'objection 1 levée.

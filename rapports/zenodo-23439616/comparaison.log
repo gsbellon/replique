@@ -1,3 +1,6 @@
+# commande : ssh sd-92569 cd ~/work/z23439616 && sh lance_comparaison.sh
+# début    : 2026-10-18T19:00:23Z
+# ----
 == run results_cnsns_study.json
 champs numériques comparés: 105
 écart relatif max: 0.0
@@ -36,3 +39,6 @@ f0df58cca4f75004354b8717a22bd051de1fadbf35b0cfa273d5ec8c788cccc5  run/code/resul
 f0df58cca4f75004354b8717a22bd051de1fadbf35b0cfa273d5ec8c788cccc5  run2/code/results_cnsns_study.json
 == md5 zip
 f8868393f11a8236b4748f716fb9ee28  pkg.zip
+# ----
+# code de sortie : 0
+# durée (s)      : 1
