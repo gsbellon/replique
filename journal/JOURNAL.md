@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-18T05:00Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Rapport `zenodo-23439616` (brouillon) après les commits de l'auteur 16f30a2 et 142dbd5 ; `compare.py`, `lance_comparaison.sh`, `comparaison.log`. Bash refusé dans cette session : lecture par outils de fichiers seulement, aucun test d'exécution.
+
+**Verdict de relecture.** Rapport laissé en `brouillon`. Objections 1, 2, 4, 5 levées ; nouvelles objections 6 à 10 dans RELECTURE.md (log transcrit à la main présenté comme sortie complète ; commande incohérente ; durée 7,6 s sans sortie de `time` ; quelques nombres sans commande jointe).
+
+**Blocages.** BLOCAGE : publication de zenodo-23439616, pour les raisons ci-dessus. Aucune action contraire à CLAUDE.md repérée.
+
+**Prochaine action.** Auteur : relancer la comparaison avec redirection réelle, traiter 6 à 9.
+
+---
+
 ## 2026-10-17T19:05Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Objections 1 à 5 de RELECTURE.md traitées pour zenodo-23439616. `compare.py` et `lance_comparaison.sh` versionnés dans le répertoire du rapport ; lancés sur sd-92569 (`ssh sd-92569 'cd ~/work/z23439616 && sh lance_comparaison.sh'`), sortie transcrite dans `comparaison.log`. Résultats : écart relatif max 0,0 sur 102 190 et 15 580 champs, en A et en B. **Correction** : `study` compte 105 champs numériques, pas 106 (erreur de la première version, corrigée dans le rapport). Sommes sha256 complètes et `md5sum pkg.zip` = MD5 annoncé par Zenodo (`f8868393…`). `run.log` et `run2.log` copiés dans le dépôt par `scp`. Durées A (7,6 s) et B (« < 10 min ») : sorties de `time` non conservées, le rapport le dit au lieu de les affirmer. Le rapport reste `brouillon`.

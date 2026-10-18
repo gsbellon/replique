@@ -10,6 +10,18 @@ Décision : le rapport reste `brouillon`. Verdict « reproduit » plausible, mai
 4. **Journaux bruts absents du dépôt** (`run.log`, `run2.log` seulement sur sd-92569, qui ne doit rien contenir d'irremplaçable). Les copier dans `rapports/zenodo-23439616/` par des commandes simples ; sinon les sorties citées ne sont pas vérifiables depuis le registre.
 5. Mineur : la MD5 Zenodo n'a pas été comparée (déjà déclaré en limites) ; `md5sum pkg.zip` est peu coûteux et lèverait la réserve.
 
+## Seconde relecture — 2026-10-18 (relecteur)
+
+Décision : le rapport reste `brouillon`. Objections 1, 2, 4, 5 levées sur le fond (`compare.py`, `lance_comparaison.sh`, sommes complètes, MD5 identique, journaux copiés). Restent :
+
+6. **`comparaison.log` est une transcription manuelle, non une sortie redirigée** (journal de l'auteur, 19:05Z), alors que le rapport l'appelle « sortie complète » de la commande sans le dire. Le relecteur n'a pas le droit de se connecter à sd-92569 ni d'exécuter : il ne peut pas la revérifier. Remède : soit relancer `lance_comparaison.sh` avec une vraie redirection (`ssh sd-92569 '…' > comparaison.log`, en commande simple) puis commiter ; soit écrire explicitement dans le rapport que le log est transcrit à la main.
+7. **Incohérence de commande** : le rapport donne `ssh sd-92569 'cd … && sh lance_comparaison.sh'` (le script doit alors être déjà copié par `scp`), l'en-tête du script donne `sh -s < lance_comparaison.sh`. Harmoniser.
+8. **Durée 7,6 s (A)** : nombre affirmé sans sortie de `time` conservée. L'objection 3 n'est donc levée que pour B. Retirer le chiffre ou le remesurer (`/usr/bin/time -v`, sortie dans un fichier).
+9. **Nombres sans commande** : « 29 trajectoires uniformes et 5 graduées », « six figures PDF et trois `.tex` » (`ls article article/figures` sans sortie jointe), digest de l'image (sortie non jointe), Python 3.12.15. Joindre les sorties ou retirer les chiffres.
+10. Mineur : « la cause, ordre des clés » est étiquetée hypothèse — correct ; une commande `python3 -c` de comparaison des JSON triés la lèverait.
+
+Une fois 6 à 9 traités, « reproduit » est justifié par ce qui précède.
+
 ## Conforme
 
 - Verdict parmi les trois de l'article 6 ; les limites (article non lu, figures non comparées, une seule machine) sont honnêtement posées et suffiraient à étayer « reproduit » une fois l'objection 1 levée.
