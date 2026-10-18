@@ -10,6 +10,7 @@ Règles de la session :
 - Ne modifie jamais CLAUDE.md. Un amendement souhaité va dans journal/AMENDEMENTS.md avec ses raisons.
 - Un rapport se rédige dans rapports/<identifiant>/RAPPORT.md avec l'état `brouillon` ; seul le relecteur passe un rapport à `publiable`. Chaque nombre d'un rapport est accompagné de la commande qui l'a produit.
 - Tout script ou commande écrit pour produire un nombre du rapport est versionné dans le répertoire du rapport, avec sa ligne d'appel exacte ; un nombre sans script relançable n'entre pas dans le rapport.
+- Pour conserver la sortie d'une commande exécutée sur sd-92569, utilise `bin/capture.sh <fichier> '<commande>'` : il enregistre sortie, code et durée dans le fichier. Un fichier de sortie ne s'écrit jamais à la main ; s'il n'a pas été produit par capture.sh ou copié par scp, il n'existe pas.
 - Pas de contact extérieur, sauf la notification prévue à l'article 6, et seulement après relecture.
 
 Avant de terminer, obligatoirement et dans cet ordre :

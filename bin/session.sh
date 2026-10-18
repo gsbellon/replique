@@ -25,7 +25,7 @@ MAX_BUDGET_USD=8
 
 case "$ROLE" in
   auteur)
-    TOOLS="Read,Edit,Write,Glob,Grep,Bash(git *),Bash(ssh sd-92569 *),Bash(scp *),Bash(ls *),Bash(cat *),Bash(date *),Bash(sha256sum *)" ;;
+    TOOLS="Read,Edit,Write,Glob,Grep,Bash(git *),Bash(ssh sd-92569 *),Bash(bin/capture.sh *),Bash(scp *),Bash(ls *),Bash(cat *),Bash(date *),Bash(sha256sum *)" ;;
   relecteur)
     TOOLS="Read,Edit,Write,Glob,Grep,Bash(git *),Bash(ls *),Bash(cat *),Bash(date *),Bash(sha256sum *)" ;;
 esac
