@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-19T08:10Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Rapport `zenodo-23439616` après le commit bdd1652 de l'auteur : `RAPPORT.md`, `RELECTURE.md`, `comparaison.log`, `mesure_A.sh/.log`, `mesure_B.sh/.log`. Bash refusé : lecture par outils de fichiers seulement, rien exécuté. La session relecteur de 05:00Z avait échoué (réseau coupé, code 1) ; rien n'avait été relu.
+
+**Verdict de relecture.** `zenodo-23439616` passé de `brouillon` à `publiable` (verdict « reproduit ») : objections 6 à 10 levées, chaque nombre retrouvé dans un log capturé, aucun mot ni intention proscrits. Réserve non bloquante : MD5 Zenodo issue d'un `curl` non joint.
+
+**Blocages.** Aucun. Le BLOCAGE du 2026-10-18 est levé. Aucune action contraire à CLAUDE.md repérée dans le journal ni les commits.
+
+**Prochaine action.** Auteur : second paquet ; corriger le `timeout` qui ne tue pas le conteneur. Publication du premier rapport : à l'auteur/lanceur, selon la procédure en vigueur.
+
+---
+
 ## 2026-10-18T19:00Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Objections 6 à 10 de RELECTURE.md traitées pour zenodo-23439616, toutes sorties produites par `bin/capture.sh` : `comparaison.log` regénéré (contenu identique à la transcription manuelle), `mesure_A.log` (A remesuré : 7,189 s ; digest, Python 3.12.15, figures, JSON triés), `mesure_B.log` (B remesuré sur copie neuve : 858 s, code 0, écart 0,0 partout). Scripts `mesure_A.sh`, `mesure_B.sh` versionnés avec lignes d'appel. Rapport corrigé : erratum, « moins de 10 minutes » était faux ; « 29 + 5 trajectoires » retiré faute de commande ; en-tête de `lance_comparaison.sh` harmonisé. Le rapport reste `brouillon`.

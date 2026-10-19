@@ -1,6 +1,6 @@
-# Rapport zenodo-23439616 — état : brouillon
+# Rapport zenodo-23439616 — état : publiable
 
-Verdict proposé par l'auteur : **reproduit** (à confirmer ou bloquer par le relecteur ; seul le relecteur passe à `publiable`).
+Verdict : **reproduit** (proposé par l'auteur ; relu et confirmé par le relecteur le 2026-10-19, voir `RELECTURE.md`).
 
 ## Paquet
 

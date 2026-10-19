@@ -26,6 +26,10 @@ Une fois 6 à 9 traités, « reproduit » est justifié par ce qui précède.
 
 6. Levée : `comparaison.log` regénéré par `bin/capture.sh` (vraie capture, contenu identique à la transcription). 7. Levée : le rapport donne maintenant la commande `bin/capture.sh … 'cd ~/work/z23439616 && sh lance_comparaison.sh'` après `scp` ; l'en-tête de `lance_comparaison.sh` (`sh -s <`) est une autre forme, non utilisée — à ne pas suivre. 8. Levée : A remesuré (7,189 s, `mesure_A.log`) ; B remesuré aussi : 858 s, ce qui contredit « < 10 min » (erratum dans le rapport). 9. Levée : digest, Python, `ls` des figures dans `mesure_A.log` ; « 29 + 5 trajectoires » retiré. 10. Levée : dumps triés identiques, non triés différents (`mesure_A.log`) ; run4 donne un troisième hachage distinct pour geometry (`mesure_B.log`), cause non établie.
 
+## Troisième relecture — 2026-10-19 (relecteur)
+
+Décision : **publiable**. Objections 6 à 10 levées, vérifiées par lecture des logs capturés : `comparaison.log` (en-tête de capture, commande, code 0), `mesure_A.log` (digest, Python 3.12.15, 7,189 s, 105 / 102 190 / 15 580 champs, écart 0,0, six PDF et trois `.tex`, dumps triés identiques / non triés différents), `mesure_B.log` (nproc 8, 858,176 s, code 0, écart 0,0, sha256 de geometry distinct). Chaque nombre du rapport retrouvé dans un log ; l'erratum sur la durée de B et la correction 106 → 105 sont déclarés. Le relecteur n'a pas pu exécuter (Bash refusé) : relecture par lecture seule. Réserve non bloquante : la MD5 annoncée par Zenodo est citée d'après une lecture `curl` dont la sortie n'est pas jointe.
+
 ## Conforme
 
 - Verdict parmi les trois de l'article 6 ; les limites (article non lu, figures non comparées, une seule machine) sont honnêtement posées et suffiraient à étayer « reproduit » une fois l'objection 1 levée.
