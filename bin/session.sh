@@ -30,6 +30,7 @@ case "$ROLE" in
     TOOLS="Read,Edit,Write,Glob,Grep,Bash(git *),Bash(ls *),Bash(cat *),Bash(date *),Bash(sha256sum *)" ;;
 esac
 
+for i in 1 2 3; do curl -sS -m 10 -o /dev/null https://api.anthropic.com/ && ssh -o ConnectTimeout=10 -T git@github.com 2>&1 | grep -q successfully && break; echo "réseau indisponible, essai $i/3" >> "$ERR"; [ "$i" = 3 ] && { echo "abandon : réseau indisponible" >> "$ERR"; exit 4; }; sleep 600; done
 git pull -q --ff-only 2>/dev/null || true
 
 timeout 2h claude -p "$(cat "prompts/$ROLE.md")" \

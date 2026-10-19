@@ -108,7 +108,7 @@ Un projet sans condition de fin n'est pas un projet.
 1. Validation de la présente v2 par le propriétaire.
 2. VM du pilote sur le poste fixe ; utilisateur `replab` et politique de sortie sur sd-92569 ; dépôt git, contrat en tête ; témoins GitHub et Google Drive ; repli API préparé.
 3. Tranche verticale sur sd-92569 : un paquet, une image, une exécution, une page publiée. Rien d'autre tant que la boucle n'existe pas.
-4. Ensuite seulement : VM sur les stations, relecteur déplacé, site public.
+4. Registre à chaînage de hachage (article 7) dans le dépôt, avec script de vérification ; premier rapport inscrit. Ensuite seulement : second paquet, VM sur les stations, relecteur déplacé, site public.
 
 ## Historique des amendements
 
