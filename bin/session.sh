@@ -30,7 +30,7 @@ case "$ROLE" in
     TOOLS="Read,Edit,Write,Glob,Grep,Bash(git *),Bash(ls *),Bash(cat *),Bash(date *),Bash(sha256sum *)" ;;
 esac
 
-reseau_ok() { curl -sS -m 10 -o /dev/null -w '%{http_code}' https://api.anthropic.com/ 2>/dev/null | grep -qE '^[0-9]{3}$' && ssh -o ConnectTimeout=10 -o BatchMode=yes -T git@github.com 2>&1 | grep -q 'successfully authenticated'; }
+reseau_ok() { curl -sS -m 10 -o /dev/null -w '%{http_code}' https://api.anthropic.com/ 2>/dev/null | grep -qE '^[0-9]{3}$' && { ssh -o ConnectTimeout=10 -o BatchMode=yes -T git@github.com 2>&1 || true; } | grep -q 'successfully authenticated'; }
 for i in 1 2 3; do reseau_ok && break; echo "réseau indisponible, essai $i/3" >> "$ERR"; [ "$i" = 3 ] && break; sleep 600; done
 git pull -q --ff-only 2>/dev/null || true
 
