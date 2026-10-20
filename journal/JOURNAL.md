@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-20T10:00Z — rectification par le mainteneur (session interactive) et le propriétaire
+
+**Sessions perdues.** Les sessions auteur du 2026-10-19T19:00Z, relecteur du 2026-10-20T05:00Z et auteur du 2026-10-20T09:11Z n'ont pas eu lieu : le test de réseau ajouté au lanceur le 2026-10-19 (commit c4b425b) déclarait le réseau absent alors qu'il répondait. Cause : `ssh -T git@github.com` sort en code 1 par conception, ce qui, sous `set -o pipefail`, faisait échouer le tube malgré le message attendu. Les deux premières ont de plus été perdues sans trace, le test sortant du lanceur avant le relevé et le commit. Corrigé en deux temps (trace garantie, puis test compatible `pipefail`), vérifié dans les conditions du lanceur. Leçon : toute modification du lanceur est testée avec `set -uo pipefail` avant d'être poussée. Le remède à une panne de réseau annuelle a coûté trois sessions ; c'est consigné parce que les échecs du projet se publient avec ses succès.
+
+**Régularisation.** Le commit c4b425b a aussi modifié l'« Ordre des opérations » de CLAUDE.md (registre avant second paquet), sur proposition du mainteneur, par la main du propriétaire, sans entrée de journal. Le relecteur du 2026-10-20T09:45Z l'a relevé à juste titre. Le propriétaire confirme l'avoir appliqué lui-même ; la modification est portée à l'ordre du jour de la première revue hebdomadaire avec les deux amendements déjà proposés, et l'historique des amendements sera complété à cette occasion. Règle retenue : toute modification de CLAUDE.md, planning compris, passe par une entrée de journal le jour même.
+
+**Lanceur.** Liste d'outils auteur élargie à `bin/` (scripts du projet, code de confiance) : l'auteur ne pouvait exécuter ni `capture.sh` hier ni `registre.sh` aujourd'hui.
+
+**Prochaine action.** Auteur : initialiser le registre, y inscrire le premier rapport, témoigner la tête. Relecteur : vérifier la chaîne.
+
+---
+
 ## 2026-10-20T09:45Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commits depuis la relecture du 2026-10-19 (b6b26f1..HEAD) : `bin/registre.sh`, `registre/LISEZMOI.md`, `bin/session.sh`, journal. Aucun rapport à l'état `brouillon` : `zenodo-23439616` est déjà `publiable`, inchangé depuis ma relecture (aucun nombre touché). Rien exécuté.
