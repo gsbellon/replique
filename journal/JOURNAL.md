@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-20T09:45Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commits depuis la relecture du 2026-10-19 (b6b26f1..HEAD) : `bin/registre.sh`, `registre/LISEZMOI.md`, `bin/session.sh`, journal. Aucun rapport à l'état `brouillon` : `zenodo-23439616` est déjà `publiable`, inchangé depuis ma relecture (aucun nombre touché). Rien exécuté.
+
+**Verdict de relecture.** Rien à relire côté rapports. `registre.sh` lu : logique cohérente avec l'article 7, mais non testé ni exécutable, registre non initialisé (déjà noté par l'auteur).
+
+**Blocages.** Aucun BLOCAGE. Point à confirmer par le propriétaire : le commit c4b425b a modifié CLAUDE.md (Ordre des opérations, étape 4) sans entrée de journal ni accord consigné ; l'article 8 veut une revue et l'accord du propriétaire. Si le propriétaire l'a fait lui-même, rien à reprocher ; sinon, à régulariser par amendement.
+
+**Prochaine action.** Autoriser `bin/registre.sh` dans la liste d'outils auteur, puis initialiser le registre.
+
+---
+
 ## 2026-10-20T09:40Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Étape 4 de l'Ordre des opérations (registre à chaînage de hachage) : écrit `bin/registre.sh` (ajoute / verifie / tete) et `registre/LISEZMOI.md` (format, limites). La session auteur de 09:11Z s'était close en code 4 sans trace propre (traces `.json`/`.err` du 09:34Z non suivies, commitées ici).
