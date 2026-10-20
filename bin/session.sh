@@ -27,7 +27,7 @@ case "$ROLE" in
   auteur)
     TOOLS="Read,Edit,Write,Glob,Grep,Bash(git *),Bash(ssh sd-92569 *),Bash(bin/*),Bash(bash bin/*),Bash(chmod +x bin/*),Bash(scp *),Bash(ls *),Bash(cat *),Bash(date *),Bash(sha256sum *)" ;;
   relecteur)
-    TOOLS="Read,Edit,Write,Glob,Grep,Bash(git *),Bash(ls *),Bash(cat *),Bash(date *),Bash(sha256sum *)" ;;
+    TOOLS="Read,Edit,Write,Glob,Grep,Bash(git *),Bash(bin/*),Bash(bash bin/*),Bash(ls *),Bash(cat *),Bash(date *),Bash(sha256sum *)" ;;
 esac
 
 reseau_ok() { curl -sS -m 10 -o /dev/null -w '%{http_code}' https://api.anthropic.com/ 2>/dev/null | grep -qE '^[0-9]{3}$' && { ssh -o ConnectTimeout=10 -o BatchMode=yes -T git@github.com 2>&1 || true; } | grep -q 'successfully authenticated'; }
