@@ -30,9 +30,11 @@ case "$ROLE" in
     TOOLS="Read,Edit,Write,Glob,Grep,Bash(git *),Bash(ls *),Bash(cat *),Bash(date *),Bash(sha256sum *)" ;;
 esac
 
-for i in 1 2 3; do curl -sS -m 10 -o /dev/null https://api.anthropic.com/ && ssh -o ConnectTimeout=10 -T git@github.com 2>&1 | grep -q successfully && break; echo "réseau indisponible, essai $i/3" >> "$ERR"; [ "$i" = 3 ] && { echo "abandon : réseau indisponible" >> "$ERR"; exit 4; }; sleep 600; done
+reseau_ok() { curl -sS -m 10 -o /dev/null -w '%{http_code}' https://api.anthropic.com/ 2>/dev/null | grep -qE '^[0-9]{3}$' && ssh -o ConnectTimeout=10 -o BatchMode=yes -T git@github.com 2>&1 | grep -q 'successfully authenticated'; }
+for i in 1 2 3; do reseau_ok && break; echo "réseau indisponible, essai $i/3" >> "$ERR"; [ "$i" = 3 ] && break; sleep 600; done
 git pull -q --ff-only 2>/dev/null || true
 
+if reseau_ok; then
 timeout 2h claude -p "$(cat "prompts/$ROLE.md")" \
   --output-format json \
   --max-turns "$MAX_TURNS" \
@@ -41,6 +43,9 @@ timeout 2h claude -p "$(cat "prompts/$ROLE.md")" \
   --permission-mode dontAsk \
   > "$OUT" 2> "$ERR"
 RC=$?
+else
+  echo "abandon : réseau indisponible, session non lancée" >> "$ERR"; RC=4
+fi
 { echo "claude: $(claude --version 2>&1)"; echo "code de sortie: $RC"; } >> "$ERR"
 
 # Relevé des tokens, quoi qu'il soit arrivé
