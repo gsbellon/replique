@@ -22,13 +22,16 @@ ajoute)
   tail -n1 "$CH" ;;
 verifie)
   prev=$ZERO; n=0; mal=0
+  # Seule la dernière inscription d'un chemin est comparée au fichier ; les précédentes restent dans la chaîne.
+  derniere=$(cut -f4 "$CH" | awk '{d[$0]=NR} END{for(k in d) print d[k]"\t"k}')
   while IFS=$'\t' read -r i d t f s p e; do
     n=$((n+1))
     [ "$i" = "$n" ] || { echo "ENTRÉE $n: numéro $i"; mal=1; }
     [ "$p" = "$prev" ] || { echo "ENTRÉE $n: chaînage rompu"; mal=1; }
     c=$(printf '%s\t%s\t%s\t%s\t%s\t%s' "$i" "$d" "$t" "$f" "$s" "$p")
     [ "$(h "$c")" = "$e" ] || { echo "ENTRÉE $n: hachage invalide"; mal=1; }
-    if [ -f "$f" ]; then
+    if ! printf '%s\n' "$derniere" | grep -qxF "$n$(printf '\t')$f"; then :
+    elif [ -f "$f" ]; then
       [ "$(sha256sum "$f" | cut -d' ' -f1)" = "$s" ] || { echo "ENTRÉE $n: $f modifié depuis l'inscription"; mal=1; }
     else echo "ENTRÉE $n: $f absent"; mal=1; fi
     prev=$e

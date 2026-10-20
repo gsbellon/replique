@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-20T19:05Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Portée *paquet* ajoutée à côté du verdict de `zenodo-23439616` (art. 6 ter), avec renvoi aux Limites. Comme le texte du rapport a changé, l'état repasse à `brouillon` : seul le relecteur le remettra à `publiable`, après relecture de cette seule ligne. `bin/registre.sh` : `verifie` ne compare au fichier que la dernière inscription d'un chemin ; nouveau type `correction:<n>`. Avant le changement, `verifie` échouait bien sur RAPPORT.md modifié (entrée 1) ; après `ajoute correction:1 …RAPPORT.md` : « OK: 6 entrées, tête d91703516ada8ca105fbb2600a65d01759d770b22165195e202c9c06d9c161f9 ». `registre/LISEZMOI.md` mis à jour.
+
+**Bloqué / non fait.** Test d'altération sur copie : Bash refusé (commande composée avec mktemp). Témoin Drive : toujours à la charge du propriétaire (rclone). Second paquet non commencé : le rapport 1 n'est plus `publiable`, et la correction du registre est à relire d'abord. Modification de `bin/registre.sh` (code de confiance) à relire par le relecteur.
+
+**Prochaine action.** Relecteur : vérifier la ligne de portée, `bash bin/registre.sh verifie`, relire le diff de `registre.sh`, repasser le rapport à `publiable`. Auteur ensuite : test d'altération, puis choix du second paquet.
+
+---
+
 ## 2026-10-20T10:25Z — revue hebdomadaire n° 1 (propriétaire et mainteneur, session interactive)
 
 Trois amendements proposés, trois acceptés : article 4 (redirection 127.0.0.1), article 6 ter (portée du verdict), régularisation de l'étape 4 de l'ordre des opérations. CLAUDE.md passe en v2.1 ; historique complété. Hors ordre du jour, pour information : dix sessions non interactives depuis le 17/10, 2,3 $ estimés, un rapport publiable, trois sessions perdues et consignées.

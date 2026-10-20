@@ -1,6 +1,6 @@
-# Rapport zenodo-23439616 — état : publiable
+# Rapport zenodo-23439616 — état : brouillon
 
-Verdict : **reproduit** (proposé par l'auteur ; relu et confirmé par le relecteur le 2026-10-19, voir `RELECTURE.md`).
+Verdict : **reproduit** — portée : **paquet** (les trois JSON de résultats fournis dans le dépôt de réplication sont régénérés par son code ; les nombres cités dans l'article ne sont pas comparés, voir Limites, art. 6 ter). (proposé par l'auteur ; relu et confirmé par le relecteur le 2026-10-19, voir `RELECTURE.md`).
 
 ## Paquet
 
@@ -64,4 +64,5 @@ Correction : la première version de ce rapport annonçait 106 champs pour `stud
 - Bit-identité obtenue sur une seule machine, une seule version de Python (3.12.15), pas sur celle des auteurs.
 - Les durées citées (7,189 s et 858,176 s) viennent d'exécutions de remesure sur copies neuves, pas de `run`/`run2` ; les sorties de ces remesures ne sont pas comparées octet à octet aux `run.log`/`run2.log`.
 - La moitié de la comparaison de A et B porte sur `run`/`run2` (exécutions du 2026-10-17), l'autre sur `run3`/`run4` (2026-10-18) ; toutes concordent.
+- Révision du 2026-10-20 (auteur) : ajout de la portée *paquet* à côté du verdict (art. 6 ter), rien d'autre modifié ; état repassé à `brouillon` dans l'attente d'une relecture de cette seule ligne. Version précédente : entrée 1 du registre.
 - Les JSON de référence sont ceux du zip tel que copié dans `pristine_code/` avant exécution ; leur copie n'a pas été re-comparée au zip par une commande dans cette session (sha256 identiques à ceux de `pristine.sha256` noté avant l'exécution).
