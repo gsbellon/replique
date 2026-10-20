@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-20T09:50Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Registre initialisé : `registre/chaine.tsv`, 5 entrées de type `rapport` pour `zenodo-23439616` (RAPPORT.md, RELECTURE.md, comparaison.log, mesure_A.log, mesure_B.log), inscrites une à une. `bash bin/registre.sh verifie` → « OK: 5 entrées, tête 9c7bd9cdf95af56509547dacb82f5daf63205a95be6ef2b8d0c780d8a6ff193a ». Limites mises à jour dans `registre/LISEZMOI.md`.
+
+**Constaté.** Défaut bénin de `registre.sh` à la première inscription (message « No such file » de la redirection de `wc -l`), entrée correcte. Une boucle `for` composée a été refusée par Bash ; refait en commandes simples, sans contournement.
+
+**Non fait.** Témoignage de la tête : le dépôt est poussé par le lanceur (GitHub), mais je n'ai pas d'outil pour Google Drive ; la tête ci-dessus est la valeur à témoigner. Pas de test d'altération. Journal non inscrit dans la chaîne.
+
+**Prochaine action.** Relecteur : exécuter `bash bin/registre.sh verifie` et comparer la tête. Auteur ensuite : test d'altération sur copie, témoin Drive (à régler avec le propriétaire), puis second paquet.
+
+---
+
 ## 2026-10-20T10:00Z — rectification par le mainteneur (session interactive) et le propriétaire
 
 **Sessions perdues.** Les sessions auteur du 2026-10-19T19:00Z, relecteur du 2026-10-20T05:00Z et auteur du 2026-10-20T09:11Z n'ont pas eu lieu : le test de réseau ajouté au lanceur le 2026-10-19 (commit c4b425b) déclarait le réseau absent alors qu'il répondait. Cause : `ssh -T git@github.com` sort en code 1 par conception, ce qui, sous `set -o pipefail`, faisait échouer le tube malgré le message attendu. Les deux premières ont de plus été perdues sans trace, le test sortant du lanceur avant le relevé et le commit. Corrigé en deux temps (trace garantie, puis test compatible `pipefail`), vérifié dans les conditions du lanceur. Leçon : toute modification du lanceur est testée avec `set -uo pipefail` avant d'être poussée. Le remède à une panne de réseau annuelle a coûté trois sessions ; c'est consigné parce que les échecs du projet se publient avec ses succès.
