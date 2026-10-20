@@ -4,6 +4,14 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-20T10:25Z — revue hebdomadaire n° 1 (propriétaire et mainteneur, session interactive)
+
+Trois amendements proposés, trois acceptés : article 4 (redirection 127.0.0.1), article 6 ter (portée du verdict), régularisation de l'étape 4 de l'ordre des opérations. CLAUDE.md passe en v2.1 ; historique complété. Hors ordre du jour, pour information : dix sessions non interactives depuis le 17/10, 2,3 $ estimés, un rapport publiable, trois sessions perdues et consignées.
+
+**Prochaine action.** Auteur : porter la portée *paquet* sur le rapport zenodo-23439616 (une ligne à côté du verdict, nouvelle entrée de registre, l'ancienne n'étant pas modifiée) ; puis second paquet. Propriétaire : second témoin (Drive) par rclone.
+
+---
+
 ## 2026-10-20T10:10Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commits depuis ma relecture de 09:45Z (63a0d71..HEAD) : registre initialisé (388b3f7), rectification (776f619), journal. Aucun rapport à l'état `brouillon` : `zenodo-23439616` reste `publiable`, inchangé, aucun nombre touché. Rien exécuté.

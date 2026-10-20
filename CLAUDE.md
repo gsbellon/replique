@@ -4,7 +4,7 @@ Nom de travail : **Réplique** (identifiant technique `replab`). Le propriétair
 
 Ce fichier est lu en premier par chaque session de travail. Il est le seul endroit où la volonté du projet persiste d'une session à l'autre. Tout ce qui n'est pas écrit ici n'engage personne.
 
-Version 2 — 2026-10-16. Historique des amendements en fin de document.
+Version 2.1 — 2026-10-20. Historique des amendements en fin de document.
 
 ---
 
@@ -41,7 +41,7 @@ Hors périmètre, définitivement : tout jeton ou instrument financier ; tout r�
 | Stations (3, Windows, bureau) | Exécuteurs nocturnes dans une VM Linux ; plus tard, relecteur et témoin | Non | la VM seulement ; jamais l'hôte Windows |
 | GitHub + Google Drive du propriétaire | Témoins du registre | — | compte machine du projet ; dépôt de fichiers seulement |
 
-**Hors projet.** sd-114393 (serveur des clients, assaini en septembre 2026) ne reçoit aucun compte, aucune clé et aucune connexion du projet ; il pourra, par amendement, héberger le site public sous forme de fichiers statiques poussés depuis le pilote, et rien d'autre. Le laptop du propriétaire est hors projet. L'hôte Windows du pilote, ses services (bibliothèque de films, Tailscale) et ses autres utilisateurs sont hors projet : la VM n'a ni dossier partagé, ni redirection de port, ni appartenance au réseau Tailscale.
+**Hors projet.** sd-114393 (serveur des clients, assaini en septembre 2026) ne reçoit aucun compte, aucune clé et aucune connexion du projet ; il pourra, par amendement, héberger le site public sous forme de fichiers statiques poussés depuis le pilote, et rien d'autre. Le laptop du propriétaire est hors projet. L'hôte Windows du pilote, ses services (bibliothèque de films, Tailscale) et ses autres utilisateurs sont hors projet : la VM n'a ni dossier partagé, ni redirection de port vers l'extérieur (une redirection liée à 127.0.0.1 est admise pour la console du propriétaire), ni appartenance au réseau Tailscale.
 
 **Interdictions sans exception.** Le mainteneur ne détient jamais : un moyen de paiement, un accès au registrar, un accès root, un identifiant des serveurs de sauvegarde, un identifiant d'un client, un accès aux répertoires des vhosts clients. Il n'ouvre aucun port entrant : les exécuteurs tirent, ils ne reçoivent pas.
 
@@ -81,6 +81,10 @@ Le propriétaire déclare une proximité personnelle avec les chercheurs suivant
 
 Cette déclaration n'emporte aucune règle de traitement : le choix des paquets ne regarde jamais le nom des auteurs, et un paquet signé par l'une de ces personnes suit la même procédure, les mêmes verdicts et la même notification que tout autre. Le droit de veto de l'article 3 reste entier ; comme tout veto, un veto portant sur un rapport qui concerne l'une de ces personnes est consigné au registre et y reste visible.
 
+## 6 ter. Portée du verdict
+
+Chaque verdict de l'article 6 porte une portée explicite, nommée à côté de lui, parmi deux : **paquet** — les fichiers de résultats fournis dans le dépôt de réplication sont régénérés par son code — ou **article** — les nombres cités dans la publication sont retrouvés. Un rapport de portée *paquet* ne prétend pas à la seconde, et le dit. Les trois verdicts restent les seuls ; la portée les qualifie, elle ne les multiplie pas.
+
 ## 7. Le registre
 
 Rapports et journal forment un registre à chaînage de hachage, témoigné hors de la machine qui l'écrit. Rien n'y est modifié : une erreur se corrige par une entrée nouvelle qui désigne l'ancienne. La méthode de vérification est publiée avec le registre, et ses limites aussi.
@@ -114,3 +118,4 @@ Un projet sans condition de fin n'est pas un projet.
 
 - v1, 2026-09-08 — rédaction initiale par le mainteneur, soumise au propriétaire.
 - v2, 2026-10-16 — rédigée par le mainteneur après vérification de la documentation produit et décisions du propriétaire du jour. Article 3 : arrêt d'office étendu aux alertes de l'hébergeur ; repli d'authentification réservé au propriétaire. Article 4 : sd-92569 libéré et réinstallé (Debian 13), frontière transitoire supprimée ; plan de contrôle déplacé de sd-114393 vers une VM sur le poste fixe du propriétaire, sd-114393 sorti du projet après son incident de septembre ; laptop sorti du projet ; témoins GitHub et Google Drive ; politique de sortie de l'exécuteur. Article 5 : mode d'exécution (`claude -p` par cron) et authentification (abonnement Max, repli par clé API plafonnée) ; mesure du coût sur les dix premières sessions ; sauvegarde. Article 6 bis créé : déclaration de proximité du propriétaire. Article 9 : recalibration du seuil après dix rapports.
+- v2.1, 2026-10-20 — première revue hebdomadaire, trois amendements acceptés par le propriétaire : article 4, redirection liée à 127.0.0.1 admise pour la console du propriétaire (pratique du 16/10) ; article 6 ter créé, portée du verdict (*paquet* ou *article*), l'article 6 restant intact ; « Ordre des opérations », étape 4 (registre avant second paquet), appliquée le 19/10 avant revue, régularisée. Règle retenue : toute modification de ce fichier, planning compris, passe par le journal le jour même et par la revue suivante.
