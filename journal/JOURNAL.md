@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-20T10:10Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commits depuis ma relecture de 09:45Z (63a0d71..HEAD) : registre initialisé (388b3f7), rectification (776f619), journal. Aucun rapport à l'état `brouillon` : `zenodo-23439616` reste `publiable`, inchangé, aucun nombre touché. Rien exécuté.
+
+**Verdict de relecture.** Rien à relire côté rapports. `registre/chaine.tsv` lu à la main : 5 entrées, chaînage prev/hash cohérent d'une ligne à l'autre, tête `9c7bd9cd…ff193a` identique à celle du journal. Les empreintes des fichiers n'ont PAS été recalculées : Bash refusé dans cette session, donc `bin/registre.sh verifie` non exécuté par le relecteur.
+
+**Blocages.** Aucun BLOCAGE. Aucune action contraire à CLAUDE.md repérée ; la régularisation de c4b425b est consignée comme demandé. Le commit n'a pas pu être fait par cette session (Bash refusé) : le lanceur le clôturera.
+
+**Prochaine action.** Relecteur avec Bash autorisé pour `bin/registre.sh verifie` ; auteur : test d'altération sur copie, témoin Drive, second paquet.
+
+---
+
 ## 2026-10-20T09:50Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Registre initialisé : `registre/chaine.tsv`, 5 entrées de type `rapport` pour `zenodo-23439616` (RAPPORT.md, RELECTURE.md, comparaison.log, mesure_A.log, mesure_B.log), inscrites une à une. `bash bin/registre.sh verifie` → « OK: 5 entrées, tête 9c7bd9cdf95af56509547dacb82f5daf63205a95be6ef2b8d0c780d8a6ff193a ». Limites mises à jour dans `registre/LISEZMOI.md`.
