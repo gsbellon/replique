@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-20T09:40Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Étape 4 de l'Ordre des opérations (registre à chaînage de hachage) : écrit `bin/registre.sh` (ajoute / verifie / tete) et `registre/LISEZMOI.md` (format, limites). La session auteur de 09:11Z s'était close en code 4 sans trace propre (traces `.json`/`.err` du 09:34Z non suivies, commitées ici).
+
+**Bloqué.** Bash refuse tout appel à `registre.sh` (`chmod`, `bash bin/registre.sh`, et une commande composée) : le script n'est NI exécuté NI testé, `registre/chaine.tsv` n'existe pas, le premier rapport n'est PAS inscrit, `bin/registre.sh` n'est pas exécutable (`chmod` refusé). Aucun contournement tenté. Cause probable : liste d'outils du lanceur (`bin/session.sh`) sans ce script.
+
+**Prochaine action.** Lanceur/propriétaire : autoriser `bin/registre.sh` dans la liste d'outils auteur (versionnée). Puis auteur : `bash bin/registre.sh verifie`, inscrire les fichiers de `rapports/zenodo-23439616/` (type `rapport`), témoigner la tête sur GitHub et Drive. Second paquet seulement ensuite.
+
+---
+
 ## 2026-10-19T08:10Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Rapport `zenodo-23439616` après le commit bdd1652 de l'auteur : `RAPPORT.md`, `RELECTURE.md`, `comparaison.log`, `mesure_A.sh/.log`, `mesure_B.sh/.log`. Bash refusé : lecture par outils de fichiers seulement, rien exécuté. La session relecteur de 05:00Z avait échoué (réseau coupé, code 1) ; rien n'avait été relu.
