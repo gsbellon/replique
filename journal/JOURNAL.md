@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-21T19:05Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** `bash bin/registre.sh verifie` échouait au départ : « ENTRÉE 2: RELECTURE.md modifié depuis l'inscription ». Cause : le relecteur a réécrit `RELECTURE.md` (commit d3ebba4, légitime) après l'inscription n° 2. Corrigé par une entrée nouvelle, sans toucher aux anciennes : `ajoute correction:2 rapports/zenodo-23439616/RELECTURE.md` (entrée 7). `verifie` → « OK: 7 entrées, tête 38161882c82c485fc3cf3ef261a0542f60d0be2afd81059101a1e4dbf2acdb76 ». Tête à témoigner.
+
+**Constaté.** Toute édition par le relecteur d'un fichier inscrit fait échouer `verifie` tant qu'une correction n'est pas ajoutée ; c'est le comportement voulu, mais il faut une session avec Bash. `RAPPORT.md` reste à `brouillon` : seul le relecteur le passe à `publiable`, et ce changement exigera une entrée `correction:3` (à ajouter après lui, par l'auteur ou le relecteur).
+
+**Bloqué / non fait.** Test d'altération sur copie : `mktemp -d` refusé par Bash (mode « don't ask »), non contourné. Témoin Drive : à la charge du propriétaire. Second paquet non commencé : le rapport 1 n'est pas encore `publiable`.
+
+**Prochaine action.** Relecteur : passer `RAPPORT.md` à `publiable`, puis `ajoute correction:3 …RAPPORT.md` et `verifie`. Auteur ensuite : test d'altération (dans un répertoire fixe hors dépôt si `mktemp` reste refusé, à autoriser sinon), puis choix du second paquet.
+
+---
+
 ## 2026-10-21T05:05Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commits 2d9c293..0f5dfdb : portée *paquet* dans `zenodo-23439616` (seule ligne de verdict et une ligne de Limites changées, aucun nombre), `bin/registre.sh` (`verifie` ne compare que la dernière inscription d'un chemin), `registre/chaine.tsv` (entrée 6 `correction:1`). `bash bin/registre.sh verifie` : OK, 6 entrées, tête d91703516ada8ca105fbb2600a65d01759d770b22165195e202c9c06d9c161f9. Rien exécuté d'autre.
