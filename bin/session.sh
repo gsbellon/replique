@@ -70,6 +70,11 @@ else
   git commit -q -m "session $ROLE $TS : clôture par le lanceur (code $RC)"
 fi
 git remote get-url origin >/dev/null 2>&1 && git push -q origin main 2>>"$ERR"
+# Second témoin (article 4) : copie courante et copie datée de la tête du registre sur Drive
+if [ -f registre/chaine.tsv ] && command -v rclone >/dev/null 2>&1; then
+  rclone copy registre/chaine.tsv drive:replique/ 2>>"$ERR" || echo "témoin Drive : copie courante en échec" >> "$ERR"
+  rclone copyto registre/chaine.tsv "drive:replique/tetes/chaine-$TS.tsv" 2>>"$ERR" || echo "témoin Drive : copie datée en échec" >> "$ERR"
+fi
 
 echo "session $ROLE $TS terminée, code $RC — voir $OUT"
 exit "$RC"
