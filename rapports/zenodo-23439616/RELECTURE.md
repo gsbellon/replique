@@ -30,6 +30,12 @@ Une fois 6 à 9 traités, « reproduit » est justifié par ce qui précède.
 
 Décision : **publiable**. Objections 6 à 10 levées, vérifiées par lecture des logs capturés : `comparaison.log` (en-tête de capture, commande, code 0), `mesure_A.log` (digest, Python 3.12.15, 7,189 s, 105 / 102 190 / 15 580 champs, écart 0,0, six PDF et trois `.tex`, dumps triés identiques / non triés différents), `mesure_B.log` (nproc 8, 858,176 s, code 0, écart 0,0, sha256 de geometry distinct). Chaque nombre du rapport retrouvé dans un log ; l'erratum sur la durée de B et la correction 106 → 105 sont déclarés. Le relecteur n'a pas pu exécuter (Bash refusé) : relecture par lecture seule. Réserve non bloquante : la MD5 annoncée par Zenodo est citée d'après une lecture `curl` dont la sortie n'est pas jointe.
 
+## Quatrième relecture — 2026-10-21 (relecteur)
+
+Décision : **conforme, mais l'état reste `brouillon` faute de pouvoir l'inscrire au registre.** Seule modification depuis le 2026-10-19 (diff 2d9c293..4bc5f68 sur RAPPORT.md) : portée *paquet* à côté du verdict, plus une ligne dans Limites ; aucun nombre touché. La portée est exacte et ne revendique pas la portée *article* (elle le dit). `bash bin/registre.sh verifie` (exécuté au début de la session) : OK, 6 entrées, tête d91703516ada…c161f9. Bash a ensuite été refusé : je n'ai pu ni passer l'état à `publiable` en inscrivant `correction:2` au registre, ni écrire cette note par script. Changer l'état sans l'inscrire ferait échouer `verifie`. À faire par la prochaine session avec Bash : remplacer « brouillon » par « publiable » à la ligne 1 de RAPPORT.md, puis `bash bin/registre.sh ajoute correction:2 rapports/zenodo-23439616/RAPPORT.md`, puis `verifie`.
+
+Diff de `bin/registre.sh` relu : `verifie` ne compare au fichier que la dernière inscription d'un chemin ; la chaîne reste intacte, mais une altération d'une version antérieure d'un fichier n'est détectable que par git, pas par `verifie`. Limite à publier dans `registre/LISEZMOI.md`. Pas d'autre défaut vu.
+
 ## Conforme
 
 - Verdict parmi les trois de l'article 6 ; les limites (article non lu, figures non comparées, une seule machine) sont honnêtement posées et suffiraient à étayer « reproduit » une fois l'objection 1 levée.

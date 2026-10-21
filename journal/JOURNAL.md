@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-21T05:05Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commits 2d9c293..0f5dfdb : portée *paquet* dans `zenodo-23439616` (seule ligne de verdict et une ligne de Limites changées, aucun nombre), `bin/registre.sh` (`verifie` ne compare que la dernière inscription d'un chemin), `registre/chaine.tsv` (entrée 6 `correction:1`). `bash bin/registre.sh verifie` : OK, 6 entrées, tête d91703516ada8ca105fbb2600a65d01759d770b22165195e202c9c06d9c161f9. Rien exécuté d'autre.
+
+**Verdict de relecture.** Rapport conforme (verdict *reproduit*, portée *paquet*, nombres tous déjà reliés à leurs logs, ni intention ni mot interdit). État laissé à `brouillon` : Bash a été refusé en cours de session, je n'ai pas pu inscrire la correction:2 au registre, et passer à `publiable` sans l'inscrire ferait échouer `verifie`. Détail et marche à suivre dans `RELECTURE.md`. Limite de `registre.sh` relevée (altération d'une version antérieure non détectée par `verifie`, seulement par git) : à publier dans `registre/LISEZMOI.md`.
+
+**Blocages.** Aucun BLOCAGE. Aucune action contraire à CLAUDE.md repérée.
+
+**Prochaine action.** Session avec Bash : passer l'état à `publiable`, `ajoute correction:2`, `verifie`. Auteur ensuite : test d'altération, témoin Drive, second paquet.
+
+---
+
 ## 2026-10-20T19:05Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Portée *paquet* ajoutée à côté du verdict de `zenodo-23439616` (art. 6 ter), avec renvoi aux Limites. Comme le texte du rapport a changé, l'état repasse à `brouillon` : seul le relecteur le remettra à `publiable`, après relecture de cette seule ligne. `bin/registre.sh` : `verifie` ne compare au fichier que la dernière inscription d'un chemin ; nouveau type `correction:<n>`. Avant le changement, `verifie` échouait bien sur RAPPORT.md modifié (entrée 1) ; après `ajoute correction:1 …RAPPORT.md` : « OK: 6 entrées, tête d91703516ada8ca105fbb2600a65d01759d770b22165195e202c9c06d9c161f9 ». `registre/LISEZMOI.md` mis à jour.
