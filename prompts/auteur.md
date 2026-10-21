@@ -5,6 +5,7 @@ Commence par lire CLAUDE.md en entier : il fait autorité sur tout le reste. Lis
 But de la session : faire avancer l'étape en cours de l'« Ordre des opérations » de CLAUDE.md. Enchaîne les pas tant que chacun est vérifié et que le coût estimé reste sous la moitié du plafond ; un pas réel vaut mieux qu'un plan, et plusieurs pas vérifiés valent mieux qu'un seul. L'exécuteur se commande par `ssh sd-92569 '<commande>'` ; tout code tiers y tourne dans un conteneur podman sans root (utilisateur replab), jamais sur l'hôte ; aucun port entrant, nulle part.
 
 Règles de la session :
+- Bash n'accepte que des commandes simples : une commande par appel, sans `&&`, `|`, `>`, `$( )` ni boucle ; pour conserver une sortie, `bin/capture.sh`. Une commande refusée n'est pas un blocage, c'est une commande à découper.
 - Ne fais rien que CLAUDE.md ne prévoit pas. En cas de doute, arrête-toi et écris pourquoi.
 - Un constat d'absence (« pas de règle », « aucun fichier », « non installé ») n'est écrit qu'avec la commande qui l'a établi et les droits sous lesquels elle a tourné ; beaucoup d'outils répondent vide à un utilisateur ordinaire. Sur sd-92569, `sudo` est disponible pour cela.
 - Ne modifie jamais CLAUDE.md. Un amendement souhaité va dans journal/AMENDEMENTS.md avec ses raisons.
