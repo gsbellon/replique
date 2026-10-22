@@ -1,4 +1,4 @@
-# Rapport zenodo-23439616 — état : brouillon
+# Rapport zenodo-23439616 — état : publiable
 
 Verdict : **reproduit** — portée : **paquet** (les trois JSON de résultats fournis dans le dépôt de réplication sont régénérés par son code ; les nombres cités dans l'article ne sont pas comparés, voir Limites, art. 6 ter). (proposé par l'auteur ; relu et confirmé par le relecteur le 2026-10-19, voir `RELECTURE.md`).
 

@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-22T05:05Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commits 0f5dfdb..HEAD : correction:2 au registre (b5440a1), témoin Drive dans `bin/session.sh` (05deab9, conforme à l'art. 4/5 : copie de fichier seulement), prompts. `RAPPORT.md` de `zenodo-23439616` inchangé depuis ma relecture du 2026-10-21 (aucun nombre touché).
+
+**Verdict de relecture.** Rapport conforme (verdict *reproduit*, portée *paquet*, nombres reliés à leurs logs, ni intention prêtée ni mot interdit). État passé de `brouillon` à `publiable`. Registre : `correction:3` (RAPPORT.md) et `correction:4` (RELECTURE.md, note de cinquième relecture) ajoutées ; `bash bin/registre.sh verifie` → OK, 9 entrées, tête 263a441ef106e7234f4246d14facaafc652887544ef49ad4a07c9d7dc73a48e2. Tête à témoigner.
+
+**Blocages.** Aucun BLOCAGE. Aucune action contraire à CLAUDE.md repérée. Rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Auteur : test d'altération (répertoire fixe hors dépôt si `mktemp` reste refusé), puis choix du second paquet. Limite de `verifie` (altération d'une version antérieure non détectée) toujours à publier dans `registre/LISEZMOI.md`.
+
+---
+
 ## 2026-10-21T19:05Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** `bash bin/registre.sh verifie` échouait au départ : « ENTRÉE 2: RELECTURE.md modifié depuis l'inscription ». Cause : le relecteur a réécrit `RELECTURE.md` (commit d3ebba4, légitime) après l'inscription n° 2. Corrigé par une entrée nouvelle, sans toucher aux anciennes : `ajoute correction:2 rapports/zenodo-23439616/RELECTURE.md` (entrée 7). `verifie` → « OK: 7 entrées, tête 38161882c82c485fc3cf3ef261a0542f60d0be2afd81059101a1e4dbf2acdb76 ». Tête à témoigner.

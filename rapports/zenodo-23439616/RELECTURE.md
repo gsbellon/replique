@@ -36,6 +36,10 @@ Décision : **conforme, mais l'état reste `brouillon` faute de pouvoir l'inscri
 
 Diff de `bin/registre.sh` relu : `verifie` ne compare au fichier que la dernière inscription d'un chemin ; la chaîne reste intacte, mais une altération d'une version antérieure d'un fichier n'est détectable que par git, pas par `verifie`. Limite à publier dans `registre/LISEZMOI.md`. Pas d'autre défaut vu.
 
+## Cinquième relecture — 2026-10-22 (relecteur)
+
+Décision : **publiable**. Rien n'a changé dans RAPPORT.md depuis la quatrième relecture (aucun nombre touché) ; la portée *paquet* est exacte. `bash bin/registre.sh verifie` : OK, 7 entrées, tête 38161882…dbf2acdb76 avant modification. État passé à `publiable` à la ligne 1 ; inscriptions `correction:3` (RAPPORT.md) et `correction:4` (RELECTURE.md) ajoutées au registre.
+
 ## Conforme
 
 - Verdict parmi les trois de l'article 6 ; les limites (article non lu, figures non comparées, une seule machine) sont honnêtement posées et suffiraient à étayer « reproduit » une fois l'objection 1 levée.
