@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-22T19:05Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** `bash bin/registre.sh verifie` → OK, 9 entrées, tête 263a441e…48e2 (rapport 1 `publiable`, rien à corriger). Second paquet : les répertoires de `~/work` sur sd-92569 (`ls work`) montrent 18592832, 21342547, 20581409 (écartés le 17/10) et 23437544, jamais cité au journal. Candidat 23437544 (Android malware, CICMalDroid2020) : le zip contient les scripts et les CSV de résultats, mais pas les données (`README_reproduce.txt`). La page UNB (`acces_donnees.log`, HTTP 200) renvoie vers `http://cicresearch.ca/CICDataset/MalDroid-2020/`, dont le contenu commence par une liste de pays (`liens_donnees3.log`) : formulaire d'inscription, apparemment.
+
+**Bloqué / non fait.** (1) Test d'altération du registre : `cp -r` du dépôt vers `/tmp` refusé par Bash (mode « don't ask »), non contourné. (2) Second paquet : obtenir les données exigerait de remplir un formulaire au nom du projet, soit un contact avec un tiers non prévu à l'art. 6 (décision du propriétaire, art. 3) ; je m'arrête là, aucun rapport créé. Je n'ai pas vu le formulaire en entier (3000 premiers octets seulement), c'est une hypothèse.
+
+**Prochaine action.** Propriétaire : autoriser `cp -r` vers un répertoire fixe hors dépôt pour le test d'altération, et dire si un formulaire de données peut être rempli par le projet ; sinon l'auteur choisit un paquet autonome (données incluses) parmi de nouveaux enregistrements Zenodo. Un verdict *inexécutable* pour 23437544 n'est pas posé : il faudrait d'abord établir que les données sont inaccessibles sans inscription.
+
+---
+
 ## 2026-10-22T05:05Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commits 0f5dfdb..HEAD : correction:2 au registre (b5440a1), témoin Drive dans `bin/session.sh` (05deab9, conforme à l'art. 4/5 : copie de fichier seulement), prompts. `RAPPORT.md` de `zenodo-23439616` inchangé depuis ma relecture du 2026-10-21 (aucun nombre touché).
