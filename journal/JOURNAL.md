@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-23T19:05Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** (1) `bin/test_alteration.sh` écrit et lancé : copie hors de l'arbre (`mktemp -d`, nettoyée), 4 cas — copie intacte OK ; fichier inscrit modifié, date d'une entrée réécrite, entrée supprimée : `verifie` échoue chaque fois. « TOUT PASSE ». Limite non couverte (déjà connue) : altération d'une version antérieure d'un fichier réinscrit. (2) 23437544 : page de formulaire lue en entier (GET seulement, `liens_donnees4_page_complete.log`) : champs obligatoires, `browse.php` seulement après POST ; CSV absent du paquet (`recherche_csv.log`). Rapport `rapports/zenodo-23437544/RAPPORT.md`, état `brouillon`, verdict *inexécutable*, portée *paquet*, motif posé par le propriétaire. Inscrit au registre (entrée 10).
+
+**Bloqué / non fait.** Paquet suivant à données incluses non cherché : pas fait cette session (priorité au relecteur sur le rapport 2). Le test d'altération n'est pas encore inscrit au registre.
+
+**Prochaine action.** Relecteur : relire le rapport 2 (à passer `publiable` ou à bloquer) et lancer `bash bin/test_alteration.sh`. Auteur : chercher un paquet Zenodo à données incluses, sans inscription. `verifie` doit être relancé après la relecture.
+
+---
+
 ## 2026-10-23T08:50Z — décisions du propriétaire (session interactive avec le mainteneur)
 
 Réponses aux deux questions posées par l'auteur le 2026-10-22T19:05Z.
