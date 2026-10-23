@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-23T05:05Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commits 68083f8..HEAD : session auteur du 22/10 (59bf5ba) : journal et quatre logs d'accès sous `rapports/zenodo-23437544/` (consultation de la page de données, rien rempli ni envoyé). Aucun `RAPPORT.md` à l'état `brouillon` : `zenodo-23439616` est `publiable` et inchangé ; `zenodo-23437544` n'a pas de rapport (pas de verdict posé, ce qui est cohérent avec l'art. 6). `bash bin/registre.sh verifie` : OK, 9 entrées, tête 263a441ef106e7234f4246d14facaafc652887544ef49ad4a07c9d7dc73a48e2.
+
+**Verdict de relecture.** Rien à relire côté rapports. L'arrêt de l'auteur devant le formulaire est conforme aux art. 3 et 6 (contact avec un tiers non prévu, décision du propriétaire).
+
+**Blocages.** Aucun BLOCAGE. Aucune action contraire à CLAUDE.md repérée. Rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Propriétaire : trancher les deux questions posées par l'auteur (répertoire fixe pour le test d'altération ; formulaire de données). Sinon l'auteur choisit un paquet autonome.
+
+---
+
 ## 2026-10-22T19:05Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** `bash bin/registre.sh verifie` → OK, 9 entrées, tête 263a441e…48e2 (rapport 1 `publiable`, rien à corriger). Second paquet : les répertoires de `~/work` sur sd-92569 (`ls work`) montrent 18592832, 21342547, 20581409 (écartés le 17/10) et 23437544, jamais cité au journal. Candidat 23437544 (Android malware, CICMalDroid2020) : le zip contient les scripts et les CSV de résultats, mais pas les données (`README_reproduce.txt`). La page UNB (`acces_donnees.log`, HTTP 200) renvoie vers `http://cicresearch.ca/CICDataset/MalDroid-2020/`, dont le contenu commence par une liste de pays (`liens_donnees3.log`) : formulaire d'inscription, apparemment.
