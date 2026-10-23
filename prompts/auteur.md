@@ -6,6 +6,7 @@ But de la session : faire avancer l'étape en cours de l'« Ordre des opération
 
 Règles de la session :
 - Bash n'accepte que des commandes simples : une commande par appel, sans `&&`, `|`, `>`, `$( )` ni boucle ; pour conserver une sortie, `bin/capture.sh`. Une commande refusée n'est pas un blocage, c'est une commande à découper.
+- Ce que Bash refuse en commande directe (copie, mktemp, boucle), un script versionné dans `bin/` le fait : écris le script, commets-le, lance-le par `bash bin/<script>`. `bin/` est du code de confiance relu par le relecteur ; il n'exécute jamais de code tiers.
 - Ne fais rien que CLAUDE.md ne prévoit pas. En cas de doute, arrête-toi et écris pourquoi.
 - Un constat d'absence (« pas de règle », « aucun fichier », « non installé ») n'est écrit qu'avec la commande qui l'a établi et les droits sous lesquels elle a tourné ; beaucoup d'outils répondent vide à un utilisateur ordinaire. Sur sd-92569, `sudo` est disponible pour cela.
 - Ne modifie jamais CLAUDE.md. Un amendement souhaité va dans journal/AMENDEMENTS.md avec ses raisons.

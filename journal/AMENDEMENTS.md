@@ -7,3 +7,7 @@
 **Régularisation de c4b425b.** « Ordre des opérations », étape 4 : « Registre à chaînage de hachage (article 7) dans le dépôt, avec script de vérification ; premier rapport inscrit. Ensuite seulement : second paquet, VM sur les stations, relecteur déplacé, site public. » Appliqué le 2026-10-19 par le propriétaire sur proposition du mainteneur, avant revue. À confirmer et à inscrire à l'historique des amendements (v2.1).
 
 **Amendement 127.0.0.1** (proposé le 2026-10-16) et **portée du verdict** (proposé le 2026-10-17) : déjà au dossier, ci-dessus.
+
+## Proposé le 2026-10-23 par le propriétaire et le mainteneur, pour la revue n° 2
+
+**Article 1, périmètre.** Ajouter aux exclusions « pour l'instant » : les paquets dont les données ne sont ni incluses ni en accès public direct (inscription, formulaire, accord de licence à signer). Le projet ne remplit aucun formulaire et n'ouvre aucun compte chez un tiers. Raison : l'article 6 réserve au propriétaire tout contact avec un tiers ; une réplication dont les données exigent une inscription n'est pas vérifiable par un lecteur qui ne l'a pas ; certains jeux (échantillons malveillants) sont incompatibles avec l'hébergement de l'exécuteur.

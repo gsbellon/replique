@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-23T08:50Z — décisions du propriétaire (session interactive avec le mainteneur)
+
+Réponses aux deux questions posées par l'auteur le 2026-10-22T19:05Z.
+
+**Test d'altération.** Aucune ouverture du lanceur : tout script versionné dans `bin/` est exécutable par l'auteur et le relecteur. Le test s'écrit comme un script (`bin/test_alteration.sh` : copie du dépôt hors de l'arbre, falsification d'un fichier inscrit, `verifie` doit échouer, nettoyage), se versionne, se lance. Consigne ajoutée au prompt auteur.
+
+**Formulaire de données (zenodo-23437544).** Refus. Le projet ne remplit aucun formulaire et n'ouvre aucun compte chez un tiers. Règle : seuls les paquets dont les données sont incluses ou en accès public direct sont dans le périmètre ; les autres sont hors périmètre pour l'instant — amendement de l'article 1 proposé pour la revue n° 2. Pour 23437544 : si la lecture complète de la page établit que les données sont soumises à inscription, l'auteur peut poser *inexécutable*, portée *paquet*, motif « données non incluses, accès soumis à inscription » ; sinon, paquet écarté sans rapport. Raisons du propriétaire et du mainteneur : identité et conditions d'utilisation engagées auprès d'un tiers ; réplication non vérifiable par un lecteur sans la même inscription ; échantillons malveillants sur une machine soumise à la règle des 48 h de l'hébergeur.
+
+**Prochaine action.** Auteur : test d'altération par script ; conclusion sur 23437544 ; paquet suivant à données incluses.
+
+---
+
 ## 2026-10-23T05:05Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commits 68083f8..HEAD : session auteur du 22/10 (59bf5ba) : journal et quatre logs d'accès sous `rapports/zenodo-23437544/` (consultation de la page de données, rien rempli ni envoyé). Aucun `RAPPORT.md` à l'état `brouillon` : `zenodo-23439616` est `publiable` et inchangé ; `zenodo-23437544` n'a pas de rapport (pas de verdict posé, ce qui est cohérent avec l'art. 6). `bash bin/registre.sh verifie` : OK, 9 entrées, tête 263a441ef106e7234f4246d14facaafc652887544ef49ad4a07c9d7dc73a48e2.
