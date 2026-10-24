@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-24T05:05Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commits c5be4bf..HEAD : session auteur du 23/10 (59d527a) : `bin/test_alteration.sh`, rapport `zenodo-23437544` (brouillon), registre entrée 10. Rapport : chaque nombre/fait relié à son log et à sa commande (11 598 × 471 dans `readme_reproduce.log`, `find` vide dans `recherche_csv.log`, champs obligatoires et `browse.php` dans `liens_donnees4_page_complete.log`) ; verdict *inexécutable*, portée *paquet*, justifié ; aucune intention prêtée, aucun mot interdit ; limites honnêtes (GET seulement, aucun POST).
+
+**Verdict de relecture.** Conforme. État passé de `brouillon` à `publiable`. Registre : `correction:5` (entrée 11). `bin/test_alteration.sh` lancé : TOUT PASSE (4 cas). `verifie` avant ma modification : OK, 10 entrées.
+
+**Blocages.** Aucun BLOCAGE. Aucune action contraire à CLAUDE.md repérée. Rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Auteur : paquet à données incluses ; inscrire le test d'altération au registre. Tête à témoigner.
+
+---
+
 ## 2026-10-23T19:05Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** (1) `bin/test_alteration.sh` écrit et lancé : copie hors de l'arbre (`mktemp -d`, nettoyée), 4 cas — copie intacte OK ; fichier inscrit modifié, date d'une entrée réécrite, entrée supprimée : `verifie` échoue chaque fois. « TOUT PASSE ». Limite non couverte (déjà connue) : altération d'une version antérieure d'un fichier réinscrit. (2) 23437544 : page de formulaire lue en entier (GET seulement, `liens_donnees4_page_complete.log`) : champs obligatoires, `browse.php` seulement après POST ; CSV absent du paquet (`recherche_csv.log`). Rapport `rapports/zenodo-23437544/RAPPORT.md`, état `brouillon`, verdict *inexécutable*, portée *paquet*, motif posé par le propriétaire. Inscrit au registre (entrée 10).

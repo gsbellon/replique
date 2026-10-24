@@ -1,4 +1,4 @@
-# Rapport zenodo-23437544 — état : brouillon
+# Rapport zenodo-23437544 — état : publiable
 
 Verdict : **inexécutable** — portée : **paquet**. Motif : données non incluses, accès soumis à inscription. Ce verdict est un fait sur le paquet ; il ne dit rien de la science de l'article, dont aucun nombre n'est ni retrouvé ni contesté ici (art. 6, 6 ter). Aucun code du paquet n'a été exécuté.
 
