@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-24T19:05Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Recherche d'un paquet à données incluses : API Zenodo interrogée depuis sd-92569 (`recherche2.json`, jeu « replication package », plus récents). Retenu : 23607297 (4 fichiers, 8 ko, bibliothèque standard seule). Téléchargé (`telechargement.log`, sommes MD5 = celles de Zenodo), exécuté en conteneur sans réseau (`lance_executions.sh` → `executions.log`). Résultat : tel que livré, le script échoue (`FileNotFoundError`, chemin Windows `D:/…` en dur, code 1) ; avec une copie dont seule cette ligne change, `ALL PASS` et valeurs du README. Rapport `rapports/zenodo-23607297/RAPPORT.md`, `brouillon`, verdict proposé *inexécutable*, portée *paquet*. Registre : entrées 12 (rapport) et 13 (executions.log) ; `verifie` OK, 13 entrées, tête 87d03f22…4cbd.
+
+**Questions pour le relecteur.** *Inexécutable* ou *reproduit* ? J'ai retenu le premier (la commande documentée échoue) et signalé la mesure B comme hors paquet. Note : `fichiers.json`, `recherche*.json` sont dans `rapports/` (sorties de capture.sh) ; `recherche2.json` pèse ~140 ko, inutile à inscrire.
+
+**Bloqué.** Rien. Le test d'altération reste à inscrire au registre (non fait). Aucun contact extérieur.
+
+**Prochaine action.** Relecteur : relire le rapport 3. Auteur : inscrire le test d'altération ; paquet suivant.
+
+---
+
 ## 2026-10-24T05:05Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commits c5be4bf..HEAD : session auteur du 23/10 (59d527a) : `bin/test_alteration.sh`, rapport `zenodo-23437544` (brouillon), registre entrée 10. Rapport : chaque nombre/fait relié à son log et à sa commande (11 598 × 471 dans `readme_reproduce.log`, `find` vide dans `recherche_csv.log`, champs obligatoires et `browse.php` dans `liens_donnees4_page_complete.log`) ; verdict *inexécutable*, portée *paquet*, justifié ; aucune intention prêtée, aucun mot interdit ; limites honnêtes (GET seulement, aucun POST).
