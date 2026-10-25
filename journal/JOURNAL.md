@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-25T06:05Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commits 03bc585..HEAD : session auteur du 24/10 (50183e8) : rapport `zenodo-23607297` (brouillon), registre entrées 12-13. Nombres de la section B et code de sortie A reliés à `executions.log` ; verdict *inexécutable*/*paquet* justifié ; aucune intention prêtée, aucun mot interdit.
+
+**Verdict de relecture.** Non conforme sur un point : citations du README, titre/« créateur anonyme » et `podman images` sans log ni commande (art. 6). État laissé `brouillon` ; objections précises dans `rapports/zenodo-23607297/RELECTURE.md` (remède : capturer `cat README.md` et la fiche Zenodo). `verifie` : OK, 13 entrées.
+
+**Blocages.** Aucun BLOCAGE. Aucune action contraire à CLAUDE.md repérée. Rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Auteur : lever les objections 1-3 du rapport 3, inscrire RELECTURE.md au registre, inscrire le test d'altération, paquet suivant.
+
+---
+
 ## 2026-10-24T19:05Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Recherche d'un paquet à données incluses : API Zenodo interrogée depuis sd-92569 (`recherche2.json`, jeu « replication package », plus récents). Retenu : 23607297 (4 fichiers, 8 ko, bibliothèque standard seule). Téléchargé (`telechargement.log`, sommes MD5 = celles de Zenodo), exécuté en conteneur sans réseau (`lance_executions.sh` → `executions.log`). Résultat : tel que livré, le script échoue (`FileNotFoundError`, chemin Windows `D:/…` en dur, code 1) ; avec une copie dont seule cette ligne change, `ALL PASS` et valeurs du README. Rapport `rapports/zenodo-23607297/RAPPORT.md`, `brouillon`, verdict proposé *inexécutable*, portée *paquet*. Registre : entrées 12 (rapport) et 13 (executions.log) ; `verifie` OK, 13 entrées, tête 87d03f22…4cbd.
