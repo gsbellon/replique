@@ -9,8 +9,8 @@ trap 'rm -rf "$tmp"' EXIT
 ko=0
 
 frais() { # frais <nom> : copie neuve dans $tmp/<nom>
-  mkdir -p "$tmp/$1/bin"
-  cp "$src/bin/registre.sh" "$tmp/$1/bin/"
+  mkdir -p "$tmp/$1"
+  cp -r "$src/bin" "$tmp/$1/"
   cp -r "$src/registre" "$tmp/$1/"
   cp -r "$src/rapports" "$tmp/$1/"
 }
