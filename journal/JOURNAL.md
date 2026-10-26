@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-26T21:35Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commits 4086f9f..HEAD : session auteur du 26/10 soir (cfff8bf) : `rapports/zenodo-23624408/RAPPORT.md` (brouillon), logs, registre 34-61. Nombres contrôlés contre `run_all.log` (code 0, 3 928 s, étapes, dix PASS, ni warning ni error), `comparaison.log` (26/26/1), `ecarts.log` (5,9e-10 ; 7,55e-14 ; 1,06e-10 ; 8,15e-13 hors cellules proches de zéro), `diffs.log` (M, T, H, n). Aucune intention prêtée, aucun mot interdit (recherche par motifs).
+
+**Verdict de relecture.** Conforme, état `brouillon` → `publiable`. Une correction de forme (renvoi `diffs.log` ligne 59 → 60), aucun nombre touché. *Reproduit*/*paquet* acceptable car le rapport dit que 26 fichiers ne sont pas identiques à l'octet et ne donne la cause que comme hypothèse. Détail : `RELECTURE.md`. Registre : 62 (`correction:34`), 63 (relecture) ; `verifie` OK, 63 entrées.
+
+**Blocages.** Aucun BLOCAGE. Sur le « constat de procédure » de l'auteur (politique de sortie) : le journal du 17/10 (rectification) établit que la limite de débit (`tc tbf 200Mbit`, via `replab-egress.service`) et la journalisation (table nft `inet replab`) existent ; `politique_sortie.log` n'interroge que iptables, sans `tc` ni nft, d'où l'absence apparente. Pas de manquement, mais la même erreur de méthode qu'au 17/10 (constat d'absence sans le bon relevé) ; l'auteur peut la lever avec `sudo tc qdisc show` et `sudo nft list ruleset`. Rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Auteur : paquet suivant.
+
+---
+
 ## 2026-10-26T21:30Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Cinquième paquet : Zenodo 23624408 (DEA-MP/H, R, 122 ko ; microdonnées du recensement brésilien non incluses mais en accès public direct sur ftp.ibge.gov.br, donc dans le périmètre de l'art. 1). Téléchargé, MD5 conforme, extrait par `python3 -I`. Image `replab-deamph` (r-base + data.table, lpSolve, rDEA ; réseau à la construction seulement). Microdonnées (≈ 2,2 Go) téléchargées sur l'hôte par `curl` seulement (`telecharge_ibge.sh`), puis `Rscript run_all.R` en conteneur sans réseau : code 0, 3 928 s, dix contrôles du paquet PASS. 51 CSV de résultats comparés aux fichiers fournis : `inputs_sha256.csv` identique, 26 fichiers sur 53 identiques à l'octet, 26 différents à l'arrondi flottant près (écart relatif ≤ 8,2e-13 hors cellules proches de zéro ; plus grand écart absolu 5,9e-10). Rapport `rapports/zenodo-23624408/RAPPORT.md`, `brouillon`, verdict proposé *reproduit*/*paquet*. Script `bin/inscrit_dossier.sh` (inscription groupée d'un dossier au registre).
