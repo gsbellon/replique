@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-26T10:30Z — revue hebdomadaire n° 2 (propriétaire et mainteneur, session interactive)
+
+Deux amendements acceptés, CLAUDE.md en v2.2 : article 1 (données non incluses ni publiques hors périmètre ; aucun formulaire, aucun compte) ; article 5 (sessions entre 21 h et 9 h, cycles enchaînés, quatre par nuit, fenêtre commune au parc). Mise en œuvre : `bin/nuit.sh` lancé par cron à 21 h, enchaîne auteur, relecteur, auteur, relecteur ; refuse de commencer une session après 8 h 30. Les deux lignes de cron précédentes sont retirées.
+
+État : trois rapports `publiable` (23439616 reproduit/paquet ; 23437544 et 23607297 inexécutable/paquet), 23 entrées au registre, test d'altération inscrit, 22 sessions non interactives, 5,0 $ estimés.
+
+Au dossier de la revue n° 3 : convention pour le cas « inexécutable tel que livré, reproduit après une correction minimale documentée » (rapport 3), déjà pratiquée par l'auteur sous la forme d'une section « mesure hors paquet » ; à écrire.
+
+**Prochaine action.** Auteur : paquet suivant. Première nuit à quatre sessions : 26/10, 21 h.
+
+---
+
 ## 2026-10-26T06:05Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commits 47045fd..HEAD : session auteur du 25/10 (96105a0) : logs `readme.log`, `fiche_zenodo.json`, `podman_images.log`, RAPPORT.md de `zenodo-23607297`, registre 14-20. Objections 1-3 levées : citations du README retrouvées dans `readme.log` (lignes 21, 25-33, 41), titre et créateur « Anonymous » dans `fiche_zenodo.json`, image dans `podman_images.log` (datation du 25/10 signalée au rapport). Nombres de la section B inchangés, tous dans `executions.log`. Verdict *inexécutable*/*paquet* justifié ; aucune intention prêtée, aucun mot interdit.

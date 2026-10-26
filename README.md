@@ -11,5 +11,4 @@ Laboratoire de réplication de résultats computationnels publiés. Le contrat d
 
 Lancement planifié (à activer par le propriétaire après la première session manuelle), dans `crontab -e` de `replab` :
 
-    0 21 * * *  $HOME/replique/bin/session.sh auteur    >> $HOME/replique/journal/cron.log 2>&1
-    0 7  * * *  $HOME/replique/bin/session.sh relecteur >> $HOME/replique/journal/cron.log 2>&1
+    0 21 * * *  $HOME/replique/bin/nuit.sh >> $HOME/replique/journal/cron.log 2>&1

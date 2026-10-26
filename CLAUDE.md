@@ -4,7 +4,7 @@ Nom de travail : **Réplique** (identifiant technique `replab`). Le propriétair
 
 Ce fichier est lu en premier par chaque session de travail. Il est le seul endroit où la volonté du projet persiste d'une session à l'autre. Tout ce qui n'est pas écrit ici n'engage personne.
 
-Version 2.1 — 2026-10-20. Historique des amendements en fin de document.
+Version 2.2 — 2026-10-26. Historique des amendements en fin de document.
 
 ---
 
@@ -14,7 +14,7 @@ Réplique réexécute des résultats computationnels publiés, à partir de paqu
 
 Le projet vaut par ses rapports, pas par son audience. Il doit avoir de la valeur même si personne ne le lit pendant six mois.
 
-Hors périmètre, définitivement : tout jeton ou instrument financier ; tout réseau social pour agents ; tout dispositif qui n'a de sens qu'avec un public humain. Hors périmètre, pour l'instant : les paquets exigeant un logiciel payant (Stata, MATLAB, SAS).
+Hors périmètre, définitivement : tout jeton ou instrument financier ; tout réseau social pour agents ; tout dispositif qui n'a de sens qu'avec un public humain. Hors périmètre, pour l'instant : les paquets exigeant un logiciel payant (Stata, MATLAB, SAS) ; les paquets dont les données ne sont ni incluses ni en accès public direct (inscription, formulaire, accord à signer). Le projet ne remplit aucun formulaire et n'ouvre aucun compte chez un tiers.
 
 ## 2. Les parties
 
@@ -53,7 +53,7 @@ Hors périmètre, définitivement : tout jeton ou instrument financier ; tout r�
 
 ## 5. Rythme, budget, discipline de session
 
-Deux sessions par jour au plus : la session **auteur** le soir, la session **relecteur** le matin, sans contexte partagé avec l'auteur. Tant que la VM d'une station n'existe pas, les deux tournent dans le pilote, comme deux sessions distinctes qui ne lisent que le dépôt ; le relecteur migre sur une station dès que possible. Le relecteur peut bloquer une publication ; le blocage et sa raison vont au journal.
+Les sessions ont lieu entre 21 h et 9 h, en cycles **auteur**–**relecteur** enchaînés, quatre sessions par nuit au plus ; une session ne commence jamais avant la fin de la précédente ; le relecteur ne partage aucun contexte avec l'auteur. Cette fenêtre vaut pour tout le parc, quelle que soit la machine : le projet vit sur le temps où les machines ne servent à rien d'autre. Tant que la VM d'une station n'existe pas, les deux tournent dans le pilote, comme deux sessions distinctes qui ne lisent que le dépôt ; le relecteur migre sur une station dès que possible. Le relecteur peut bloquer une publication ; le blocage et sa raison vont au journal.
 
 **Mode d'exécution.** Les sessions sont lancées par cron dans le pilote, en mode non interactif (`claude -p`), avec une liste d'outils autorisés explicite, une limite de tours et un plafond de dépense estimée par session, tous trois versionnés dans le dépôt. Aucun agent ne tourne en arrière-plan hors des tâches planifiées listées dans le dépôt.
 
@@ -119,3 +119,4 @@ Un projet sans condition de fin n'est pas un projet.
 - v1, 2026-09-08 — rédaction initiale par le mainteneur, soumise au propriétaire.
 - v2, 2026-10-16 — rédigée par le mainteneur après vérification de la documentation produit et décisions du propriétaire du jour. Article 3 : arrêt d'office étendu aux alertes de l'hébergeur ; repli d'authentification réservé au propriétaire. Article 4 : sd-92569 libéré et réinstallé (Debian 13), frontière transitoire supprimée ; plan de contrôle déplacé de sd-114393 vers une VM sur le poste fixe du propriétaire, sd-114393 sorti du projet après son incident de septembre ; laptop sorti du projet ; témoins GitHub et Google Drive ; politique de sortie de l'exécuteur. Article 5 : mode d'exécution (`claude -p` par cron) et authentification (abonnement Max, repli par clé API plafonnée) ; mesure du coût sur les dix premières sessions ; sauvegarde. Article 6 bis créé : déclaration de proximité du propriétaire. Article 9 : recalibration du seuil après dix rapports.
 - v2.1, 2026-10-20 — première revue hebdomadaire, trois amendements acceptés par le propriétaire : article 4, redirection liée à 127.0.0.1 admise pour la console du propriétaire (pratique du 16/10) ; article 6 ter créé, portée du verdict (*paquet* ou *article*), l'article 6 restant intact ; « Ordre des opérations », étape 4 (registre avant second paquet), appliquée le 19/10 avant revue, régularisée. Règle retenue : toute modification de ce fichier, planning compris, passe par le journal le jour même et par la revue suivante.
+- v2.2, 2026-10-26 — revue hebdomadaire n° 2, deux amendements acceptés par le propriétaire : article 1, exclusion des paquets dont les données ne sont ni incluses ni en accès public direct (décision du 23/10 sur zenodo-23437544) ; article 5, sessions entre 21 h et 9 h en cycles enchaînés, quatre par nuit au plus, fenêtre commune à tout le parc. Données au dossier : dix-huit sessions entre 0,10 et 0,40 $ estimés ; usage du quota Max inférieur à 30 % hebdomadaire tous usages confondus au 23/10.
