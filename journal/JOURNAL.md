@@ -4,6 +4,20 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-26T21:30Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Cinquième paquet : Zenodo 23624408 (DEA-MP/H, R, 122 ko ; microdonnées du recensement brésilien non incluses mais en accès public direct sur ftp.ibge.gov.br, donc dans le périmètre de l'art. 1). Téléchargé, MD5 conforme, extrait par `python3 -I`. Image `replab-deamph` (r-base + data.table, lpSolve, rDEA ; réseau à la construction seulement). Microdonnées (≈ 2,2 Go) téléchargées sur l'hôte par `curl` seulement (`telecharge_ibge.sh`), puis `Rscript run_all.R` en conteneur sans réseau : code 0, 3 928 s, dix contrôles du paquet PASS. 51 CSV de résultats comparés aux fichiers fournis : `inputs_sha256.csv` identique, 26 fichiers sur 53 identiques à l'octet, 26 différents à l'arrondi flottant près (écart relatif ≤ 8,2e-13 hors cellules proches de zéro ; plus grand écart absolu 5,9e-10). Rapport `rapports/zenodo-23624408/RAPPORT.md`, `brouillon`, verdict proposé *reproduit*/*paquet*. Script `bin/inscrit_dossier.sh` (inscription groupée d'un dossier au registre).
+
+**À examiner par le relecteur.** (1) *Reproduit* avec des fichiers qui ne sont pas identiques à l'octet : le rapport l'écrit en toutes lettres et chiffre les écarts ; la cause (plateforme numérique) n'est qu'une hypothèse, notée comme telle. (2) Les fichiers IBGE ont été placés par `curl` hors du code du paquet (voie « à la main » du README). (3) `tests/expected_values.csv` est absent de l'archive : aucune comparaison avec les valeurs de l'article.
+
+**Constat de procédure.** La politique de sortie vue sur sd-92569 (`politique_sortie.log`) ne montre que le blocage des ports 25, 465 et 587 ; je n'ai pas cherché de limitation de débit ni de journalisation des destinations (autre chaîne ou `tc`), et le code du paquet n'avait de toute façon aucun réseau. À confirmer par le propriétaire ou à contrôler à la prochaine session (art. 4).
+
+**Non fait.** Aucun contact extérieur. Pas de comparaison au manuscrit. Coût estimé : voir USAGE.tsv.
+
+**Prochaine action.** Relecteur : juger le rapport 5. Auteur : paquet suivant ; vérifier la politique de sortie (`sudo tc qdisc show`, règles de journalisation) avant le suivant.
+
+---
+
 ## 2026-10-26T20:45Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commits 58377c7..HEAD : session auteur du 26/10 (48e147a) : `rapports/zenodo-23511350/RAPPORT.md` (brouillon), logs, registre 24-31. Contrôlé contre les logs : code 1 et message NumPy (`executions.log` l. 7, 14), NumPy 2.5.4 (`executions_numpy.log` l. 12, 22), manifeste 138, médianes appariées et graine 20260922 (l. 24-29), `TOTAL=97 PASS=97`, `ARM64_TOTAL=72 PASS=72` (l. 140, 214), `graphs_tested=1099` (l. 215), `trials_per_parameter` 10000 (l. 221), `DFAR_FULL_VERIFICATION_PASS` et code 0 (l. 376-377), citations du guide (`guide.log` l. 58-64, 134-143). Chaque nombre est relié à sa commande ou à son log ; aucune intention prêtée, aucun mot interdit (recherche par motifs faite).
