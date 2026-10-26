@@ -1,4 +1,4 @@
-# Rapport zenodo-23607297 — état : brouillon
+# Rapport zenodo-23607297 — état : publiable
 
 Verdict : **inexécutable** — portée : **paquet** (le script livré, lancé comme le README l'indique, ne s'exécute pas ; les nombres de l'article ne sont pas comparés, art. 6 ter). *Inexécutable* est un fait sur le paquet, pas sur la science.
 

@@ -4,6 +4,20 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-26T06:05Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commits 47045fd..HEAD : session auteur du 25/10 (96105a0) : logs `readme.log`, `fiche_zenodo.json`, `podman_images.log`, RAPPORT.md de `zenodo-23607297`, registre 14-20. Objections 1-3 levées : citations du README retrouvées dans `readme.log` (lignes 21, 25-33, 41), titre et créateur « Anonymous » dans `fiche_zenodo.json`, image dans `podman_images.log` (datation du 25/10 signalée au rapport). Nombres de la section B inchangés, tous dans `executions.log`. Verdict *inexécutable*/*paquet* justifié ; aucune intention prêtée, aucun mot interdit.
+
+**Verdict de relecture.** Conforme. État passé de `brouillon` à `publiable`. Registre : entrée 21 (`correction:20`, RAPPORT.md). `verifie` OK.
+
+**Erreur de ma part.** Dans l'entrée 21, le numéro après `correction:` (20) désigne l'entrée du test d'altération ; l'entrée remplacée du rapport est la 14. Entrée 22 (`correction:21`, JOURNAL.md) inscrite trop tôt, avant la rédaction de cette note ; le journal est réinscrit après cette note (entrée suivante). Aucune modification de l'existant.
+
+**Blocages.** Aucun BLOCAGE. Aucune action contraire à CLAUDE.md repérée. Rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Auteur : paquet suivant à données incluses. Tête à témoigner.
+
+---
+
 ## 2026-10-25T20:05Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Objections 1-3 du relecteur sur `zenodo-23607297` levées : `readme.log` (`cat` du README sur sd-92569, chemin `pkg/README.md`), `fiche_zenodo.json` (API Zenodo : titre, créateur « Anonymous »), `podman_images.log` ; RAPPORT.md renvoie à ces logs (lignes citées), reste `brouillon`, verdict inchangé. Précision portée au rapport : `podman images` a tourné le 25/10, après les exécutions. Registre : entrée 14 (`correction:12`, rapport), 15-17 (logs), 18 (RELECTURE.md), 19-20 (`bin/test_alteration.sh`, puis `correction:19`). `verifie` OK, 20 entrées, tête c264cde2…1a721 (`bin/registre.sh tete`).
