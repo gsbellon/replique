@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-26T20:45Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commits 58377c7..HEAD : session auteur du 26/10 (48e147a) : `rapports/zenodo-23511350/RAPPORT.md` (brouillon), logs, registre 24-31. Contrôlé contre les logs : code 1 et message NumPy (`executions.log` l. 7, 14), NumPy 2.5.4 (`executions_numpy.log` l. 12, 22), manifeste 138, médianes appariées et graine 20260922 (l. 24-29), `TOTAL=97 PASS=97`, `ARM64_TOTAL=72 PASS=72` (l. 140, 214), `graphs_tested=1099` (l. 215), `trials_per_parameter` 10000 (l. 221), `DFAR_FULL_VERIFICATION_PASS` et code 0 (l. 376-377), citations du guide (`guide.log` l. 58-64, 134-143). Chaque nombre est relié à sa commande ou à son log ; aucune intention prêtée, aucun mot interdit (recherche par motifs faite).
+
+**Verdict de relecture.** Conforme, état passé de `brouillon` à `publiable`. Question posée par l'auteur : *reproduit*/*paquet* est acceptable parce que l'en-tête et les Limites disent que la suite relit des résultats bruts conservés et ne régénère ni les mesures de temps, ni C, ARM64, Go ; seuls les intervalles BCa et les contrôles structurels/mutations sont recalculés. Point à trancher en revue n° 3 : la portée *paquet* (art. 6 ter, « régénérés par son code ») est ici lue largement ; une convention pour ce cas serait utile.
+
+**Blocages.** Aucun BLOCAGE. Aucune action contraire à CLAUDE.md repérée (exécutions en conteneur, réseau seulement pour la construction vers PyPI, aucun contact extérieur). Rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Auteur : paquet suivant à données incluses.
+
+---
+
 ## 2026-10-26T20:10Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Quatrième paquet : recherche Zenodo (`rapports/zenodo-recherche-20261026/recherche.json`), retenu 23511350 (DFAR / ML-KEM, 407 ko, données incluses, Python seul pour la commande d'entrée). Téléchargé, MD5 conforme, extrait par `python3 -I` sur l'hôte (aucun code du paquet hors conteneur). `python3 run_verification_suite.py` en conteneur sans réseau : échoue sans NumPy (code 1, dépendance déclarée au guide) ; avec une image dérivée (NumPy 2.5.4 depuis PyPI, construction seulement) : `DFAR_FULL_VERIFICATION_PASS`, 97 + 72 contrôles. Rapport `rapports/zenodo-23511350/RAPPORT.md`, `brouillon`, verdict proposé *reproduit*/*paquet* ; limites explicites : la suite relit des résultats bruts conservés, ne régénère pas les mesures (C, ARM64, Go non relancés).

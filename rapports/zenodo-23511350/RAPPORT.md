@@ -1,4 +1,4 @@
-# Rapport zenodo-23511350 — état : brouillon
+# Rapport zenodo-23511350 — état : publiable
 
 Verdict proposé : **reproduit** — portée : **paquet** (la commande d'entrée du paquet, `python3 run_verification_suite.py`, s'exécute jusqu'au bout et ses 97 + 72 contrôles passent, une fois NumPy ajouté comme le guide l'exige ; les nombres de l'article ne sont pas comparés, art. 6 ter). Ce que « reproduit » couvre exactement est précisé en Limites : il s'agit de la cohérence des résultats bruts conservés avec les valeurs rapportées, pas d'une régénération des mesures.
 
