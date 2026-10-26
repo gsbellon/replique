@@ -1,0 +1,6 @@
+# commande : ssh sd-92569 curl -s -m 30 'https://zenodo.org/api/records/23511350/files'
+# début    : 2026-10-26T20:00:33Z
+# ----
+{"enabled": true, "links": {"self": "https://zenodo.org/api/records/23511350/files"}, "entries": [{"created": "2026-10-25T20:33:56.851768+00:00", "updated": "2026-10-25T20:33:56.876250+00:00", "mimetype": "application/zip", "version_id": "3b4764f4-be09-4ffa-8b40-df55db1d62cb", "file_id": "a20f784c-1b9d-4f28-8b08-8116b7a3740e", "bucket_id": "726a3840-59a6-4e50-ab32-310699097c58", "metadata": {"zip_toc_position": 389744}, "access": {"hidden": false}, "links": {"self": "https://zenodo.org/api/records/23511350/files/DFAR_Replication_Package_Final_Zenodo.zip", "content": "https://zenodo.org/api/records/23511350/files/DFAR_Replication_Package_Final_Zenodo.zip/content", "container": "https://zenodo.org/api/records/23511350/files/DFAR_Replication_Package_Final_Zenodo.zip/container"}, "key": "DFAR_Replication_Package_Final_Zenodo.zip", "size": 407114, "transfer": {"type": "L"}, "status": "completed", "checksum": "md5:bcbdf663c698f3709e974efbad0604c0", "storage_class": "L"}], "default_preview": null, "order": []}# ----
+# code de sortie : 0
+# durée (s)      : 0

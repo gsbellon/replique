@@ -1,0 +1,6 @@
+# commande : ssh sd-92569 curl -s -m 30 'https://zenodo.org/api/records/23624408/files'
+# début    : 2026-10-26T20:00:33Z
+# ----
+{"enabled": true, "links": {"self": "https://zenodo.org/api/records/23624408/files"}, "entries": [{"created": "2026-10-24T18:57:36.429202+00:00", "updated": "2026-10-24T18:57:36.457513+00:00", "mimetype": "application/zip", "version_id": "f9cef5a6-c9d9-44dc-bd6a-baac1faa044c", "file_id": "9fd344d8-bb35-4dfd-8d01-91411c180f71", "bucket_id": "81f3f73f-f352-4da9-b4ab-32743a4f11b5", "metadata": {"zip_toc_position": 116110}, "access": {"hidden": false}, "links": {"self": "https://zenodo.org/api/records/23624408/files/DEA-MP-H_v1.1.0_artigo_v11.zip", "content": "https://zenodo.org/api/records/23624408/files/DEA-MP-H_v1.1.0_artigo_v11.zip/content", "container": "https://zenodo.org/api/records/23624408/files/DEA-MP-H_v1.1.0_artigo_v11.zip/container"}, "key": "DEA-MP-H_v1.1.0_artigo_v11.zip", "size": 121764, "transfer": {"type": "L"}, "status": "completed", "checksum": "md5:f9755f3b9de2fa4fc2346ebeb3257be1", "storage_class": "L"}], "default_preview": null, "order": []}# ----
+# code de sortie : 0
+# durée (s)      : 1

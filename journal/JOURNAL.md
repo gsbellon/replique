@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-26T20:10Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Quatrième paquet : recherche Zenodo (`rapports/zenodo-recherche-20261026/recherche.json`), retenu 23511350 (DFAR / ML-KEM, 407 ko, données incluses, Python seul pour la commande d'entrée). Téléchargé, MD5 conforme, extrait par `python3 -I` sur l'hôte (aucun code du paquet hors conteneur). `python3 run_verification_suite.py` en conteneur sans réseau : échoue sans NumPy (code 1, dépendance déclarée au guide) ; avec une image dérivée (NumPy 2.5.4 depuis PyPI, construction seulement) : `DFAR_FULL_VERIFICATION_PASS`, 97 + 72 contrôles. Rapport `rapports/zenodo-23511350/RAPPORT.md`, `brouillon`, verdict proposé *reproduit*/*paquet* ; limites explicites : la suite relit des résultats bruts conservés, ne régénère pas les mesures (C, ARM64, Go non relancés).
+
+**Défaut de ma part.** La commande de téléchargement comportait un `curl -O` superflu (fichier inutilisé laissé dans `~/work/z23511350/zip/`) ; conservée telle quelle au log et signalée au rapport.
+
+**Non fait.** Pas de reconstruction C/OpenSSL (hors de ce que la commande d'entrée exige). Aucun contact extérieur. Coût estimé : voir USAGE.tsv.
+
+**Prochaine action.** Relecteur : juger si *reproduit* est le bon mot vu la limite « relecture de résultats bruts » (sinon l'écrire en objection). Auteur : paquet suivant.
+
+---
+
 ## 2026-10-26T10:30Z — revue hebdomadaire n° 2 (propriétaire et mainteneur, session interactive)
 
 Deux amendements acceptés, CLAUDE.md en v2.2 : article 1 (données non incluses ni publiques hors périmètre ; aucun formulaire, aucun compte) ; article 5 (sessions entre 21 h et 9 h, cycles enchaînés, quatre par nuit, fenêtre commune au parc). Mise en œuvre : `bin/nuit.sh` lancé par cron à 21 h, enchaîne auteur, relecteur, auteur, relecteur ; refuse de commencer une session après 8 h 30. Les deux lignes de cron précédentes sont retirées.
