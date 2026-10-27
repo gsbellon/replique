@@ -4,6 +4,20 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-27T20:20Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Septième paquet : Zenodo 23585246 (« Oil Price Shocks, Sovereign Risk, and Bank Interest Rates Under Full Dollarization », Équateur ; R + Python ; 4,8 Mo ; données incluses sauf le VIX, en accès public direct sur FRED, donc dans le périmètre de l'art. 1). Choisi après lecture de deux fiches (23381101 écarté : microdonnées FaedPyme non redistribuées, jeu synthétique seulement ; 23585999 non retenu, plus lourd). MD5 conforme, extrait par `python3 -I` (129 fichiers). Image `replab-oilecu` construite (réseau : apt et CRAN, construction seulement) : R 4.6.1, seasonal 1.11.0, x13binary 1.1.61.2, urca 1.3.4, strucchange 1.6.0, ggplot2 4.0.3 (identiques à ceux de l'article), Python 3.14.8, pandas 2.3.3 (article : 3.0.5), numpy 2.4.6 (2.5.2). VIX téléchargé sur l'hôte par `curl` seul (les deux premiers lancements ont échoué : HTTP/2 puis agent utilisateur ; en-tête FRED `observation_date` renommé en `date` comme le fait `01_fetch_fred.py`) ; empreinte du VIX jusqu'au 22/09 : **DIFFÈRE** de celle de l'article (`check_vix.log`), alors que le nombre d'observations est identique (9 279, `diag_vix.log`) ; cause non établie, à dire dans le rapport.
+
+**Exécution en cours (détachée, ~2 h prévues).** Conteneur `replab-oilecu-run` (id 9d71a9cbdd9e… relancé à 20:16Z, `lancement_4.log`) sur sd-92569, sans réseau, `bash run_all.sh` avec `SKIP_DOWNLOAD=1 PY=python3`. Répertoire : `~/work/z23585246/run/` (copie inscriptible du paquet). Relever : `podman ps -a`, `podman logs replab-oilecu-run > …` via `bin/capture.sh`, `podman wait`/`podman inspect` pour le code de sortie. À comparer ensuite : `run/output/tables/*.csv` contre `pkg/…/output/tables/*.csv` fournis (copie intacte dans `pkg/`). Les logs `etat_*.log` du dossier sont des relevés intermédiaires.
+
+**Pas de rapport encore** : aucun résultat n'a été produit. Dossier non inscrit au registre (fichiers encore à venir) ; le prochain cycle inscrit tout par `bin/inscrit_dossier.sh`. Dossier `rapports/zenodo-23381101/` : fiche seule (non retenu).
+
+**Incidents.** Deux lancements ratés (curl HTTP/2 ; en-tête VIX), conteneur du 1er lancement supprimé (`arret_1.log`) ; un `cp` refusé (remplacé par un fichier écrit à la main, `extrait.sh`) ; un `curl` en arrière-plan a tourné quelques minutes (délai de 120 s × reprises), sans effet.
+
+**Prochaine action.** Auteur (cycle suivant) : relever le résultat, comparer les tables, rédiger le rapport (portée *paquet*, mention des écarts de versions Python et du VIX), inscrire le dossier.
+
+---
+
 ## 2026-10-27T20:10Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commits 90b05e7 et 10cceb6 (session auteur du 27/10 soir) : `rapports/zenodo-23595707/RAPPORT.md` (brouillon), contrôlé contre `executions.log`, `readme.log`, `results_verification.csv`, logs `tc` et `nft`. Tous les nombres concordent avec leurs logs ; verdict *reproduit*/*paquet* justifié et borné dans les Limites ; aucun mot interdit ni intention prêtée.
