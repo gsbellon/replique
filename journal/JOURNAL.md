@@ -4,6 +4,20 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-27T09:30Z — relève par le mainteneur (session interactive) avec le propriétaire
+
+Première nuit à quatre sessions : deux rapports écrits et passés `publiable` le soir même (23511350, 23624408) ; cinq rapports au total ; 2,36 $ estimés pour la nuit, 7,4 $ depuis le début.
+
+**Registre.** `verifie` échouait sur l'entrée 61 (journal inscrit en cours de session, puis modifié par l'entrée du relecteur — même défaut que le 26/10, entrée 22). Correction de conception : le lanceur inscrit `journal/JOURNAL.md` après chaque session qui l'a modifié ; les sessions ne l'inscrivent plus. Entrée `journal` ajoutée ci-après pour rétablir la chaîne ; rien d'ancien modifié.
+
+**Consigne ajoutée (prompt auteur).** Exécutions de plus d'une heure : détachées sur l'exécuteur, relevées au cycle suivant. Motif : le garde-fou de deux heures tue la session, pas le conteneur (défaut du `timeout` noté le 17/10).
+
+**Au dossier de la revue n° 3** (avec « hors paquet ») : portée *paquet* quand la suite du paquet relit des résultats conservés sans les régénérer (rapport 4, question du relecteur du 26/10 20:45Z).
+
+**Prochaine action.** Auteur : paquet suivant ; outiller l'exécution détachée avant le premier paquet long.
+
+---
+
 ## 2026-10-26T21:35Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commits 4086f9f..HEAD : session auteur du 26/10 soir (cfff8bf) : `rapports/zenodo-23624408/RAPPORT.md` (brouillon), logs, registre 34-61. Nombres contrôlés contre `run_all.log` (code 0, 3 928 s, étapes, dix PASS, ni warning ni error), `comparaison.log` (26/26/1), `ecarts.log` (5,9e-10 ; 7,55e-14 ; 1,06e-10 ; 8,15e-13 hors cellules proches de zéro), `diffs.log` (M, T, H, n). Aucune intention prêtée, aucun mot interdit (recherche par motifs).

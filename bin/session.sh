@@ -62,6 +62,10 @@ else
   printf '%s\t%s\t%s\t?\t?\t?\t?\t?\t?\t?\n' "$TS" "$ROLE" "$RC" >> "$USAGE"
 fi
 
+# Registre : si la session a modifié le journal, le lanceur l'inscrit (les sessions ne l'inscrivent jamais elles-mêmes)
+if [ -x bin/registre.sh ] && [ -f registre/chaine.tsv ] && ! git diff --quiet HEAD -- journal/JOURNAL.md; then
+  bash bin/registre.sh ajoute journal journal/JOURNAL.md >>"$ERR" 2>&1 || echo "registre : inscription du journal en échec" >> "$ERR"
+fi
 # Trace : commit même si la session n'a rien fait, puis poussée si un remote existe
 git add -A
 if git diff --cached --quiet; then

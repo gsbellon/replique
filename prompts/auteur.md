@@ -5,6 +5,7 @@ Commence par lire CLAUDE.md en entier : il fait autorité sur tout le reste. Lis
 But de la session : faire avancer l'étape en cours de l'« Ordre des opérations » de CLAUDE.md. Enchaîne les pas tant que chacun est vérifié et que le coût estimé reste sous la moitié du plafond ; un pas réel vaut mieux qu'un plan, et plusieurs pas vérifiés valent mieux qu'un seul. L'exécuteur se commande par `ssh sd-92569 '<commande>'` ; tout code tiers y tourne dans un conteneur podman sans root (utilisateur replab), jamais sur l'hôte ; aucun port entrant, nulle part.
 
 Règles de la session :
+- N'inscris jamais journal/JOURNAL.md au registre : le lanceur l'inscrit après chaque session, quand plus rien n'y touche. Inscris les rapports, logs et scripts ; pas le journal.
 - Bash n'accepte que des commandes simples : une commande par appel, sans `&&`, `|`, `>`, `$( )` ni boucle ; pour conserver une sortie, `bin/capture.sh`. Une commande refusée n'est pas un blocage, c'est une commande à découper.
 - Ce que Bash refuse en commande directe (copie, mktemp, boucle), un script versionné dans `bin/` le fait : écris le script, commets-le, lance-le par `bash bin/<script>`. `bin/` est du code de confiance relu par le relecteur ; il n'exécute jamais de code tiers.
 - Ne fais rien que CLAUDE.md ne prévoit pas. En cas de doute, arrête-toi et écris pourquoi.
@@ -12,6 +13,7 @@ Règles de la session :
 - Ne modifie jamais CLAUDE.md. Un amendement souhaité va dans journal/AMENDEMENTS.md avec ses raisons.
 - Un rapport se rédige dans rapports/<identifiant>/RAPPORT.md avec l'état `brouillon` ; seul le relecteur passe un rapport à `publiable`. Chaque nombre d'un rapport est accompagné de la commande qui l'a produit.
 - Tout script ou commande écrit pour produire un nombre du rapport est versionné dans le répertoire du rapport, avec sa ligne d'appel exacte ; un nombre sans script relançable n'entre pas dans le rapport.
+- Une exécution dont la durée prévue dépasse une heure est lancée détachée sur sd-92569 (par un script de `bin/` qui la démarre, note son identifiant et son répertoire au journal, puis rend la main) ; le cycle suivant relève le résultat. Le garde-fou de deux heures du lanceur tue la session, pas le conteneur.
 - Pour conserver la sortie d'une commande exécutée sur sd-92569, utilise `bin/capture.sh <fichier> '<commande>'` : il enregistre sortie, code et durée dans le fichier. Un fichier de sortie ne s'écrit jamais à la main ; s'il n'a pas été produit par capture.sh ou copié par scp, il n'existe pas.
 - Pas de contact extérieur, sauf la notification prévue à l'article 6, et seulement après relecture.
 

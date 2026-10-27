@@ -16,3 +16,6 @@
 
 ## Pour la revue n° 3 — convention « hors paquet »
 Quand la commande documentée échoue mais qu'une correction minimale et nommée (un chemin, une version) suffit à retrouver les résultats, le verdict reste *inexécutable* (il porte sur le paquet tel que livré) et le rapport peut comporter une section « mesure hors paquet », clairement marquée, donnant la correction exacte et le résultat obtenu. Raison : c'est le cas le plus fréquent ; le lecteur et l'auteur du paquet ont besoin des deux informations, et le verdict ne doit pas récompenser une réparation que le paquet n'a pas faite.
+
+## Pour la revue n° 3 — portée et régénération (ajouté le 2026-10-27)
+Le rapport 4 (23511350) est *reproduit*/*paquet* alors que la suite de vérification du paquet relit des résultats bruts conservés et ne régénère que certains calculs. L'article 6 ter définit *paquet* par « régénérés par son code ». Proposition à discuter : soit une troisième portée (*vérification* : les contrôles du paquet passent sans régénération des résultats), soit l'obligation de dire, à côté de la portée *paquet*, ce qui est régénéré et ce qui est relu. Le relecteur a demandé cette convention le 26/10.
