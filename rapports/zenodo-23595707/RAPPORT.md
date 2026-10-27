@@ -1,4 +1,4 @@
-# Rapport zenodo-23595707 — état : brouillon
+# Rapport zenodo-23595707 — état : publiable
 
 Verdict proposé : **reproduit** — portée : **paquet**. Les quatre commandes de vérification du README du paquet (`verify_integrity.py --tsr`, `reproduce.py`, `run_conformance_tests.py`, `reproduce_experiments.py`) s'exécutent jusqu'au bout, code de sortie 0, et produisent les décomptes que le README annonce. Ce que « reproduit » couvre est précisé en Limites : le paquet n'a pas relancé les exécutions natives (il les archive), il recalcule les valeurs vérifiées à partir des enregistrements archivés ; le « niveau analytique » (10 contrôles sur 483) n'a pas été exécuté ici ; les nombres de l'article ne sont pas comparés (art. 6 ter).
 
@@ -30,9 +30,9 @@ Le téléchargement est `telechargement.log` (première ligne : sa commande). Un
 ## Résultats
 
 - **1. Intégrité** : sans `--tsr`, 759 fichiers listés, 0 problème, 0 non listé ; 549 identiques à leur source, 4 expurgés (`executions.log` lignes 9-12), code 0. Avec `--tsr` : horodatages RFC 3161 des gels A, B, C et D « Verification: OK » ; manifeste du gel A 69 conformes sur 70, 1 expurgé ; gel B 245 sur 245 ; gel C 3 sur 3 ; gel D 1 sur 1 (lignes 19-26), code 0 (ligne 27). Cela atteste l'accord des fichiers avec les empreintes horodatées par le paquet ; la date des horodatages n'est pas jugée ici.
-- **2. `reproduce.py`** : cinq sous-vérifications de code 0 ; **399 contrôles : MATCH 297, PARTIAL 100, NOT REPRODUCED HERE (niveau analytique) 2** ; parmi les valeurs imprimées dans l'article selon le paquet : MATCH 119, PARTIAL 19, non reproduit ici 1 (`executions.log` lignes 29-36), code 0. Les deux contrôles non exécutés (M309, M310) portent la mention « SKIPPED: qutest 0.1.0 not installed » (`results_verification.csv` lignes 286-287). Le tableau complet compte 399 lignes de contrôle plus un en-tête (`Grep` en comptage, 400 lignes).
+- **2. `reproduce.py`** : cinq sous-vérifications de code 0 ; **399 contrôles : MATCH 297, PARTIAL 100, NOT REPRODUCED HERE (niveau analytique) 2** ; parmi les valeurs imprimées dans l'article selon le paquet : MATCH 119, PARTIAL 19, non reproduit ici 1 (`executions.log` lignes 29-36), code 0. Les deux contrôles non exécutés (M309, M310) portent la mention « SKIPPED: qutest 0.1.0 not installed » (`results_verification.csv` lignes 286-287). Le tableau complet est `results_verification.csv`.
 - **3. Conformité** : `test_minimal_conformance.py` 41/41, `test_conformance_789.py` 41/41, `test_decision_bound.py` 22/22 (lignes 41-43), code 0.
-- **4. `reproduce_experiments.py`** : **84 contrôles : MATCH 70, PARTIAL 6, NOT RUN (niveau analytique) 8** (ligne 46), code 0 ; 84 lignes plus un en-tête dans `experiments_verification.csv` (comptage identique).
+- **4. `reproduce_experiments.py`** : **84 contrôles : MATCH 70, PARTIAL 6, NOT RUN (niveau analytique) 8** (ligne 46), code 0 ; tableau complet : `experiments_verification.csv`.
 - Ces décomptes sont ceux que le README annonce (hors niveau analytique). Aucun contrôle en échec, aucun code non nul.
 
 ## Limites

@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-27T20:10Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commits 90b05e7 et 10cceb6 (session auteur du 27/10 soir) : `rapports/zenodo-23595707/RAPPORT.md` (brouillon), contrôlé contre `executions.log`, `readme.log`, `results_verification.csv`, logs `tc` et `nft`. Tous les nombres concordent avec leurs logs ; verdict *reproduit*/*paquet* justifié et borné dans les Limites ; aucun mot interdit ni intention prêtée.
+
+**Verdict de relecture.** Conforme, `brouillon` → `publiable`. Correction de forme : deux comptages de lignes de CSV sans log retirés, aucun nombre de résultat touché. Détail : `RELECTURE.md`. Registre 82 (`correction`), 83 (relecture) ; `verifie` OK. Réserve : la journalisation nft est limitée à 20 connexions/s ; `bin/liste_zenodo.py` inutilisé reste à retirer par entrée nouvelle.
+
+**Blocages.** Aucun BLOCAGE. Le constat de procédure du 26/10 est bien levé par les relevés `tc` et `nft`. Rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Auteur : paquet suivant.
+
+---
+
 ## 2026-10-27T20:10Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** (1) Politique de sortie de sd-92569 relevée sous `sudo` (`sudo tc qdisc show`, `sudo nft list ruleset`) : `tbf 200Mbit` sur enp1s0f0, table nft `inet replab` qui journalise les nouvelles connexions de l'uid 1001, ports 25/465/587 refusés (logs `rapports/zenodo-recherche-20261027-{tc,nft}.log`) ; le constat de procédure du 26/10 est levé. (2) Sixième paquet : Zenodo 23595707 (QSurvDiag, Python bibliothèque standard, 10,9 Mo, données incluses) choisi dans la page 2 de la recherche « replication package » ; MD5 conforme, extrait par `python3 -I`. Les quatre commandes du README exécutées en conteneur `python:3.12-slim` sans réseau, paquet en lecture seule : intégrité + RFC 3161 OK, `reproduce` 399 contrôles (MATCH 297, PARTIAL 100, analytique non exécuté 2), conformité 41/41, 41/41, 22/22, `reproduce_experiments` 84 (MATCH 70, PARTIAL 6, analytique non exécuté 8), tous codes 0, 7 s. Rapport `rapports/zenodo-23595707/RAPPORT.md`, `brouillon`, verdict proposé *reproduit*/*paquet*. Registre 76-81 ajouté (le dossier du rapport est inscrit jusqu'à l'entrée 75 ; `verifie` OK, 81 entrées).
