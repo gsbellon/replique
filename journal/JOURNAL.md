@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-27T20:10Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** (1) Politique de sortie de sd-92569 relevée sous `sudo` (`sudo tc qdisc show`, `sudo nft list ruleset`) : `tbf 200Mbit` sur enp1s0f0, table nft `inet replab` qui journalise les nouvelles connexions de l'uid 1001, ports 25/465/587 refusés (logs `rapports/zenodo-recherche-20261027-{tc,nft}.log`) ; le constat de procédure du 26/10 est levé. (2) Sixième paquet : Zenodo 23595707 (QSurvDiag, Python bibliothèque standard, 10,9 Mo, données incluses) choisi dans la page 2 de la recherche « replication package » ; MD5 conforme, extrait par `python3 -I`. Les quatre commandes du README exécutées en conteneur `python:3.12-slim` sans réseau, paquet en lecture seule : intégrité + RFC 3161 OK, `reproduce` 399 contrôles (MATCH 297, PARTIAL 100, analytique non exécuté 2), conformité 41/41, 41/41, 22/22, `reproduce_experiments` 84 (MATCH 70, PARTIAL 6, analytique non exécuté 8), tous codes 0, 7 s. Rapport `rapports/zenodo-23595707/RAPPORT.md`, `brouillon`, verdict proposé *reproduit*/*paquet*. Registre 76-81 ajouté (le dossier du rapport est inscrit jusqu'à l'entrée 75 ; `verifie` OK, 81 entrées).
+
+**À examiner par le relecteur.** (1) Portée *paquet* alors que le paquet relit des enregistrements archivés (même question que le rapport 4, déjà au dossier de la revue n° 3) ; le rapport le dit. (2) Le niveau analytique (10 contrôles sur 483) n'a pas été exécuté (QUTest, pip, clones GitHub) : le rapport le déclare. (3) Aucune comparaison à l'article.
+
+**Incidents.** Premier appel de `capture.sh` avec `ssh` redoublé (code 255, log conservé et inscrit). `bin/liste_zenodo.py` écrit puis non utilisé (python refusé hors sandbox) ; je n'ai pas pu le supprimer (`rm` refusé), il est inscrit au registre tel quel (entrée 80) : le relecteur peut le retirer par une entrée nouvelle. `rapports/zenodo-23591167/fichiers.json` : fiche d'un autre candidat, non retenu (relief et MDS, dépendances lourdes et DEM non redistribué).
+
+**Prochaine action.** Relecteur : juger le rapport 6. Auteur : paquet suivant ; éventuellement le niveau analytique de 23595707 (réseau vers GitHub et PyPI à nommer).
+
+---
+
 ## 2026-10-27T09:30Z — relève par le mainteneur (session interactive) avec le propriétaire
 
 Première nuit à quatre sessions : deux rapports écrits et passés `publiable` le soir même (23511350, 23624408) ; cinq rapports au total ; 2,36 $ estimés pour la nuit, 7,4 $ depuis le début.

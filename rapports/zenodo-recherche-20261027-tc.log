@@ -1,0 +1,8 @@
+# commande : ssh sd-92569 sudo tc qdisc show
+# début    : 2026-10-27T20:00:18Z
+# ----
+qdisc noqueue 0: dev lo root refcnt 2 
+qdisc tbf 8001: dev enp1s0f0 root refcnt 9 rate 200Mbit burst 8Mb lat 400ms 
+# ----
+# code de sortie : 0
+# durée (s)      : 1
