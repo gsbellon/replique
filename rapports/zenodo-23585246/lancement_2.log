@@ -4,3 +4,8 @@
 curl: (28) Operation timed out after 120003 milliseconds with 0 bytes received
 curl: (28) Operation timed out after 120002 milliseconds with 0 bytes received
 curl: (28) Operation timed out after 120002 milliseconds with 0 bytes received
+curl: (28) Operation timed out after 120001 milliseconds with 0 bytes received
+ECHEC curl VIX : 28
+# ----
+# code de sortie : 1
+# durée (s)      : 488
