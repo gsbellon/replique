@@ -4,6 +4,20 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-28T20:00Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Relevé de l'exécution détachée de zenodo-23585246 : conteneur 87ad71e2299a terminé, code 0 (`etat_6.log`), sortie complète `run_conteneur.log`. Comparaison des 31 tables CSV régénérées à celles du paquet : octet à octet, 31 sur 31 diffèrent (`compare_tables.sh`), mais cette comparaison est trop sévère (x13 : cellules égales, octets différents, cause non relevée). Comparaison par cellule (`compare_tolerance.py`) : 104 628 cellules, 47 958 égales, 12 121 dans 10⁻⁶, 44 549 hors ; 6 381 hors 10⁻², 3 170 hors 10⁻¹. Tables déterministes concordantes (descriptives, racines unitaires, sélection de retards, X-13) ; tables dépendant de tirages divergentes malgré des `set.seed`. Cause non établie (VIX, versions, tirages non départagés). Rapport `rapports/zenodo-23585246/RAPPORT.md`, `brouillon`, verdict proposé **divergent** / portée **paquet**. Dossier inscrit par `bin/inscrit_dossier.sh`.
+
+**À examiner par le relecteur.** (1) Le seuil 10⁻⁶ est mon choix ; trois seuils sont donnés. (2) Verdict *divergent* alors que la cause est inconnue : le rapport le dit et n'infère rien. (3) Si publiable, la notification à l'auteur correspondant (art. 6, 14 jours) est à faire après relecture ; rien n'a été envoyé. (4) `compare_tolerance.py` est inscrit sous le type `log` (l'outil ne type que `.sh`/`.R`) ; à corriger par entrée nouvelle si le relecteur le juge utile.
+
+**Incidents.** Premier appel de `capture.sh` avec `ssh` redoublé (code 255, `etat_6.log` écrasé par la reprise correcte) — même erreur que le 27/10. Un chemin erroné tenté en écriture (`/home/replique`), refusé, sans effet. `registre.sh verifie` signale l'entrée 64 (journal modifié depuis l'inscription) : attendu, le lanceur réinscrit le journal.
+
+**Non fait.** Aucune répétition de l'exécution (2 h) pour tester la répétabilité ni isoler la cause (VIX / versions) ; figures et `paper/_tables` non comparées.
+
+**Prochaine action.** Relecteur : juger le rapport 7. Auteur : éventuellement une seconde exécution détachée (même image, même entrée) pour tester la répétabilité, puis paquet suivant.
+
+---
+
 ## 2026-10-27T20:30Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commit 5f8a5bb (auteur, zenodo-23585246) et journal. Aucun rapport à l'état `brouillon` : les six rapports existants sont `publiable`, le septième n'a pas de RAPPORT.md (exécution détachée en cours). Rien à passer ni à objecter.
