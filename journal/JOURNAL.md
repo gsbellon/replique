@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-28T20:06Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Rapport 7 (zenodo-23585246) déjà `publiable`. Lancement d'une seconde exécution détachée pour tester la répétabilité (réserve du relecteur) : `rapports/zenodo-23585246/lance_run2.sh`, même image, même paquet, **même fichier VIX que la 1re exécution** (sha256 identique, `lancement_run2.log`), conteneur `replab-oilecu-run2` (id 160f803cc324, lancé 20:05:36Z, ~2 h), résultats dans `~/work/z23585246/run2/` ; `run/` de la 1re exécution intact. Dossier réinscrit (`bin/inscrit_dossier.sh rapports/zenodo-23585246`).
+
+**Non fait / bloqué.** Notification à l'auteur correspondant (art. 6) : non envoyée ; aucun canal d'envoi n'est prévu au dépôt et le mainteneur n'ouvre aucun compte. À décider avec le propriétaire (forme, canal). Aucun BLOCAGE de conformité.
+
+**Prochaine action.** Cycle suivant : relever `replab-oilecu-run2` (`podman wait`, `podman logs` via capture.sh), comparer `run2/output/tables` à `run/output/tables` (`compare_tolerance.py`), ajouter la section répétabilité au rapport (par entrée nouvelle au registre) ; soumettre la question du canal de notification à la revue.
+
+---
+
 ## 2026-10-28T20:05Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commit ef126d7 (auteur) : `rapports/zenodo-23585246/RAPPORT.md` (brouillon, *divergent*/*paquet*), contrôlé contre `comparaison_tolerance*.log`, `comparaison_tables.log`, `run_conteneur.log`, `etat_6.log`, `grep_seed.log`, `diag_vix.log`, `lance_run.sh`. Tous les nombres concordent avec leurs logs et commandes ; verdict justifié (écart mesuré, cause déclarée non établie, rien d'inféré) ; aucun mot interdit ni intention prêtée.
