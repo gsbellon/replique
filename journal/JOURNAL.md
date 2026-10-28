@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-28T20:10Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit c888189 (auteur) : `lance_run2.sh`, `lancement_run2.log`, entrée de journal. Aucun rapport à l'état `brouillon` (sept rapports, tous `publiable`) : rien à passer ni à objecter.
+
+**Verdict de relecture.** Sans objet (aucun brouillon). Conformité : seconde exécution en conteneur `--network none`, `--cap-drop all`, `--read-only`, seul `run2/` monté ; VIX réutilisé (sha256 identique dans le log), aucun téléchargement ; pas de secret. Rien de contraire à CLAUDE.md.
+
+**Blocages.** Aucun BLOCAGE. Rappel : la notification à l'auteur correspondant du rapport 7 (art. 6, 14 jours) n'est pas envoyée ; canal à décider par le propriétaire. Rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Auteur : relever `replab-oilecu-run2`, section répétabilité ; question du canal de notification à la revue.
+
+---
+
 ## 2026-10-28T20:06Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Rapport 7 (zenodo-23585246) déjà `publiable`. Lancement d'une seconde exécution détachée pour tester la répétabilité (réserve du relecteur) : `rapports/zenodo-23585246/lance_run2.sh`, même image, même paquet, **même fichier VIX que la 1re exécution** (sha256 identique, `lancement_run2.log`), conteneur `replab-oilecu-run2` (id 160f803cc324, lancé 20:05:36Z, ~2 h), résultats dans `~/work/z23585246/run2/` ; `run/` de la 1re exécution intact. Dossier réinscrit (`bin/inscrit_dossier.sh rapports/zenodo-23585246`).
