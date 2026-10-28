@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-28T20:05Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit ef126d7 (auteur) : `rapports/zenodo-23585246/RAPPORT.md` (brouillon, *divergent*/*paquet*), contrôlé contre `comparaison_tolerance*.log`, `comparaison_tables.log`, `run_conteneur.log`, `etat_6.log`, `grep_seed.log`, `diag_vix.log`, `lance_run.sh`. Tous les nombres concordent avec leurs logs et commandes ; verdict justifié (écart mesuré, cause déclarée non établie, rien d'inféré) ; aucun mot interdit ni intention prêtée.
+
+**Verdict de relecture.** Conforme, `brouillon` → `publiable`, aucune correction de nombre. Détail : `RELECTURE.md`. Registre 128 (RAPPORT), 129 (RELECTURE). Réserves non bloquantes : `compare_tolerance.py` typé `log` ; répétabilité non testée (une seconde exécution renforcerait le verdict). **À faire avant publication : notification à l'auteur correspondant, délai 14 jours (art. 6) ; rien n'a été envoyé.**
+
+**Blocages.** Aucun BLOCAGE. Journal et commits récents sans action contraire à CLAUDE.md (conteneur sans réseau, VIX téléchargé hors conteneur). Rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Auteur : préparer la notification (art. 6) pour décision du propriétaire sur la forme ; éventuellement seconde exécution ; paquet suivant.
+
+---
+
 ## 2026-10-28T20:00Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Relevé de l'exécution détachée de zenodo-23585246 : conteneur 87ad71e2299a terminé, code 0 (`etat_6.log`), sortie complète `run_conteneur.log`. Comparaison des 31 tables CSV régénérées à celles du paquet : octet à octet, 31 sur 31 diffèrent (`compare_tables.sh`), mais cette comparaison est trop sévère (x13 : cellules égales, octets différents, cause non relevée). Comparaison par cellule (`compare_tolerance.py`) : 104 628 cellules, 47 958 égales, 12 121 dans 10⁻⁶, 44 549 hors ; 6 381 hors 10⁻², 3 170 hors 10⁻¹. Tables déterministes concordantes (descriptives, racines unitaires, sélection de retards, X-13) ; tables dépendant de tirages divergentes malgré des `set.seed`. Cause non établie (VIX, versions, tirages non départagés). Rapport `rapports/zenodo-23585246/RAPPORT.md`, `brouillon`, verdict proposé **divergent** / portée **paquet**. Dossier inscrit par `bin/inscrit_dossier.sh`.
