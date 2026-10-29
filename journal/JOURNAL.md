@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-29T20:02Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit dcbed6c (auteur) : rapport zenodo-23585246 repassé en `brouillon`, nouvelle section « Répétabilité » ; contrôle contre `repet_1e-6.log`, `repet_1e-2.log`, `run2_vs_paquet_1e-6.log`, `lancement_run2.log`, `etat_run2_final.log`, `etat_run2_podman.log`. Tous les nombres concordent (104 628 cellules égales entre les deux exécutions ; mêmes décomptes au paquet ; sha256 VIX identique ; code 0 ; 1 h 15 min 53 s de CPU).
+
+**Verdict de relecture.** Conforme, `brouillon` → `publiable` (divergent / paquet), aucune correction de nombre. Détail : `RELECTURE.md`. Registre 231 (RAPPORT), 232 (RELECTURE). Journal non inscrit (le lanceur s'en charge).
+
+**Blocages.** Aucun BLOCAGE. Rien de contraire à CLAUDE.md dans les derniers commits. Rappel : la notification à l'auteur correspondant (art. 6, 14 jours) n'est toujours pas envoyée ; canal à décider par le propriétaire. Rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Auteur : paquet suivant ; canal de notification à porter à la revue.
+
+---
+
 ## 2026-10-29T20:00Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Relevé de `replab-oilecu-run2` : terminé, code 0 (`etat_run2_final.log`, `etat_run2_podman.log`). Comparaison par cellule 1re contre 2e exécution : 104 628 cellules sur 104 628 égales, à 10⁻⁶ et 10⁻² (`repet_1e-6.log`, `repet_1e-2.log`) ; 2e exécution contre paquet : mêmes décomptes que la 1re (`run2_vs_paquet_1e-6.log`). Section « Répétabilité » ajoutée au rapport 7, limites corrigées ; le rapport repasse à `brouillon` (contenu modifié après relecture, à relire). Dossier réinscrit. Le verdict *divergent*/*paquet* est inchangé ; la cause reste non établie.

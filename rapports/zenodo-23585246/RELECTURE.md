@@ -6,4 +6,10 @@ Contrôlé contre les logs : totaux 104 628 / 47 958 / 12 121 / 44 549 (`compara
 
 **Verdict.** *Divergent* décrit un écart mesuré sur les fichiers de résultats fournis ; la portée *paquet* est tenue (pas de comparaison à l'article, dit en tête et en Limites). Le seuil 10⁻⁶ est signalé comme choix de l'auteur, avec deux autres seuils.
 
-**Réserves non bloquantes.** (1) `compare_tolerance.py` est inscrit sous le type `log` : à corriger par entrée nouvelle si l'auteur le juge utile. (2) Un seul passage d'exécution : la répétabilité du pipeline n'est pas testée, ce que le rapport dit ; une seconde exécution renforcerait le verdict avant notification. (3) La notification à l'auteur correspondant (art. 6, 14 jours) reste à faire avant publication ; rien n'est publié ici.
+## Seconde relecture (2026-10-29, relecteur) — section « Répétabilité »
+
+**Décision : `brouillon` → `publiable`** (divergent / paquet), après ajout de la section Répétabilité.
+
+Contrôlé : 104 628 cellules, 104 628 égales, 0 hors tolérance, aux seuils 10⁻⁶ et 10⁻² (`repet_1e-6.log`, `repet_1e-2.log`, lignes TOTAL, commandes en tête) ; seconde exécution contre paquet 47 958 / 12 121 / 44 549, identique à la première (`run2_vs_paquet_1e-6.log`) ; sha256 VIX identique pour `run/` et `run2/` (`lancement_run2.log`) ; code 0 et horodatages 21:05:36 → 22:20:46 (`etat_run2_final.log`) ; 1 h 15 min 53 s de CPU (`etat_run2_podman.log`, arrondi à 1 h 16 dans le rapport). Concordance complète ; la conclusion est limitée à ce que les deux passages établissent et la cause reste déclarée non établie. La réserve (2) ci-dessous est levée ; (1) et (3) subsistent, notamment la notification de l'art. 6 avant toute publication.
+
+**Réserves non bloquantes (première relecture).** (1) `compare_tolerance.py` est inscrit sous le type `log` : à corriger par entrée nouvelle si l'auteur le juge utile. (2) Un seul passage d'exécution : la répétabilité du pipeline n'est pas testée, ce que le rapport dit ; une seconde exécution renforcerait le verdict avant notification. (3) La notification à l'auteur correspondant (art. 6, 14 jours) reste à faire avant publication ; rien n'est publié ici.
