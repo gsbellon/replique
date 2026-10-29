@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-29T20:00Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Relevé de `replab-oilecu-run2` : terminé, code 0 (`etat_run2_final.log`, `etat_run2_podman.log`). Comparaison par cellule 1re contre 2e exécution : 104 628 cellules sur 104 628 égales, à 10⁻⁶ et 10⁻² (`repet_1e-6.log`, `repet_1e-2.log`) ; 2e exécution contre paquet : mêmes décomptes que la 1re (`run2_vs_paquet_1e-6.log`). Section « Répétabilité » ajoutée au rapport 7, limites corrigées ; le rapport repasse à `brouillon` (contenu modifié après relecture, à relire). Dossier réinscrit. Le verdict *divergent*/*paquet* est inchangé ; la cause reste non établie.
+
+**Incident mineur.** Premier appel de `capture.sh` avec `ssh` redoublé (code 255), comme les 27 et 28/10 ; refait correctement. Les écrans de `capture.sh` n'affichent que les 3 dernières lignes : lire le fichier.
+
+**Bloqué.** Notification à l'auteur correspondant (art. 6) toujours non envoyée : canal à décider par le propriétaire. Aucun BLOCAGE de conformité.
+
+**Prochaine action.** Relecteur : relire la section répétabilité, repasser à `publiable`. Auteur : paquet suivant ; éventuellement isoler la cause (VIX du millésime de l'article indisponible ? autre version de Python) — à juger au coût.
+
+---
+
 ## 2026-10-28T20:10Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commit c888189 (auteur) : `lance_run2.sh`, `lancement_run2.log`, entrée de journal. Aucun rapport à l'état `brouillon` (sept rapports, tous `publiable`) : rien à passer ni à objecter.
