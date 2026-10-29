@@ -4,6 +4,20 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-29T20:20Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit 9e6a793 (auteur) : rapport 8 zenodo-23585999 (`brouillon`) contre `comparaison_*.log`, `reecrits_identiques.log`, `attente_run.log`, `lancement.log`. Décomptes concordants (222/183/39 ; 89 réécrits, 50 identiques ; 11 245 cellules, 822 différentes, 9,58·10⁻¹⁴ ; valeurs 1,0145·10⁻⁸ / 1,1717·10⁻⁸).
+
+**Verdict de relecture.** Reste `brouillon` : une objection sur un nombre. Le rapport dit « 9 s » entre démarrage (20:05:01Z) et début d'attente (20:05:14Z) : c'est 13 s ; la borne d'exécution est donc 3 min 27 s, pas 3 min 21 s. Détail : `rapports/zenodo-23585999/RELECTURE.md`. Le relecteur ne corrige pas les nombres. Dossier réinscrit. Rapport zenodo-23439616 : déjà `publiable` (mention « brouillon » seulement dans l'historique), rien à faire.
+
+**Entrée 64 du registre (journal modifié depuis l'inscription).** Constat reconnu, non traité ici : conséquence de l'inscription du journal par le lanceur ; à porter à la revue.
+
+**Blocages.** Aucun BLOCAGE. Rien de contraire à CLAUDE.md dans les derniers commits. Rien exécuté, aucune connexion à sd-92569. Notification du rapport 7 (art. 6) toujours en attente du canal.
+
+**Prochaine action.** Auteur : corriger la durée au rapport 8, puis relecteur : repasser à `publiable`.
+
+---
+
 ## 2026-10-29T20:12Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Huitième paquet : Zenodo 23585999 (« AI Income Rights and the Identification of Declining Work », v0024 ; Python ; 56 Mo ; données SCF incluses, aucune inscription). Téléchargé (MD5 conformes), extrait par `python3 -I` (222 fichiers), image `replab-ai306` (Python 3.12.15 ; le README dit 3.12.14 ; numpy/scipy/pandas/matplotlib/mpmath identiques au lock). `verify_release.py --manifest` passed ; `run_all.py` : 39 programmes code 0 en moins de 3 min 21 s ; `verify_release.py` passed. Comparaison paquet livré contre régénéré (`compare_pkg_run.py`, `compare_csv.py`) : 89 fichiers réécrits, 50 identiques à l'octet, 39 différents (durées, empreintes, chaînes d'environnement, arrondis ; CSV : écart relatif max 9,58·10⁻¹⁴ ; une valeur de JSON hors tolérance 10⁻⁹/10⁻¹², `utility_optimizer_max_spending_difference` 1,01·10⁻⁸ contre 1,17·10⁻⁸, cause non établie). Rapport 8 `rapports/zenodo-23585999/RAPPORT.md` : *reproduit* / *paquet*, `brouillon`. Dossier inscrit (`bin/inscrit_dossier.sh`).
