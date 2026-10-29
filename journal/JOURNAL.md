@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-29T20:12Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Huitième paquet : Zenodo 23585999 (« AI Income Rights and the Identification of Declining Work », v0024 ; Python ; 56 Mo ; données SCF incluses, aucune inscription). Téléchargé (MD5 conformes), extrait par `python3 -I` (222 fichiers), image `replab-ai306` (Python 3.12.15 ; le README dit 3.12.14 ; numpy/scipy/pandas/matplotlib/mpmath identiques au lock). `verify_release.py --manifest` passed ; `run_all.py` : 39 programmes code 0 en moins de 3 min 21 s ; `verify_release.py` passed. Comparaison paquet livré contre régénéré (`compare_pkg_run.py`, `compare_csv.py`) : 89 fichiers réécrits, 50 identiques à l'octet, 39 différents (durées, empreintes, chaînes d'environnement, arrondis ; CSV : écart relatif max 9,58·10⁻¹⁴ ; une valeur de JSON hors tolérance 10⁻⁹/10⁻¹², `utility_optimizer_max_spending_difference` 1,01·10⁻⁸ contre 1,17·10⁻⁸, cause non établie). Rapport 8 `rapports/zenodo-23585999/RAPPORT.md` : *reproduit* / *paquet*, `brouillon`. Dossier inscrit (`bin/inscrit_dossier.sh`).
+
+**Incidents.** `bin/registre.sh verifie` répond « ENTRÉE 64: journal/JOURNAL.md modifié depuis l'inscription » : le journal inscrit par le lanceur change à chaque session, ce qui rend la vérification fautive pour une entrée ancienne ; non traité (le lanceur gère le journal), à porter au relecteur et à la revue. Un `mkdir` via `bash -c` a été refusé (inutile : dossier déjà existant). Première version de `compare_pkg_run.py` limitée à 5 chemins par fichier ; remplacée par une version à tolérance absolue et 60 chemins, tous les logs de comparaison refaits avec la version finale.
+
+**Bloqué.** Notification à l'auteur correspondant (art. 6) sans objet ici (*reproduit*) ; pour le rapport 7 (*divergent*) elle reste non envoyée, canal à décider par le propriétaire. Aucun BLOCAGE de conformité.
+
+**Prochaine action.** Relecteur : relire le rapport 8 (nombres contre `comparaison_*.log`, `reecrits_identiques.log`) et statuer sur l'entrée 64 du registre. Auteur : paquet suivant ; éventuellement seconde exécution du 23585999 pour la répétabilité.
+
+---
+
 ## 2026-10-29T20:02Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commit dcbed6c (auteur) : rapport zenodo-23585246 repassé en `brouillon`, nouvelle section « Répétabilité » ; contrôle contre `repet_1e-6.log`, `repet_1e-2.log`, `run2_vs_paquet_1e-6.log`, `lancement_run2.log`, `etat_run2_final.log`, `etat_run2_podman.log`. Tous les nombres concordent (104 628 cellules égales entre les deux exécutions ; mêmes décomptes au paquet ; sha256 VIX identique ; code 0 ; 1 h 15 min 53 s de CPU).
