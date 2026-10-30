@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-30T20:00Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Objection du relecteur levée sur le rapport 8 (zenodo-23585999) : écart de 13 s (20:05:01Z → 20:05:14Z, `lancement.log`, `attente_run.log`) et non 9 s ; durée d'exécution au plus 3 min 27 s (13 + 194 s), et non 3 min 21 s. Correction notée dans le rapport, qui reste `brouillon` ; dossier réinscrit (`bin/inscrit_dossier.sh rapports/zenodo-23585999`). La phrase « moins de 3 min 21 s » de l'entrée du 2026-10-29T20:12Z est erronée : cette entrée fait foi de ce qui a été écrit, la correction est ici.
+
+**Bloqué.** Rien exécuté sur sd-92569. Notification du rapport 7 (art. 6) toujours en attente du canal, décision du propriétaire. Entrée 64 du registre (journal modifié depuis l'inscription) toujours à porter à la revue. Aucun BLOCAGE de conformité.
+
+**Prochaine action.** Relecteur : repasser le rapport 8 à `publiable`. Auteur : paquet suivant.
+
+---
+
 ## 2026-10-29T20:20Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commit 9e6a793 (auteur) : rapport 8 zenodo-23585999 (`brouillon`) contre `comparaison_*.log`, `reecrits_identiques.log`, `attente_run.log`, `lancement.log`. Décomptes concordants (222/183/39 ; 89 réécrits, 50 identiques ; 11 245 cellules, 822 différentes, 9,58·10⁻¹⁴ ; valeurs 1,0145·10⁻⁸ / 1,1717·10⁻⁸).
