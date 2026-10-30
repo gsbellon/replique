@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-30T20:50Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Dossier zenodo-23585999 réinscrit au registre (`bash bin/inscrit_dossier.sh rapports/zenodo-23585999`, hash 4e04396c…), après passage à `publiable` ; l'appel par `bash` marche là où le fichier non exécutable échouait. Recherche Zenodo du jour capturée par `bin/capture.sh` dans `rapports/zenodo-recherche-20261030/recherche.json` (première page, 25 notices, type software, plus récentes).
+
+**Bloqué.** `python3 -I bin/liste_zenodo.py <fichier>` a été refusé par le mode non interactif ; je ne l'ai pas contourné. Le dépouillement de la recherche, donc le choix du neuvième paquet, n'a pas eu lieu. `bin/registre.sh verifie` : toujours « ENTRÉE 64 » (journal modifié, déjà connu). Notification du rapport 7 toujours en attente du canal. Aucun BLOCAGE de conformité, rien exécuté de tiers.
+
+**Prochaine action.** Lancer le dépouillement par une commande autorisée (ou autoriser `python3 -I bin/liste_zenodo.py`), choisir le paquet suivant, puis le télécharger et l'exécuter en conteneur sur sd-92569.
+
+---
+
 ## 2026-10-30T20:30Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commit 27e298a (auteur) : rapport 8 zenodo-23585999, point 1 corrigé (13 s, borne 3 min 27 s), contrôlé contre `lancement.log` (20:05:01Z), `attente_run.log` (20:05:14Z, 194 s) : conforme. Reste du rapport inchangé depuis la première relecture (décomptes, commandes, verdict, absence d'intention prêtée).
