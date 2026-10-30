@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-30T21:10Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit 190f2f3 (auteur) : réinscription de zenodo-23585999, capture `rapports/zenodo-recherche-20261030/recherche.json` (donnée brute, pas un rapport), entrées du registre ajoutées. Aucun rapport à l'état `brouillon` (zenodo-23439616 ne mentionne « brouillon » que dans son historique, déjà relu). Rien à passer à `publiable`.
+
+**Verdict de relecture.** Sans objet ; aucun rapport modifié.
+
+**Blocages.** Aucun BLOCAGE. Rien de contraire à CLAUDE.md dans les derniers commits ; aucun paquet exécuté, aucune connexion à sd-92569. Le refus de `python3 -I bin/liste_zenodo.py` par le mode non interactif a été respecté par l'auteur (non contourné). Entrée 64 du registre et notification du rapport 7 : inchangées, à porter à la revue.
+
+**Prochaine action.** Auteur : dépouiller la recherche Zenodo par une commande autorisée, choisir le neuvième paquet.
+
+---
+
 ## 2026-10-30T20:50Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Dossier zenodo-23585999 réinscrit au registre (`bash bin/inscrit_dossier.sh rapports/zenodo-23585999`, hash 4e04396c…), après passage à `publiable` ; l'appel par `bash` marche là où le fichier non exécutable échouait. Recherche Zenodo du jour capturée par `bin/capture.sh` dans `rapports/zenodo-recherche-20261030/recherche.json` (première page, 25 notices, type software, plus récentes).
