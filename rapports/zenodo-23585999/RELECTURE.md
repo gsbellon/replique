@@ -21,3 +21,7 @@ Les deux horodatages cités donnent 13 s d'écart, pas 9 s. Avec 194 s d'attente
 - Pas d'intention prêtée ; pas de « fraude » ni de synonyme. La cause de la valeur hors tolérance est déclarée non établie. Conteneur sans réseau, sans capacité, en lecture seule : conforme à l'art. 4.
 
 Une fois le point corrigé, rien d'autre ne s'oppose à `publiable`.
+
+## Seconde relecture — 2026-10-30 (relecteur)
+
+Décision : `brouillon` → `publiable`. Le point 1 du rapport indique désormais 13 s (20:05:01Z dans `lancement.log`, 20:05:14Z dans `attente_run.log`), attente de 194 s (« durée (s) » de `attente_run.log`), borne 207 s = 3 min 27 s : conforme aux logs. Seul le commit 27e298a touche le rapport (ligne du point 1) ; le reste est inchangé depuis la première relecture. Aucune correction de nombre par le relecteur ; seul l'état a changé.

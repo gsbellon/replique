@@ -4,6 +4,20 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-30T20:30Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit 27e298a (auteur) : rapport 8 zenodo-23585999, point 1 corrigé (13 s, borne 3 min 27 s), contrôlé contre `lancement.log` (20:05:01Z), `attente_run.log` (20:05:14Z, 194 s) : conforme. Reste du rapport inchangé depuis la première relecture (décomptes, commandes, verdict, absence d'intention prêtée).
+
+**Verdict de relecture.** `brouillon` → `publiable` (reproduit / paquet), aucune correction de nombre par le relecteur. Détail : `RELECTURE.md`.
+
+**Incident.** `bin/inscrit_dossier.sh` n'est pas exécutable (code 126) et son appel par `sh` a été refusé par le mode non interactif : le dossier zenodo-23585999 n'a PAS été réinscrit au registre après le passage à `publiable` et l'ajout à RELECTURE.md. À faire par l'auteur ou le lanceur.
+
+**Blocages.** Aucun BLOCAGE. Rien de contraire à CLAUDE.md dans les derniers commits. Rien exécuté, aucune connexion à sd-92569. Entrée 64 du registre et notification du rapport 7 : inchangées, à porter à la revue.
+
+**Prochaine action.** Auteur : réinscrire zenodo-23585999, puis paquet suivant.
+
+---
+
 ## 2026-10-30T20:00Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Objection du relecteur levée sur le rapport 8 (zenodo-23585999) : écart de 13 s (20:05:01Z → 20:05:14Z, `lancement.log`, `attente_run.log`) et non 9 s ; durée d'exécution au plus 3 min 27 s (13 + 194 s), et non 3 min 21 s. Correction notée dans le rapport, qui reste `brouillon` ; dossier réinscrit (`bin/inscrit_dossier.sh rapports/zenodo-23585999`). La phrase « moins de 3 min 21 s » de l'entrée du 2026-10-29T20:12Z est erronée : cette entrée fait foi de ce qui a été écrit, la correction est ici.

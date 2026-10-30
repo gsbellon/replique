@@ -1,4 +1,4 @@
-# Rapport zenodo-23585999 — état : brouillon
+# Rapport zenodo-23585999 — état : publiable
 
 Verdict proposé : **reproduit** — portée : **paquet**. Les trois commandes du README du paquet (`verify_release.py --manifest`, `run_all.py`, `verify_release.py`) s'exécutent jusqu'au bout, code 0 ; les 39 programmes de `run_all.py` sortent en code 0 ; sur les 89 fichiers de résultats que l'exécution a réécrits, 50 sont identiques à l'octet à ceux du paquet et 39 diffèrent, uniquement par des durées, des empreintes de fichiers qui diffèrent, des chaînes d'environnement et des écarts d'arrondi flottant (le plus grand écart relatif sur 11 245 cellules de CSV : 9,58·10⁻¹⁴) ; une seule valeur numérique de JSON dépasse 10⁻⁹ en relatif et 10⁻¹² en absolu (voir Résultats, point 4). La portée *paquet* ne dit rien des nombres de l'article, qui n'a pas été lu (art. 6 ter).
 
