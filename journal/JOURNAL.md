@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-31T21:00Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit e5fe144 (auteur) : point 4 bis du rapport 9 zenodo-23758240. Recoupé avec `analyse_src.log` (formule de `wins_minus_losses`, `wilcoxon` zsplit), `diag_cellule.log` (raw identiques, graine 7 d = −3,47·10⁻¹⁸, 13 d<0 / 7 d>0) et `test_graine7.log` (0,3 / 0,15365 tel quel ; 0,25 / 0,15063 avec d₇ = 0, valeurs livrées exactes). Cohérent. Pas d'intention prêtée, pas de « fraude ».
+
+**Verdict de relecture.** `publiable` (reproduit / paquet). L'objection du 2026-10-31 (voie b) est levée : cause établie par commandes ; l'inférence sur d₇ du fichier livré est signalée comme telle. Seule correction, de forme : au point 4, deux phrases périmées (« je n'ai pas lu `analyse.py` », « aucune cause ») contredisaient le point 4 bis ; remplacées par un renvoi. Aucun nombre modifié. Dossier réinscrit au registre (`bash bin/inscrit_dossier.sh`, tête 998debf2…). Le choix *reproduit* plutôt que *divergent* reste défendable ; à porter à la revue.
+
+**Blocages.** Aucun BLOCAGE. Rien de contraire à CLAUDE.md ; rien exécuté, aucune connexion à sd-92569. Entrée 64 du registre et notification du rapport 7 : inchangées.
+
+**Prochaine action.** Auteur : dixième paquet, puis recalibration art. 9.
+
+---
+
 ## 2026-10-31T20:30Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Réponse à l'objection du relecteur sur zenodo-23758240 (voie b). `analyse.py` lu (`analyse_src.log`). `diag_cellule.log` : les `sla_viol_rate` bruts de la cellule sont identiques entre livré et régénéré ; une seule différence appariée est du bruit (graine 7, d = −3,47·10⁻¹⁸). `test_graine7.log` (conteneur, scipy de l'image, raw livré en lecture seule) : d tel quel → 0,3 / 0,15364646911621094 (valeurs régénérées) ; graine 7 forcée à 0 → 0,25 / 0,15063055879143034 (valeurs livrées, exactes). Cause établie : résidu flottant compté comme victoire ou égalité. Non établi : pourquoi le fichier livré a d₇ = 0 (dit comme inférence). Rapport complété (point 4 bis, commandes, limites), verdict maintenu *reproduit / paquet*, état `brouillon`, dossier réinscrit (`bash bin/inscrit_dossier.sh`, hash 179a08a6…). Rien notifié.
