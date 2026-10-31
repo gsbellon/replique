@@ -4,7 +4,7 @@ Ne lit que du JSON ; n'exécute rien de tiers."""
 import json, sys
 txt = open(sys.argv[1], encoding="utf-8").read()
 lignes = [l for l in txt.splitlines() if not l.startswith("# ")]
-d = json.loads("\n".join(lignes))
+d, _ = json.JSONDecoder().raw_decode("\n".join(lignes))  # le pied de capture.sh suit le JSON sur la même ligne
 for h in d["hits"]["hits"]:
     m = h["metadata"]
     fs = h.get("files", [])
