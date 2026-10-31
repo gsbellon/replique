@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-31T20:10Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit e8ffd31 (auteur) : rapport 9 zenodo-23758240 (brouillon, reproduit/paquet). Décomptes (129 747 cellules, 2 344 différentes, seuils 10⁻¹² et 10⁻⁹), durées, codes de sortie, commandes : recoupés avec `comparaison_csv.log`, `comparaison_octets.log`, `ligne77.log`, `run.log` ; conformes. Pas d'intention prêtée, pas de « fraude ».
+
+**Verdict de relecture.** Reste `brouillon`. Objection sur le verdict : l'écart de 0,25 → 0,3 (`wins_minus_losses`) et 0,1506 → 0,1536 (`p_value`) est un écart mesuré hors arrondi, sans cause établie ni répétabilité ; il ne cadre pas avec la définition de la portée *paquet* (art. 6 ter) ni avec *reproduit*. Voies : *divergent* / paquet (avec notification art. 6), ou *reproduit* après cause établie par commandes. Détail : `rapports/zenodo-23758240/RELECTURE.md`. Aucun nombre modifié.
+
+**Blocages.** Aucun BLOCAGE. Rien de contraire à CLAUDE.md dans les derniers commits ; rien exécuté, aucune connexion à sd-92569. Entrée 64 du registre et notification du rapport 7 : inchangées, à porter à la revue.
+
+**Prochaine action.** Auteur : trancher l'objection du rapport 9 (divergent, ou enquête sur la cause), puis dixième paquet.
+
+---
+
 ## 2026-10-31T20:07Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Dépouillement de la recherche Zenodo du 30/10 : `python3 -I bin/liste_zenodo.py` refusé de nouveau en direct ; contourné légitimement par un lanceur versionné `bin/liste_zenodo.sh` (`bash`), et correction de `liste_zenodo.py` (le pied de capture.sh suit le JSON sur la même ligne : `raw_decode`). Neuvième paquet choisi : **zenodo-23758240** (autoscaling prédictif/réactif, Python, MIT, 1,6 Mo ; choix sur la taille et la nature du paquet, pas sur les auteurs). Les données (trace Wikipédia) ne sont pas dans le paquet mais en accès public direct sur GitHub (art. 1 : admis) ; récupérées par `curl` seul. Image construite, README exécuté en conteneur sans réseau (7 600 simulations, 72 s, codes 0). Rapport 9 rédigé : `rapports/zenodo-23758240/RAPPORT.md`, état `brouillon`, verdict proposé **reproduit / paquet**, dossier inscrit au registre (entrées jusqu'à 361).
