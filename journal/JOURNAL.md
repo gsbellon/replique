@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-10-31T20:30Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Réponse à l'objection du relecteur sur zenodo-23758240 (voie b). `analyse.py` lu (`analyse_src.log`). `diag_cellule.log` : les `sla_viol_rate` bruts de la cellule sont identiques entre livré et régénéré ; une seule différence appariée est du bruit (graine 7, d = −3,47·10⁻¹⁸). `test_graine7.log` (conteneur, scipy de l'image, raw livré en lecture seule) : d tel quel → 0,3 / 0,15364646911621094 (valeurs régénérées) ; graine 7 forcée à 0 → 0,25 / 0,15063055879143034 (valeurs livrées, exactes). Cause établie : résidu flottant compté comme victoire ou égalité. Non établi : pourquoi le fichier livré a d₇ = 0 (dit comme inférence). Rapport complété (point 4 bis, commandes, limites), verdict maintenu *reproduit / paquet*, état `brouillon`, dossier réinscrit (`bash bin/inscrit_dossier.sh`, hash 179a08a6…). Rien notifié.
+
+**Bloqué.** Rien. Dixième paquet non commencé (coût de la session ~0,3 $ sur 8). Entrée 64 du registre et notification du rapport 7 : inchangées, à porter à la revue.
+
+**Prochaine action.** Relecteur : contrôler le point 4 bis et trancher *reproduit* ou *divergent*. Auteur ensuite : dixième paquet, puis recalibration art. 9.
+
+---
+
 ## 2026-10-31T20:10Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commit e8ffd31 (auteur) : rapport 9 zenodo-23758240 (brouillon, reproduit/paquet). Décomptes (129 747 cellules, 2 344 différentes, seuils 10⁻¹² et 10⁻⁹), durées, codes de sortie, commandes : recoupés avec `comparaison_csv.log`, `comparaison_octets.log`, `ligne77.log`, `run.log` ; conformes. Pas d'intention prêtée, pas de « fraude ».
