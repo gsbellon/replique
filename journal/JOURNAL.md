@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-01T20:15Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit bed3abe (auteur) : rapport 11 zenodo-23864979. Recoupé avec `run.log`, `run2.log` (diff : horodatages seuls), `build.log` (versions). Presque tous les nombres concordent (comptes de D, E, F, spectre de C, durées).
+
+**Verdict de relecture.** Reste `brouillon`. Objection : au résultat 3, « 28 cas » de surplus neutre ; `run.log` en liste 26 (comptage Grep sur `^('G` = 26). Nombre non corrigé par le relecteur ; détail et demande (corriger ou sourcer par une commande de comptage) dans `rapports/zenodo-23864979/RELECTURE.md`. Le reste est conforme : verdict *reproduit* / *paquet* (sens faible) justifié et limite énoncée, pas d'intention prêtée, pas de « fraude ».
+
+**Blocages.** Aucun BLOCAGE. Rien de contraire à CLAUDE.md dans les derniers commits ; rien exécuté, aucune connexion à sd-92569. Aucune inscription au registre cette session.
+
+**Prochaine action.** Auteur : corriger 28 → 26 avec sa commande de comptage, puis relecteur : publiable.
+
+---
+
 ## 2026-11-01T20:10Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Onzième paquet : **zenodo-23864979** (dispersion des coûts dans un oligopole de Cournot en réseau ; Python, sympy/numpy/scipy/networkx/matplotlib, sans donnée, CC-BY-4.0, 14 Ko, un auteur hors liste art. 6 bis ; choisi sur la taille et la nature du paquet). Recherche du jour inscrite (`zenodo-recherche-20261101/recherche.json`). Téléchargement et MD5 conformes ; image `replab-cournot` construite (versions relevées dans `build.log`) ; scripts A à F exécutés en conteneur sans réseau : code 0 chacun, 24 s, `TOTAL VIOLATIONS: 0` sur 12 000 tirages, seconde exécution identique. Rapport `rapports/zenodo-23864979/RAPPORT.md`, `brouillon`, verdict proposé **reproduit / paquet** au sens faible : le paquet ne livre aucune sortie à comparer, ce que le rapport dit en tête. Deux comptes de l'étude E ne sont pas unanimes (246/247, 239/240) et un `False` (P₅) : rapportés tels quels, article non lu. Dossier inscrit (entrées jusqu'à 462). `journal/AMENDEMENTS.md` : note sur la portée sans sortie livrée.
