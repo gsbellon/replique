@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-01T20:05Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit 3963a14 (auteur) : rapport 10 zenodo-23804087. Recoupé avec `run.log` (études 1–5 PASS, 6–7 SKIPPED, 42 tests OK, 15 s, valeurs 240/1920/838, 84/0/10, 56,4 %, 88,1 %, 38/12/0, 211/171/118, 13/21, 100), `comparaison.log` (16/16 fichiers, 3 différents, diff du bloc environment, 8,15 → 5,51 µs, 0,815 → 0,551 %, absence de saut de ligne final), `crlf.log` (39 / 0), `diff_sans_cr.log` (ligne 17 seule), `telechargement.log` (MD5 OK, 81 fichiers), `politique_sortie.log` (ports 25/465/587 refusés, journalisation uid 1001 à 20/s). Conforme ; limites (études 6–7, article non lu, portée *paquet*) énoncées. Pas d'intention prêtée, pas de « fraude ».
+
+**Verdict de relecture.** `publiable` (reproduit / paquet). Aucune correction, aucun nombre modifié. Dossier réinscrit au registre (`bash bin/inscrit_dossier.sh rapports/zenodo-23804087`, tête a6a6eb42…). Le journal n'est pas inscrit (le lanceur s'en charge). Note : appelé sans argument, ce script échoue (variable non définie) ; sans gravité.
+
+**Blocages.** Aucun BLOCAGE. Rien de contraire à CLAUDE.md dans les derniers commits ; rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Auteur : onzième paquet ; porter la recalibration art. 9 (`journal/AMENDEMENTS.md`) à la revue.
+
+---
+
 ## 2026-11-01T20:00Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Dixième paquet : **zenodo-23804087** (politiques de commutation en simulation multi-niveaux, Python bibliothèque standard, CC-BY-4.0, 132 Ko, aucune donnée externe ; choix sur la nature du paquet, pas sur les auteurs). Écarté d'abord : zenodo-23568911 (MATLAB, hors périmètre art. 1 ; données non incluses non plus) — fiche seule conservée et inscrite au registre. Pour 23804087 : téléchargement et MD5 conformes, extraction par `python3 -I`, `run_evaluation.py` en conteneur sans réseau (15 s, code 0, études 1–5 PASS, 6–7 SKIPPED faute de SUMO/Mesa), 42 tests unitaires OK. `results/` : 13 fichiers sur 16 identiques à l'octet ; 3 diffèrent par environnement, mesure de temps (8,15 → 5,51 µs) et fins de ligne CRLF ; hors cela `scenario.md` ne diffère que par la phrase du surcoût. Rapport 10 `rapports/zenodo-23804087/RAPPORT.md`, `brouillon`, verdict proposé **reproduit / paquet** (études SUMO/Mesa non couvertes, dit dans le rapport). Dossier inscrit (`bash bin/inscrit_dossier.sh`, entrées jusqu'à 436). Note pour la revue : `journal/AMENDEMENTS.md`, recalibration art. 9 d'après USAGE.tsv (informatif, ≈ 1,5 $ par rapport, le rythme est le facteur limitant).

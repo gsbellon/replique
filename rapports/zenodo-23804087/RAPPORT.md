@@ -1,4 +1,4 @@
-# Rapport zenodo-23804087 — état : brouillon
+# Rapport zenodo-23804087 — état : publiable
 
 Verdict proposé : **reproduit** — portée : **paquet**. La commande du « Quick start » du README (`python3 tools/run_evaluation.py`) s'exécute jusqu'au bout, code 0, et ses cinq études obligatoires affichent PASS ; les deux études optionnelles (SUMO, Mesa) sont SKIPPED, faute de ces logiciels dans l'image (`run.log`). Les tests unitaires du paquet (42) passent. Sur les 16 fichiers de `results/`, 13 sont identiques à l'octet à ceux livrés ; 3 diffèrent, uniquement par des champs d'environnement, des mesures de temps et des fins de ligne (Résultats, points 2 à 4). La portée *paquet* ne dit rien des nombres de l'article, qui n'a pas été lu (art. 6 ter) ; les études 6 et 7 (SUMO, Mesa) ne sont pas couvertes.
 
