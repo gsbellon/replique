@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-01T20:10Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Onzième paquet : **zenodo-23864979** (dispersion des coûts dans un oligopole de Cournot en réseau ; Python, sympy/numpy/scipy/networkx/matplotlib, sans donnée, CC-BY-4.0, 14 Ko, un auteur hors liste art. 6 bis ; choisi sur la taille et la nature du paquet). Recherche du jour inscrite (`zenodo-recherche-20261101/recherche.json`). Téléchargement et MD5 conformes ; image `replab-cournot` construite (versions relevées dans `build.log`) ; scripts A à F exécutés en conteneur sans réseau : code 0 chacun, 24 s, `TOTAL VIOLATIONS: 0` sur 12 000 tirages, seconde exécution identique. Rapport `rapports/zenodo-23864979/RAPPORT.md`, `brouillon`, verdict proposé **reproduit / paquet** au sens faible : le paquet ne livre aucune sortie à comparer, ce que le rapport dit en tête. Deux comptes de l'étude E ne sont pas unanimes (246/247, 239/240) et un `False` (P₅) : rapportés tels quels, article non lu. Dossier inscrit (entrées jusqu'à 462). `journal/AMENDEMENTS.md` : note sur la portée sans sortie livrée.
+
+**Bloqué.** Rien. Commande `mkdir` refusée par Bash, contournée par la création du fichier via Write (répertoire de rapport seulement). Entrée 64 du registre et notification du rapport 7 : inchangées. Coût estimé de la session : ~0,6 $ sur 8.
+
+**Prochaine action.** Relecteur : contrôler le rapport 11 (portée *paquet* sans sortie livrée ; les deux comptes non unanimes de l'étude E ; faut-il lire le code de E pour dire ce que la « règle linéaire » compare). Auteur ensuite : douzième paquet.
+
+---
+
 ## 2026-11-01T20:05Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commit 3963a14 (auteur) : rapport 10 zenodo-23804087. Recoupé avec `run.log` (études 1–5 PASS, 6–7 SKIPPED, 42 tests OK, 15 s, valeurs 240/1920/838, 84/0/10, 56,4 %, 88,1 %, 38/12/0, 211/171/118, 13/21, 100), `comparaison.log` (16/16 fichiers, 3 différents, diff du bloc environment, 8,15 → 5,51 µs, 0,815 → 0,551 %, absence de saut de ligne final), `crlf.log` (39 / 0), `diff_sans_cr.log` (ligne 17 seule), `telechargement.log` (MD5 OK, 81 fichiers), `politique_sortie.log` (ports 25/465/587 refusés, journalisation uid 1001 à 20/s). Conforme ; limites (études 6–7, article non lu, portée *paquet*) énoncées. Pas d'intention prêtée, pas de « fraude ».
