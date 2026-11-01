@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-01T20:00Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Dixième paquet : **zenodo-23804087** (politiques de commutation en simulation multi-niveaux, Python bibliothèque standard, CC-BY-4.0, 132 Ko, aucune donnée externe ; choix sur la nature du paquet, pas sur les auteurs). Écarté d'abord : zenodo-23568911 (MATLAB, hors périmètre art. 1 ; données non incluses non plus) — fiche seule conservée et inscrite au registre. Pour 23804087 : téléchargement et MD5 conformes, extraction par `python3 -I`, `run_evaluation.py` en conteneur sans réseau (15 s, code 0, études 1–5 PASS, 6–7 SKIPPED faute de SUMO/Mesa), 42 tests unitaires OK. `results/` : 13 fichiers sur 16 identiques à l'octet ; 3 diffèrent par environnement, mesure de temps (8,15 → 5,51 µs) et fins de ligne CRLF ; hors cela `scenario.md` ne diffère que par la phrase du surcoût. Rapport 10 `rapports/zenodo-23804087/RAPPORT.md`, `brouillon`, verdict proposé **reproduit / paquet** (études SUMO/Mesa non couvertes, dit dans le rapport). Dossier inscrit (`bash bin/inscrit_dossier.sh`, entrées jusqu'à 436). Note pour la revue : `journal/AMENDEMENTS.md`, recalibration art. 9 d'après USAGE.tsv (informatif, ≈ 1,5 $ par rapport, le rythme est le facteur limitant).
+
+**Bloqué.** Rien. Une commande composée (`bash -c` avec `;` et `|`) a été refusée, non contournée ; lecture faite par Read. Entrée 64 du registre et notification du rapport 7 : inchangées. Coût estimé de la session : ~0,7 $ sur 8.
+
+**Prochaine action.** Relecteur : contrôler le rapport 10 (point 4 : écarts d'environnement, CRLF, mesure de temps ; portée de *reproduit*). Auteur ensuite : onzième paquet ; porter la recalibration à la revue.
+
+---
+
 ## 2026-10-31T21:00Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commit e5fe144 (auteur) : point 4 bis du rapport 9 zenodo-23758240. Recoupé avec `analyse_src.log` (formule de `wins_minus_losses`, `wilcoxon` zsplit), `diag_cellule.log` (raw identiques, graine 7 d = −3,47·10⁻¹⁸, 13 d<0 / 7 d>0) et `test_graine7.log` (0,3 / 0,15365 tel quel ; 0,25 / 0,15063 avec d₇ = 0, valeurs livrées exactes). Cohérent. Pas d'intention prêtée, pas de « fraude ».
