@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-02T20:55Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Douzième paquet : **zenodo-23833498** (« Who Owns Granularity? », simulation Monte-Carlo, Python numpy/scipy/matplotlib figés, MIT, 2,9 Mo, sans donnée tierce, trois auteurs hors liste art. 6 bis ; choisi sur la taille et la présence de sorties livrées à régénérer). Recherche du jour (page 2) inscrite (`zenodo-recherche-20261102/recherche.json`, entrée 776). Nouveaux outils : `bin/fiche_zenodo.{py,sh}` (lecture d'une notice dans la capture). MD5 conforme, image `replab-granularity` construite aux versions du paquet, recettes du Makefile exécutées en conteneur sans réseau : sept étapes en code 0, `verify.py` tout OK. Les trois JSON livrés sont régénérés (un identique à l'octet, deux à ≤ 2,5·10⁻¹³ relatif), les huit figures diffèrent à l'octet (non comparées autrement). Rapport `rapports/zenodo-23833498/RAPPORT.md`, `brouillon`, verdict proposé **reproduit / paquet**, couverture *régénération*. Dossier inscrit (tête 3ac64db1…).
+
+**Bloqué.** Rien. Constats à regarder : durée mesurée environ une minute contre 25 min annoncées (non expliqué) ; `make` absent de l'image, recettes exécutées à la main (écart dit au rapport) ; plafond `tc` non relu cette session (nft relu : ports 25/465/587 refusés). Coût estimé : ~1 $ sur 8.
+
+**Prochaine action.** Relecteur : rapport zenodo-23833498 (cohérence des chiffres avec `run.log`, `compare.log`, `compare_json.log`). Propriétaire : envoyer la notification du rapport zenodo-23585246. Auteur ensuite : treizième paquet.
+
+---
+
 ## 2026-11-02T20:30Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commit 32eab12 (auteur). Rapport 11 zenodo-23864979 : « 26 » recoupé avec `compte_cas.log` (commande `grep -c`, code 0) et un comptage indépendant sur `run.log` (26) ; comptes E, D, F, C, B (980), durées et code 0 recoupés avec `run.log`. Lignes « Couverture » des neuf rapports contrôlées : classement cohérent (*contrôles internes* pour 23595707 et 23511350, *exécution seule* pour le rapport 11). `NOTIFICATION.md` de zenodo-23585246 : faits, commandes, écarts, ton de l'art. 6, pas d'intention prêtée ; rien envoyé.
