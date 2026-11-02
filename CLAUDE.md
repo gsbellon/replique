@@ -4,7 +4,7 @@ Nom de travail : **Réplique** (identifiant technique `replab`). Le propriétair
 
 Ce fichier est lu en premier par chaque session de travail. Il est le seul endroit où la volonté du projet persiste d'une session à l'autre. Tout ce qui n'est pas écrit ici n'engage personne.
 
-Version 2.2 — 2026-10-26. Historique des amendements en fin de document.
+Version 2.3 — 2026-11-02. Historique des amendements en fin de document.
 
 ---
 
@@ -85,6 +85,12 @@ Cette déclaration n'emporte aucune règle de traitement : le choix des paquets 
 
 Chaque verdict de l'article 6 porte une portée explicite, nommée à côté de lui, parmi deux : **paquet** — les fichiers de résultats fournis dans le dépôt de réplication sont régénérés par son code — ou **article** — les nombres cités dans la publication sont retrouvés. Un rapport de portée *paquet* ne prétend pas à la seconde, et le dit. Les trois verdicts restent les seuls ; la portée les qualifie, elle ne les multiplie pas.
 
+Sous chaque verdict, une ligne « Couverture » dit laquelle de trois situations s'applique : *régénération* (les sorties livrées sont régénérées et comparées), *contrôles internes* (le paquet vérifie ses propres résultats conservés sans les régénérer), *exécution seule* (le paquet ne livre aucune sortie à comparer). Quand la commande documentée échoue mais qu'une correction minimale et nommée suffit à retrouver les résultats, le verdict reste *inexécutable* sur le paquet tel que livré, et le rapport peut comporter une section « Hors paquet », ainsi nommée, donnant la correction exacte et ce qu'elle produit.
+
+## 6 quater. Notification
+
+La notification prévue à l'article 6 part d'une adresse au nom du projet, sur le domaine du projet. Tant que l'envoi n'est pas automatisé, l'auteur rédige `NOTIFICATION.md` dans le dossier du rapport — faits, commandes, écarts, rien d'autre, dans le ton de l'article 6 — et le propriétaire l'envoie depuis cette adresse ; la date d'envoi est consignée au journal et le délai de quatorze jours court à partir d'elle. Un rapport *divergent* n'est publié qu'après ce délai ou la réponse de l'auteur.
+
 ## 7. Le registre
 
 Rapports et journal forment un registre à chaînage de hachage, témoigné hors de la machine qui l'écrit. Rien n'y est modifié : une erreur se corrige par une entrée nouvelle qui désigne l'ancienne. La méthode de vérification est publiée avec le registre, et ses limites aussi.
@@ -103,6 +109,8 @@ Sont inamendables : le paragraphe « Interdictions sans exception » de l'articl
 
 Le chiffre de cinquante a été fixé sans mesure. Après les dix premiers rapports, le mainteneur propose à la revue hebdomadaire une recalibration fondée sur le coût mesuré d'un rapport ; le propriétaire tranche. La condition de fin elle-même ne se discute pas.
 
+Recalibration du 2026-11-02 (dix rapports publiables) : seuil maintenu à cinquante. Données : dix rapports en quatorze jours depuis le premier, 1,5 $ estimés par rapport, aucune session en échec sur vingt-quatre.
+
 Un projet sans condition de fin n'est pas un projet.
 
 ---
@@ -120,3 +128,4 @@ Un projet sans condition de fin n'est pas un projet.
 - v2, 2026-10-16 — rédigée par le mainteneur après vérification de la documentation produit et décisions du propriétaire du jour. Article 3 : arrêt d'office étendu aux alertes de l'hébergeur ; repli d'authentification réservé au propriétaire. Article 4 : sd-92569 libéré et réinstallé (Debian 13), frontière transitoire supprimée ; plan de contrôle déplacé de sd-114393 vers une VM sur le poste fixe du propriétaire, sd-114393 sorti du projet après son incident de septembre ; laptop sorti du projet ; témoins GitHub et Google Drive ; politique de sortie de l'exécuteur. Article 5 : mode d'exécution (`claude -p` par cron) et authentification (abonnement Max, repli par clé API plafonnée) ; mesure du coût sur les dix premières sessions ; sauvegarde. Article 6 bis créé : déclaration de proximité du propriétaire. Article 9 : recalibration du seuil après dix rapports.
 - v2.1, 2026-10-20 — première revue hebdomadaire, trois amendements acceptés par le propriétaire : article 4, redirection liée à 127.0.0.1 admise pour la console du propriétaire (pratique du 16/10) ; article 6 ter créé, portée du verdict (*paquet* ou *article*), l'article 6 restant intact ; « Ordre des opérations », étape 4 (registre avant second paquet), appliquée le 19/10 avant revue, régularisée. Règle retenue : toute modification de ce fichier, planning compris, passe par le journal le jour même et par la revue suivante.
 - v2.2, 2026-10-26 — revue hebdomadaire n° 2, deux amendements acceptés par le propriétaire : article 1, exclusion des paquets dont les données ne sont ni incluses ni en accès public direct (décision du 23/10 sur zenodo-23437544) ; article 5, sessions entre 21 h et 9 h en cycles enchaînés, quatre par nuit au plus, fenêtre commune à tout le parc. Données au dossier : dix-huit sessions entre 0,10 et 0,40 $ estimés ; usage du quota Max inférieur à 30 % hebdomadaire tous usages confondus au 23/10.
+- v2.3, 2026-11-02 — revue hebdomadaire n° 3, quatre points acceptés par le propriétaire : article 6 ter, ligne « Couverture » (régénération, contrôles internes, exécution seule) et section « Hors paquet » (rapports 3, 4 et 11) ; article 6 quater créé, canal de notification (adresse du projet, envoi par le propriétaire, délai à l'envoi) ; article 9, seuil maintenu après dix rapports ; achat du domaine du projet décidé (dépense du propriétaire). Lanceur : inscription du journal corrigée (fondée sur la chaîne).

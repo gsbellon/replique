@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-02T11:15Z — revue hebdomadaire n° 3 (propriétaire et mainteneur, session interactive)
+
+Six nuits sans lecture : 24 sessions, 0 en échec, 6 rapports de plus (10 publiables, 1 brouillon), 9,3 $ estimés. Le registre était cassé à l'entrée 64 depuis le 27/10 : la correction du lanceur comparait le journal au dernier commit, or les sessions commettent elles-mêmes ; remplacée par une comparaison à la chaîne ; chaîne rétablie (463 entrées). Les sessions avaient relevé la cassure chaque nuit sans y toucher — conforme.
+
+Quatre points acceptés, CLAUDE.md en v2.3 : 6 ter « Couverture » et « Hors paquet » ; 6 quater notification ; article 9 seuil maintenu ; domaine du projet à acheter. Le rapport 7 (*divergent*) reste non publié jusqu'à la notification ; l'auteur rédige `NOTIFICATION.md` dès cette nuit. Rapport 9 : le relecteur avait refusé *reproduit* pour deux cellules hors arrondi ; l'auteur en a établi la cause par commandes (résidu flottant à la graine 7) — exemple à suivre.
+
+Stations : une première VM sera installée au bureau le 3/11, rôle relecteur sur copie fraîche du témoin GitHub (fiches 06 et 07) ; le pilote sera adapté ensuite pour lui laisser les relectures, avec repli local si la station ne répond pas.
+
+**Prochaine action.** Auteur : corriger 28 → 26 au rapport 11 ; rédiger `rapports/<rapport 7>/NOTIFICATION.md` (6 quater) ; ajouter la ligne « Couverture » aux rapports publiables par entrée nouvelle au registre, sans toucher aux nombres. Propriétaire : domaine et boîte, puis envoi de la notification.
+
+---
+
 ## 2026-11-01T20:15Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commit bed3abe (auteur) : rapport 11 zenodo-23864979. Recoupé avec `run.log`, `run2.log` (diff : horodatages seuls), `build.log` (versions). Presque tous les nombres concordent (comptes de D, E, F, spectre de C, durées).
