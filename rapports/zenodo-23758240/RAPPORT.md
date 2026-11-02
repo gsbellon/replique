@@ -2,6 +2,8 @@
 
 Verdict proposé : **reproduit** — portée : **paquet**. Les trois commandes de la section « Reproduce » du README (`run_experiments.py`, `analyse.py`, `figures.py`) s'exécutent jusqu'au bout, code 0 (`run.log`). Sur les 129 747 cellules des cinq CSV de `results/`, aucune cellule non numérique ne diffère et 2 344 cellules numériques diffèrent à l'octet ; 2 342 d'entre elles par un écart relatif d'au plus 10⁻⁹ (dont une, dans `paired_vs_reactive.csv`, entre 10⁻¹² et 10⁻⁹ ; toutes les autres à 10⁻¹² ou moins, et à 4,72·10⁻¹³ ou moins dans les quatre autres fichiers), **deux** par plus que 10⁻⁹, dans une même ligne de `paired_vs_reactive.csv` : `wins_minus_losses` 0,25 livré contre 0,3 régénéré, `p_value` 0,15063 contre 0,15365 (voir Résultats, points 4 et 4 bis : cause établie, un résidu flottant de 3,5·10⁻¹⁸ à la graine 7, compté comme victoire ou comme égalité). La portée *paquet* ne dit rien des nombres de l'article, qui n'a pas été lu (art. 6 ter).
 
+Couverture : *régénération* (les cinq CSV de `results/` sont régénérés et comparés cellule par cellule).
+
 ## Paquet
 
 - Zenodo 23758240, « When Does Prediction Pay Off? Replication Package for Predictive versus Reactive Autoscaling under Controlled Burst Intensity and Provisioning Delay », publié le 2026-10-29, auteurs Hashim M., Moiz Abdul, Zulkifl Hassan (University of Central Punjab), type logiciel, accès ouvert, licence MIT. Fiche : `bin/capture.sh rapports/zenodo-23758240/fiche_zenodo.json 'curl -s -m 60 https://zenodo.org/api/records/23758240'`.

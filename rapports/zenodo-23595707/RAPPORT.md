@@ -2,6 +2,8 @@
 
 Verdict proposé : **reproduit** — portée : **paquet**. Les quatre commandes de vérification du README du paquet (`verify_integrity.py --tsr`, `reproduce.py`, `run_conformance_tests.py`, `reproduce_experiments.py`) s'exécutent jusqu'au bout, code de sortie 0, et produisent les décomptes que le README annonce. Ce que « reproduit » couvre est précisé en Limites : le paquet n'a pas relancé les exécutions natives (il les archive), il recalcule les valeurs vérifiées à partir des enregistrements archivés ; le « niveau analytique » (10 contrôles sur 483) n'a pas été exécuté ici ; les nombres de l'article ne sont pas comparés (art. 6 ter).
 
+Couverture : *contrôles internes* (le paquet recalcule ses valeurs à partir des enregistrements archivés et vérifie ses propres résultats conservés ; les exécutions natives ne sont pas relancées).
+
 ## Paquet
 
 - Zenodo 23595707, « QSurvDiag replication package », version 1.3.0, publié le 2026-10-23, licence CC-BY-4.0 (mixte, `provenance/LICENSE_MAP.csv` du paquet), un fichier `qsurvdiag-replication-v1.3.0.zip` (10 865 952 octets), données et code inclus, Python bibliothèque standard seulement (README, `readme.log` lignes 14 et 6-8). Fiche : `bin/capture.sh rapports/zenodo-23595707/fichiers.json 'curl -s -m 60 https://zenodo.org/api/records/23595707'` (`fichiers.json`). Découverte : `rapports/zenodo-recherche-20261027/recherche.json` (requête page 2, même méthode que les recherches précédentes) puis `rapports/zenodo-23591167/fichiers.json` (autre candidat consulté, non retenu).

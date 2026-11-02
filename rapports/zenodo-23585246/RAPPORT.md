@@ -2,6 +2,8 @@
 
 Verdict proposé : **divergent** — portée : **paquet**. Le pipeline complet du paquet (`run_all.sh`) s'exécute jusqu'au bout, code 0, et régénère les 31 tables CSV de `output/tables/` fournies. Les fichiers régénérés ne sont pas identiques à ceux du dépôt : sur 104 628 cellules comparées, 47 958 sont égales au caractère près, 12 121 de plus le sont à 10⁻⁶ près (relatif), 44 549 s'en écartent davantage ; 6 381 dépassent 10⁻² et 3 170 dépassent 10⁻¹. Les écarts se concentrent dans les étapes à tirages aléatoires ; les étapes déterministes concordent. **La cause n'est pas établie** (voir Limites). Ce rapport décrit un écart mesuré et n'infère rien d'autre. Aucune comparaison avec les nombres de l'article n'est faite (portée *paquet*, art. 6 ter).
 
+Couverture : *régénération* (les 31 tables CSV livrées sont régénérées et comparées cellule par cellule).
+
 ## Paquet
 
 - Zenodo 23585246, « Oil Price Shocks, Sovereign Risk, and Bank Interest Rates Under Full Dollarization » (Équateur), R + Python, 4,8 Mo, données incluses sauf la série VIX (FRED, accès public direct, art. 1). Fiche : `fichiers.json` ; MD5 conforme (`telechargement.log`) ; extraction par `python3 -I` (`extraction.log`, 129 fichiers). README : `readme.log`.

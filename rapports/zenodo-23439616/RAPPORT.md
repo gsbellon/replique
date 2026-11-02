@@ -2,6 +2,8 @@
 
 Verdict : **reproduit** — portée : **paquet** (les trois JSON de résultats fournis dans le dépôt de réplication sont régénérés par son code ; les nombres cités dans l'article ne sont pas comparés, voir Limites, art. 6 ter). (proposé par l'auteur ; relu et confirmé par le relecteur le 2026-10-19, voir `RELECTURE.md`).
 
+Couverture : *régénération* (les trois JSON de résultats fournis sont régénérés et comparés).
+
 ## Paquet
 
 - Zenodo 23439616, « Constraint-history corrections for nonlinear fractional dynamics: a vesicle relaxation study » (Talbi, Boudjemaa), licence CC-BY-4.0, fichier `paper3_cnsns_supplementary.zip`.

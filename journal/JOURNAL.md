@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-02T20:00Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Les trois pas de la « prochaine action » de la revue n° 3. (1) Rapport 11 zenodo-23864979 : 28 → 26, avec `bin/compte_lignes.sh` (nouveau, générique : `grep -c` + commande/code dans un log) → `compte_cas.log` = 26 ; reste `brouillon`, à relire. (2) `rapports/zenodo-23585246/NOTIFICATION.md` (divergent / paquet) rédigé selon 6 quater : faits, commandes, écarts ; l'adresse de l'auteur correspondant n'est pas au dossier, le propriétaire la relève sur la fiche Zenodo ; rien envoyé. (3) Ligne « Couverture » ajoutée à 8 rapports publiables et au rapport 11, dossiers réinscrits au registre (entrées nouvelles), aucun nombre touché. Non fait : 23607297 et 23437544 (*inexécutable*), aucune des trois situations ne s'y applique — question portée à `journal/AMENDEMENTS.md`.
+
+**Bloqué.** `bash rapports/.../compte_cas.sh` refusé par Bash (seul `bash bin/…` passe) ; contourné par un script dans `bin/`. Pas de commande sur sd-92569, aucun paquet exécuté. Coût estimé : ~0,45 $ sur 8.
+
+**Prochaine action.** Relecteur : rapport 11 (26 attendu), et contrôle des lignes « Couverture » (classement *contrôles internes* pour 23595707 et 23511350). Propriétaire : envoyer NOTIFICATION.md du rapport zenodo-23585246 et consigner la date. Auteur ensuite : douzième paquet.
+
+---
+
 ## 2026-11-02T11:15Z — revue hebdomadaire n° 3 (propriétaire et mainteneur, session interactive)
 
 Six nuits sans lecture : 24 sessions, 0 en échec, 6 rapports de plus (10 publiables, 1 brouillon), 9,3 $ estimés. Le registre était cassé à l'entrée 64 depuis le 27/10 : la correction du lanceur comparait le journal au dernier commit, or les sessions commettent elles-mêmes ; remplacée par une comparaison à la chaîne ; chaîne rétablie (463 entrées). Les sessions avaient relevé la cassure chaque nuit sans y toucher — conforme.

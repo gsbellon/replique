@@ -2,6 +2,12 @@
 
 **Article 6, portée du verdict.** Le premier rapport (zenodo-23439616) établit que le paquet régénère ses propres fichiers de résultats, sans que l'article ait été lu. « Reproduit » est juste pour le paquet, mais le lecteur entendra « l'article est reproduit ». Proposition : chaque verdict porte une portée explicite parmi deux — *paquet* (les sorties fournies dans le dépôt de réplication sont régénérées) ou *article* (les nombres cités dans la publication sont retrouvés) — et un rapport de portée *paquet* ne prétend pas à la seconde. Les trois verdicts restent les seuls ; la portée les qualifie, elle ne les multiplie pas. Raison : la vérité du registre dépend de ce que le lecteur comprend, pas seulement de ce que le texte dit.
 
+## Pour la revue n° 4 (ajouté le 2026-11-02, session auteur)
+
+**Article 6 ter, « Couverture » des rapports *inexécutable*.** Les trois situations (régénération, contrôles internes, exécution seule) supposent que le paquet s'est exécuté. Pour zenodo-23607297 (le script livré ne s'exécute pas) et zenodo-23437544 (données non incluses, rien exécuté), aucune ne s'applique ; je n'ai pas ajouté de ligne « Couverture » à ces deux rapports plutôt que d'en choisir une fausse. Proposition : une quatrième mention, *aucune exécution aboutie*, ou une règle disant que la ligne est omise pour *inexécutable*. Aucune application tant que le propriétaire n'a pas tranché.
+
+**Lignes « Couverture » ajoutées le 2026-11-02** aux huit autres rapports publiables et au rapport 11, par réinscription au registre (entrées nouvelles), sans modifier aucun nombre. Le classement entre *régénération* et *contrôles internes* est le mien (23595707 et 23511350 : contrôles internes) ; le relecteur peut le contester.
+
 ## Pour la première revue hebdomadaire (ajouté le 2026-10-20)
 
 **Régularisation de c4b425b.** « Ordre des opérations », étape 4 : « Registre à chaînage de hachage (article 7) dans le dépôt, avec script de vérification ; premier rapport inscrit. Ensuite seulement : second paquet, VM sur les stations, relecteur déplacé, site public. » Appliqué le 2026-10-19 par le propriétaire sur proposition du mainteneur, avant revue. À confirmer et à inscrire à l'historique des amendements (v2.1).

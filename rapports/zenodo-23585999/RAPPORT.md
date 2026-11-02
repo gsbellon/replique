@@ -2,6 +2,8 @@
 
 Verdict proposé : **reproduit** — portée : **paquet**. Les trois commandes du README du paquet (`verify_release.py --manifest`, `run_all.py`, `verify_release.py`) s'exécutent jusqu'au bout, code 0 ; les 39 programmes de `run_all.py` sortent en code 0 ; sur les 89 fichiers de résultats que l'exécution a réécrits, 50 sont identiques à l'octet à ceux du paquet et 39 diffèrent, uniquement par des durées, des empreintes de fichiers qui diffèrent, des chaînes d'environnement et des écarts d'arrondi flottant (le plus grand écart relatif sur 11 245 cellules de CSV : 9,58·10⁻¹⁴) ; une seule valeur numérique de JSON dépasse 10⁻⁹ en relatif et 10⁻¹² en absolu (voir Résultats, point 4). La portée *paquet* ne dit rien des nombres de l'article, qui n'a pas été lu (art. 6 ter).
 
+Couverture : *régénération* (les fichiers de résultats réécrits par `run_all.py` sont comparés à ceux du paquet : 89 fichiers, dont 50 identiques à l'octet).
+
 ## Paquet
 
 - Zenodo 23585999, « Replication package: AI Income Rights and the Identification of Declining Work », version v0024, publié le 2026-10-23, auteur Craig Steven Wright (University of Exeter), type logiciel, accès ouvert. Fiche : `bin/capture.sh rapports/zenodo-23585999/fiche_zenodo.json 'curl -s -m 60 https://zenodo.org/api/records/23585999'`. Instructions du dépôt : `download_and_extract.log` (`curl -s -m 60 https://zenodo.org/api/records/23585999/files/DOWNLOAD_AND_EXTRACT.txt/content`, même méthode).

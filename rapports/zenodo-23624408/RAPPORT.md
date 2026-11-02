@@ -2,6 +2,8 @@
 
 Verdict proposé : **reproduit** — portée : **paquet** (la commande d'entrée du paquet, `Rscript run_all.R`, s'exécute jusqu'au bout sur les microdonnées IBGE ; ses dix contrôles passent ; les 51 fichiers CSV de résultats fournis sont régénérés avec la même forme, les mêmes cellules textuelles et des valeurs numériques égales à l'arrondi flottant près — voir Résultats pour les écarts exacts, dont l'absence d'identité octet à octet). Les nombres de l'article (manuscrit v11) ne sont pas comparés (art. 6 ter).
 
+Couverture : *régénération* (les 51 CSV de résultats fournis sont régénérés et comparés).
+
 ## Paquet
 
 - Zenodo 23624408, « DEA-MP/H: replication package for household multidimensional poverty measurement », version 1.1.0, publié le 2026-10-24, licence MIT, un fichier `DEA-MP-H_v1.1.0_artigo_v11.zip` (121 764 octets). Fiche : `fiche_zenodo.json` (`bin/capture.sh rapports/zenodo-23624408/fiche_zenodo.json "curl -s -m 30 'https://zenodo.org/api/records/23624408'"`). Découverte : `rapports/zenodo-recherche-20261026/f23624408.json` (liste des fichiers, MD5 annoncé `f9755f3b…be1`).

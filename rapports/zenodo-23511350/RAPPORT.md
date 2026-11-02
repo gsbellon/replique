@@ -2,6 +2,8 @@
 
 Verdict proposé : **reproduit** — portée : **paquet** (la commande d'entrée du paquet, `python3 run_verification_suite.py`, s'exécute jusqu'au bout et ses 97 + 72 contrôles passent, une fois NumPy ajouté comme le guide l'exige ; les nombres de l'article ne sont pas comparés, art. 6 ter). Ce que « reproduit » couvre exactement est précisé en Limites : il s'agit de la cohérence des résultats bruts conservés avec les valeurs rapportées, pas d'une régénération des mesures.
 
+Couverture : *contrôles internes* (le paquet vérifie la cohérence de ses résultats bruts conservés avec les valeurs rapportées, sans régénérer les mesures).
+
 ## Paquet
 
 - Zenodo 23511350, « Decision-Free Algebraic Rejection for Post-Quantum Key Encapsulation: Replication Package », version V1.0.0, publié le 2026-10-25, licence CC-BY-4.0, un fichier `DFAR_Replication_Package_Final_Zenodo.zip` (407 114 octets), données et code inclus. Fiche : `bin/capture.sh rapports/zenodo-23511350/fiche_zenodo.json "curl -s -m 30 'https://zenodo.org/api/records/23511350'"` (`fiche_zenodo.json`). Découverte : `rapports/zenodo-recherche-20261026/recherche.json` (requête et fichier de liste `f23511350.json` dans ce répertoire).
