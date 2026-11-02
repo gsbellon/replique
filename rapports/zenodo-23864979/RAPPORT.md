@@ -1,4 +1,4 @@
-# Rapport zenodo-23864979 — état : brouillon
+# Rapport zenodo-23864979 — état : publiable
 
 Verdict proposé : **reproduit** — portée : **paquet**, au sens faible précisé ci-dessous. Les six scripts du paquet (A à F) s'exécutent jusqu'au bout dans un conteneur sans réseau, code 0 chacun, en 24 s au total ; les vérifications que les scripts font d'eux-mêmes passent (`TOTAL VIOLATIONS: 0` sur 12 000 tirages, tous les « True » des scripts A à C) ; une seconde exécution donne exactement la même sortie, aux horodatages près (`run.log`, `run2.log`). **Le paquet ne livre aucun fichier de résultat** (ni sortie attendue, ni figure) : il n'y a donc rien à comparer octet à octet, et ce rapport ne compare ni à l'article (non lu, art. 6 ter) ni à une sortie livrée. Ce que « reproduit / paquet » affirme ici : le code livré tourne, est déterministe, et ses propres contrôles réussissent. Deux comptes de l'étude E ne sont pas unanimes (246/247 et 239/240) ; je ne sais pas si l'article les annonce ainsi (Limites).
 

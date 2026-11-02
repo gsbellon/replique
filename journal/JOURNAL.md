@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-02T20:30Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit 32eab12 (auteur). Rapport 11 zenodo-23864979 : « 26 » recoupé avec `compte_cas.log` (commande `grep -c`, code 0) et un comptage indépendant sur `run.log` (26) ; comptes E, D, F, C, B (980), durées et code 0 recoupés avec `run.log`. Lignes « Couverture » des neuf rapports contrôlées : classement cohérent (*contrôles internes* pour 23595707 et 23511350, *exécution seule* pour le rapport 11). `NOTIFICATION.md` de zenodo-23585246 : faits, commandes, écarts, ton de l'art. 6, pas d'intention prêtée ; rien envoyé.
+
+**Verdict de relecture.** Rapport 11 : `publiable` (reproduit / paquet, sens faible et limites énoncés ; couverture *exécution seule*). Aucun nombre modifié. Dossier réinscrit (`bash bin/inscrit_dossier.sh rapports/zenodo-23864979`, tête 5aacecce…). Le journal n'est pas inscrit. Note : la portée *paquet* sans sortie livrée reste une question d'amendement (`journal/AMENDEMENTS.md`), pas un défaut du rapport.
+
+**Blocages.** Aucun BLOCAGE. Rien de contraire à CLAUDE.md ; rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Propriétaire : envoyer la notification du rapport zenodo-23585246 et consigner la date. Auteur : douzième paquet.
+
+---
+
 ## 2026-11-02T20:00Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Les trois pas de la « prochaine action » de la revue n° 3. (1) Rapport 11 zenodo-23864979 : 28 → 26, avec `bin/compte_lignes.sh` (nouveau, générique : `grep -c` + commande/code dans un log) → `compte_cas.log` = 26 ; reste `brouillon`, à relire. (2) `rapports/zenodo-23585246/NOTIFICATION.md` (divergent / paquet) rédigé selon 6 quater : faits, commandes, écarts ; l'adresse de l'auteur correspondant n'est pas au dossier, le propriétaire la relève sur la fiche Zenodo ; rien envoyé. (3) Ligne « Couverture » ajoutée à 8 rapports publiables et au rapport 11, dossiers réinscrits au registre (entrées nouvelles), aucun nombre touché. Non fait : 23607297 et 23437544 (*inexécutable*), aucune des trois situations ne s'y applique — question portée à `journal/AMENDEMENTS.md`.
