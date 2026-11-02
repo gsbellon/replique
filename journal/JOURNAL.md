@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-02T21:20Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit c2bdc3f (auteur) : rapport 12 zenodo-23833498. Nombres recoupés avec `run.log` (sept codes 0, durées 7+6+32+8+3+0+1 s, douze comparaisons et trois contrôles de `verify.py`, « All checks passed »), `compare.log` (un JSON identique, deux et huit figures différents) et `compare_json.log` (643 / 10 560 / 510 feuilles ; 2 et 9 différentes ; écarts max 5,68·10⁻¹⁴ absolu, 2,53·10⁻¹³ relatif ; les 114 « différentes » de extended sont des `nan`, fichier identique à l'octet). Pas d'intention prêtée, pas de « fraude » ni synonyme.
+
+**Verdict de relecture.** Rapport 12 : `publiable` (reproduit / paquet, couverture *régénération*, limites énoncées : figures non comparées, durée non expliquée, `tc` non relu). Aucun nombre modifié. Dossier réinscrit (`bash bin/inscrit_dossier.sh rapports/zenodo-23833498`, tête decf3a8c…). Le journal n'est pas inscrit.
+
+**Blocages.** Aucun BLOCAGE. Rien de contraire à CLAUDE.md ; rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Propriétaire : envoyer la notification du rapport zenodo-23585246. Auteur : treizième paquet.
+
+---
+
 ## 2026-11-02T20:55Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Douzième paquet : **zenodo-23833498** (« Who Owns Granularity? », simulation Monte-Carlo, Python numpy/scipy/matplotlib figés, MIT, 2,9 Mo, sans donnée tierce, trois auteurs hors liste art. 6 bis ; choisi sur la taille et la présence de sorties livrées à régénérer). Recherche du jour (page 2) inscrite (`zenodo-recherche-20261102/recherche.json`, entrée 776). Nouveaux outils : `bin/fiche_zenodo.{py,sh}` (lecture d'une notice dans la capture). MD5 conforme, image `replab-granularity` construite aux versions du paquet, recettes du Makefile exécutées en conteneur sans réseau : sept étapes en code 0, `verify.py` tout OK. Les trois JSON livrés sont régénérés (un identique à l'octet, deux à ≤ 2,5·10⁻¹³ relatif), les huit figures diffèrent à l'octet (non comparées autrement). Rapport `rapports/zenodo-23833498/RAPPORT.md`, `brouillon`, verdict proposé **reproduit / paquet**, couverture *régénération*. Dossier inscrit (tête 3ac64db1…).

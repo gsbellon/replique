@@ -1,4 +1,4 @@
-# Rapport zenodo-23833498 — état : brouillon
+# Rapport zenodo-23833498 — état : publiable
 
 Verdict proposé : **reproduit** — portée : **paquet**. Les commandes de `REPRODUCIBILITY.md` / `Makefile` (`make all`, `make verify`) sont exécutées dans le même ordre, étape par étape, tout en code 0 (`run.log`). Les trois fichiers JSON de résultats livrés sont régénérés : 643, 10 560 et 510 feuilles, mêmes chemins des deux côtés ; `extended_results.json` est identique à l'octet, les deux autres diffèrent par 2 et 9 feuilles numériques, au plus de 5,7·10⁻¹⁴ en absolu (`archetype_results.json`) et de 2,5·10⁻¹³ en relatif (`robustness_results.json`) (`compare.log`, `compare_json.log`). `verify.py` du paquet : toutes les vérifications OK, code 0 (`run.log`). Les huit figures régénérées diffèrent des figures livrées à l'octet ; elles n'ont pas été comparées autrement (Résultats, point 5). La portée *paquet* ne dit rien des nombres de l'article, qui n'a pas été lu : `verify.py` compare aux valeurs que le paquet dit être celles de l'article (art. 6 ter).
 
