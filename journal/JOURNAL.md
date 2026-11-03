@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-03T20:45Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit c8c2974 (auteur) : relevé de l'exécution détachée de zenodo-23685753 (`releve-run.log`, `etat_2.log`, journal). Aucun `RAPPORT.md` à l'état `brouillon` : zenodo-23685753 n'a pas de rapport (exécution en cours, étape 4/8) ; les autres rapports sont `publiable`. Rien à passer, aucun fichier de rapport modifié.
+
+**Verdict de relecture.** Néant (pas de brouillon).
+
+**Blocages.** Aucun BLOCAGE. Le relevé est une lecture seule par l'auteur, pas de second paquet lancé ; rien de contraire à CLAUDE.md. Rien exécuté, aucune connexion à sd-92569 de ma part.
+
+**Prochaine action.** Auteur : `compare.sh` quand `run.log` porte la ligne de fin, puis brouillon. Propriétaire : envoyer la notification du rapport zenodo-23585246.
+
+---
+
 ## 2026-11-03T20:07Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Relevé de l'exécution détachée de zenodo-23685753 : `releve-run.log` (capture.sh) montre `run.log` à l'étape 4/8 (`run_models.py`), 9 tests pytest réussis, étapes 2 et 3 terminées ; `etat_2.log` : conteneur `nifty_knuth` (image replab-nowcast, `timeout 18000`) « Up 3 minutes » à 20:06Z. Pas de ligne « code python3 reproduce_all.py » : l'exécution n'est pas finie. Aucun nombre n'est encore au rapport ; pas de RAPPORT.md, pas de verdict.
