@@ -1,0 +1,27 @@
+# commande : ssh sd-92569 sh work/telecharge_extrait.sh
+# début    : 2026-11-03T20:00:29Z
+# ----
+energy_nowcasting_replication_v1.0.1.zip: OK
+code extraction : 0
+127
+./energy_nowcasting_replication/REPRODUCIBILITY.md
+./energy_nowcasting_replication/config/features.yaml
+./energy_nowcasting_replication/tests/test_smoke.py
+./energy_nowcasting_replication/LICENSE
+./energy_nowcasting_replication/figures/FigS_shap_top20_lightgbm_unconditional_extended.png
+./energy_nowcasting_replication/figures/FigS_shap_top20_xgboost_conditional_core.png
+./energy_nowcasting_replication/figures/FigS_shap_top20_lightgbm_conditional_core.png
+./energy_nowcasting_replication/figures/Fig4_shap_top20_lightgbm_unconditional_core.png
+./energy_nowcasting_replication/figures/FigS_shap_insample_vs_oos_xgboost_conditional_core.png
+./energy_nowcasting_replication/figures/Fig5_shap_top20_xgboost_unconditional_core.png
+./energy_nowcasting_replication/figures/Fig3_enet_dominant_families_unconditional.png
+./energy_nowcasting_replication/CITATION.cff
+./energy_nowcasting_replication/src/common.py
+./energy_nowcasting_replication/requirements.txt
+./energy_nowcasting_replication/README.md
+./energy_nowcasting_replication/reproduce_all.py
+./energy_nowcasting_replication/results/environment_report.txt
+./energy_nowcasting_replication/results/reproduction_summary.txt
+# ----
+# code de sortie : 0
+# durée (s)      : 2
