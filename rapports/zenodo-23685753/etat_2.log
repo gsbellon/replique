@@ -1,0 +1,23 @@
+# commande : ssh sd-92569 ls -la ~/work/z23685753; podman ps -a; date -u
+# début    : 2026-11-03T20:06:00Z
+# ----
+total 44
+drwxrwxr-x  6 replab replab 4096 Nov  3 21:02 .
+drwxrwxr-x 18 replab replab 4096 Nov  3 21:00 ..
+drwxrwxr-x  2 replab replab 4096 Nov  3 21:01 build
+-rw-rw-r--  1 replab replab  942 Nov  3 21:01 Containerfile
+drwxrwxr-x  2 replab replab 4096 Nov  3 21:00 dl
+-rw-rw-r--  1 replab replab 1101 Nov  3 21:01 lance_build.sh
+-rw-rw-r--  1 replab replab 1113 Nov  3 21:02 lance_run.sh
+drwxrwxr-x  3 replab replab 4096 Nov  3 21:00 pkg
+drwxrwxr-x 10 replab replab 4096 Nov  3 21:02 run
+-rw-rw-r--  1 replab replab 4609 Nov  3 21:03 run.log
+CONTAINER ID  IMAGE                            COMMAND               CREATED        STATUS                 PORTS       NAMES
+87ad71e2299a  localhost/replab-oilecu:latest   bash run_all.sh       7 days ago     Exited (0) 6 days ago              replab-oilecu-run
+160f803cc324  localhost/replab-oilecu:latest   bash run_all.sh       6 days ago     Exited (0) 5 days ago              replab-oilecu-run2
+81f7b0a9aa53  localhost/replab-ai306:latest    sh -c python3 run...  5 days ago     Exited (0) 5 days ago              replab-ai306-run
+ac97b0ff78b2  localhost/replab-nowcast:latest  timeout 18000 pyt...  3 minutes ago  Up 3 minutes                       nifty_knuth
+Tue Nov  3 08:06:00 PM UTC 2026
+# ----
+# code de sortie : 0
+# durée (s)      : 0

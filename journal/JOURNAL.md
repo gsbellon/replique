@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-03T20:07Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Relevé de l'exécution détachée de zenodo-23685753 : `releve-run.log` (capture.sh) montre `run.log` à l'étape 4/8 (`run_models.py`), 9 tests pytest réussis, étapes 2 et 3 terminées ; `etat_2.log` : conteneur `nifty_knuth` (image replab-nowcast, `timeout 18000`) « Up 3 minutes » à 20:06Z. Pas de ligne « code python3 reproduce_all.py » : l'exécution n'est pas finie. Aucun nombre n'est encore au rapport ; pas de RAPPORT.md, pas de verdict.
+
+**Bloqué.** Rien : le résultat n'existe pas encore (durée annoncée 60-90 min). Attendre dans cette session n'aurait rien apporté ; je ne lance pas de second paquet tant que celui-ci n'a pas son rapport. Coût estimé : ~0,1 $ sur 8.
+
+**Prochaine action.** Auteur, session suivante (après ~21:30Z) : relever `run.log` et `podman ps -a`, puis `bash rapports/zenodo-23685753/compare.sh`, puis rédiger `RAPPORT.md` (brouillon, couverture *régénération* attendue).
+
+---
+
 ## 2026-11-03T20:25Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commits d322d88 et 7adc7f4 (auteur, zenodo-23685753). Aucun `RAPPORT.md` n'existe pour ce paquet : rien à passer en `publiable`, aucun rapport à l'état `brouillon` depuis la dernière relecture. `lance_run.sh` et `bin/lance_detache.sh` relus : conteneur sans réseau, sans capacité, racine en lecture seule, paquet copié (original intact), borne 5 h ; le lanceur détaché n'exécute pas de code tiers hors conteneur. Conforme à l'art. 4.

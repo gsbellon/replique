@@ -1,0 +1,115 @@
+# commande : ssh sd-92569 cat ~/work/z23685753/run.log
+# début    : 2026-11-03T20:05:58Z
+# ----
+début 2026-11-03T20:02:55Z
+[0] existing results/ backed up -> results_backup_20261103_2002
+Reproduction run: 20261103_2002
+OS: Linux-6.12.111+deb13-amd64-x86_64-with-glibc2.41
+Machine: x86_64  CPU: 
+Python: 3.12.15  (/usr/local/bin/python3)
+CPU threads: 8
+
+numpy          2.5.3
+pandas         3.0.6
+scipy          1.18.1
+scikit-learn   1.9.1
+xgboost        3.4.1
+lightgbm       4.7.0
+shap           0.53.0
+arch           8.0.0
+yaml           6.0.3
+
+
+
+======================================================================
+[1/8] -m pytest -q tests/
+======================================================================
+.........                                                                [100%]
+9 passed in 1.32s
+
+======================================================================
+[2/8] src/features/build_monthly_features.py
+======================================================================
+         date
+0  2012-01-31
+1  2012-02-29
+2  2012-03-31
+3  2012-04-30
+4  2012-05-31
+5  2012-06-30
+6  2012-07-31
+7  2012-08-31
+8  2012-09-30
+9  2012-10-31
+10 2012-11-30
+11 2012-12-31
+12 2013-01-31
+13 2013-02-28
+14 2013-03-31
+          date
+153 2024-10-31
+154 2024-11-30
+155 2024-12-31
+156 2025-01-31
+157 2025-02-28
+158 2025-03-31
+159 2025-04-30
+160 2025-05-31
+161 2025-06-30
+162 2025-07-31
+163 2025-08-31
+164 2025-09-30
+165 2025-10-31
+166 2025-11-30
+167 2025-12-31
+brent_usd_mean                0
+usdtry_last                   0
+epias_tl_mean                 0
+epias_peak_offpeak_gap        0
+policy_rate                   0
+inflation_expectation_12m    12
+dtype: int64
+Saved: data/processed/monthly_nowcasting_panel.csv
+        date  ...  epias_peak_offpeak_gap_lag12
+0 2012-01-31  ...                           NaN
+1 2012-02-29  ...                           NaN
+2 2012-03-31  ...                           NaN
+3 2012-04-30  ...                           NaN
+4 2012-05-31  ...                           NaN
+
+[5 rows x 78 columns]
+          date  ...  epias_peak_offpeak_gap_lag12
+163 2025-08-31  ...                     39.587095
+164 2025-09-30  ...                     -0.838513
+165 2025-10-31  ...                    -63.903203
+166 2025-11-30  ...                    282.208720
+167 2025-12-31  ...                    445.014780
+
+[5 rows x 78 columns]
+(168, 78)
+['date', 'cpi_energy_index', 'cpi_headline_index', 'inflation_expectation_12m', 'policy_rate', 'target_mom', 'target_yoy', 'headline_mom', 'headline_yoy', 'brent_usd_mean', 'brent_usd_std', 'brent_usd_last', 'brent_try_mean', 'brent_try_std', 'brent_try_last', 'usdtry_mean', 'usdtry_std', 'usdtry_last', 'epias_tl_mean', 'epias_tl_std', 'epias_tl_min', 'epias_tl_max', 'epias_tl_last', 'epias_usd_mean', 'epias_eur_mean', 'epias_tl_peak_mean', 'epias_tl_offpeak_mean', 'epias_peak_offpeak_gap', 'target_mom_lag1', 'target_mom_lag2', 'target_mom_lag3', 'target_mom_lag6', 'target_mom_lag12', 'headline_mom_lag1', 'headline_mom_lag2', 'headline_mom_lag3', 'headline_mom_lag6', 'headline_mom_lag12', 'inflation_expectation_12m_lag1', 'inflation_expectation_12m_lag2', 'inflation_expectation_12m_lag3', 'inflation_expectation_12m_lag6', 'inflation_expectation_12m_lag12', 'policy_rate_lag1', 'policy_rate_lag2', 'policy_rate_lag3', 'policy_rate_lag6', 'policy_rate_lag12', 'usdtry_last_lag1', 'usdtry_last_lag2', 'usdtry_last_lag3', 'usdtry_last_lag6', 'usdtry_last_lag12', 'brent_usd_last_lag1', 'brent_usd_last_lag2', 'brent_usd_last_lag3', 'brent_usd_last_lag6', 'brent_usd_last_lag12', 'brent_try_last_lag1', 'brent_try_last_lag2', 'brent_try_last_lag3', 'brent_try_last_lag6', 'brent_try_last_lag12', 'epias_tl_mean_lag1', 'epias_tl_mean_lag2', 'epias_tl_mean_lag3', 'epias_tl_mean_lag6', 'epias_tl_mean_lag12', 'epias_tl_std_lag1', 'epias_tl_std_lag2', 'epias_tl_std_lag3', 'epias_tl_std_lag6', 'epias_tl_std_lag12', 'epias_peak_offpeak_gap_lag1', 'epias_peak_offpeak_gap_lag2', 'epias_peak_offpeak_gap_lag3', 'epias_peak_offpeak_gap_lag6', 'epias_peak_offpeak_gap_lag12']
+
+======================================================================
+[3/8] src/features/build_midas_features.py
+======================================================================
+Saved /work/data/processed/midas_blocks.csv: (168, 13); NaN per col:
+date            0
+brent_usd_w1    0
+brent_usd_w2    0
+brent_usd_w3    0
+brent_usd_w4    0
+usdtry_w1       0
+usdtry_w2       0
+usdtry_w3       0
+usdtry_w4       0
+epias_tl_w1     0
+epias_tl_w2     0
+epias_tl_w3     0
+epias_tl_w4     0
+
+======================================================================
+[4/8] src/models/run_models.py
+======================================================================
+# ----
+# code de sortie : 0
+# durée (s)      : 0
