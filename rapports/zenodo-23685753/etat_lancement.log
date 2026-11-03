@@ -1,0 +1,31 @@
+# commande : ssh sd-92569 cd ~/work/z23685753 && cat run.log && podman ps
+# début    : 2026-11-03T20:02:58Z
+# ----
+début 2026-11-03T20:02:55Z
+[0] existing results/ backed up -> results_backup_20261103_2002
+Reproduction run: 20261103_2002
+OS: Linux-6.12.111+deb13-amd64-x86_64-with-glibc2.41
+Machine: x86_64  CPU: 
+Python: 3.12.15  (/usr/local/bin/python3)
+CPU threads: 8
+
+numpy          2.5.3
+pandas         3.0.6
+scipy          1.18.1
+scikit-learn   1.9.1
+xgboost        3.4.1
+lightgbm       4.7.0
+shap           0.53.0
+arch           8.0.0
+yaml           6.0.3
+
+
+
+======================================================================
+[1/8] -m pytest -q tests/
+======================================================================
+CONTAINER ID  IMAGE                            COMMAND               CREATED        STATUS        PORTS       NAMES
+ac97b0ff78b2  localhost/replab-nowcast:latest  timeout 18000 pyt...  3 seconds ago  Up 3 seconds              nifty_knuth
+# ----
+# code de sortie : 0
+# durée (s)      : 0

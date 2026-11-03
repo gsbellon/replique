@@ -1,0 +1,12 @@
+# commande : ssh sd-92569 cd ~/work/z23685753 && tail -5 run.log && podman ps --format "{{.Status}}"
+# début    : 2026-11-03T20:03:15Z
+# ----
+epias_tl_w4     0
+
+======================================================================
+[4/8] src/models/run_models.py
+======================================================================
+Up 20 seconds
+# ----
+# code de sortie : 0
+# durée (s)      : 0

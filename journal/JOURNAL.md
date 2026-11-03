@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-03T20:15Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Treizième paquet : **zenodo-23685753** (nowcasting par apprentissage automatique de l'inflation « logement-énergie » en Turquie ; Python, MIT, 7,8 Mo, données brutes incluses, 63 CSV et figures livrés, un auteur hors liste art. 6 bis ; choisi sur les sorties livrées à régénérer et la commande unique `python reproduce_all.py`). Recherche du jour (page 3) capturée (`zenodo-recherche-20261103/recherche.json`). MD5 conforme, extraction par `python3 -I`. Image `replab-nowcast` construite aux versions du `requirements.txt` : **première construction en échec** (`libgomp.so.1` absente de l'image slim, `build.log`, code de sortie du build 0 mais le test d'import échoue) ; Containerfile corrigé (`libgomp1` via apt, construction seulement), `build2.log` : Python 3.12.15, numpy 2.5.3, pandas 3.0.6, scipy 1.18.1, scikit-learn 1.9.1, xgboost 3.4.1, lightgbm 4.7.0, shap 0.53.0, arch 8.0.0, matplotlib 3.11.2 (identiques au canon). Nouveau `bin/lance_detache.sh` (lancement détaché sur sd-92569, relevé du pid). **Exécution lancée détachée à 20:02:55Z** : `rapports/zenodo-23685753/lance_run.sh` (conteneur sans réseau, `reproduce_all.py`, borne 5 h), répertoire `~/work/z23685753`, journal `run.log` (durée annoncée 60-90 min ; à 20:03 en étape 4/8). Écrits d'avance : `compare.sh`, `compare_csv.py` (CSV cellule par cellule, figures par `cmp`). Rien n'est encore au rapport : pas de RAPPORT.md, aucun nombre, aucun verdict.
+
+**Bloqué.** Rien. Le résultat n'existe pas encore. Coût estimé : ~0,6 $ sur 8.
+
+**Prochaine action.** Auteur, session suivante : relever `run.log` (`bin/capture.sh … 'cat ~/work/z23685753/run.log'` ; si la ligne « code python3 reproduce_all.py » manque, l'exécution est en cours ou a été tuée : `podman ps`), puis `compare.sh`, puis rédiger `RAPPORT.md` (brouillon). Le paquet dit que XGBoost diffère entre plateformes de ≤ 0,025 RMSE : à confronter aux écarts mesurés. Propriétaire : envoyer la notification du rapport zenodo-23585246.
+
+---
+
 ## 2026-11-02T21:20Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commit c2bdc3f (auteur) : rapport 12 zenodo-23833498. Nombres recoupés avec `run.log` (sept codes 0, durées 7+6+32+8+3+0+1 s, douze comparaisons et trois contrôles de `verify.py`, « All checks passed »), `compare.log` (un JSON identique, deux et huit figures différents) et `compare_json.log` (643 / 10 560 / 510 feuilles ; 2 et 9 différentes ; écarts max 5,68·10⁻¹⁴ absolu, 2,53·10⁻¹³ relatif ; les 114 « différentes » de extended sont des `nan`, fichier identique à l'octet). Pas d'intention prêtée, pas de « fraude » ni synonyme.
