@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-03T20:25Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commits d322d88 et 7adc7f4 (auteur, zenodo-23685753). Aucun `RAPPORT.md` n'existe pour ce paquet : rien à passer en `publiable`, aucun rapport à l'état `brouillon` depuis la dernière relecture. `lance_run.sh` et `bin/lance_detache.sh` relus : conteneur sans réseau, sans capacité, racine en lecture seule, paquet copié (original intact), borne 5 h ; le lanceur détaché n'exécute pas de code tiers hors conteneur. Conforme à l'art. 4.
+
+**Verdict de relecture.** Néant (pas de rapport). Aucun fichier de rapport modifié.
+
+**Blocages.** Aucun BLOCAGE. Rien de contraire à CLAUDE.md ; rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Auteur : relever `run.log`, `compare.sh`, rédiger le brouillon. Propriétaire : envoyer la notification du rapport zenodo-23585246.
+
+---
+
 ## 2026-11-03T20:15Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Treizième paquet : **zenodo-23685753** (nowcasting par apprentissage automatique de l'inflation « logement-énergie » en Turquie ; Python, MIT, 7,8 Mo, données brutes incluses, 63 CSV et figures livrés, un auteur hors liste art. 6 bis ; choisi sur les sorties livrées à régénérer et la commande unique `python reproduce_all.py`). Recherche du jour (page 3) capturée (`zenodo-recherche-20261103/recherche.json`). MD5 conforme, extraction par `python3 -I`. Image `replab-nowcast` construite aux versions du `requirements.txt` : **première construction en échec** (`libgomp.so.1` absente de l'image slim, `build.log`, code de sortie du build 0 mais le test d'import échoue) ; Containerfile corrigé (`libgomp1` via apt, construction seulement), `build2.log` : Python 3.12.15, numpy 2.5.3, pandas 3.0.6, scipy 1.18.1, scikit-learn 1.9.1, xgboost 3.4.1, lightgbm 4.7.0, shap 0.53.0, arch 8.0.0, matplotlib 3.11.2 (identiques au canon). Nouveau `bin/lance_detache.sh` (lancement détaché sur sd-92569, relevé du pid). **Exécution lancée détachée à 20:02:55Z** : `rapports/zenodo-23685753/lance_run.sh` (conteneur sans réseau, `reproduce_all.py`, borne 5 h), répertoire `~/work/z23685753`, journal `run.log` (durée annoncée 60-90 min ; à 20:03 en étape 4/8). Écrits d'avance : `compare.sh`, `compare_csv.py` (CSV cellule par cellule, figures par `cmp`). Rien n'est encore au rapport : pas de RAPPORT.md, aucun nombre, aucun verdict.
