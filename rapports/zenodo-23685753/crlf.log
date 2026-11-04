@@ -1,0 +1,11 @@
+# commande : ssh sd-92569 cd ~/work/z23685753 && grep -c -P "\r$" pkg/energy_nowcasting_replication/results/robustness/vif.csv run/results/robustness/vif.csv; wc -l pkg/energy_nowcasting_replication/results/robustness/vif.csv run/results/robustness/vif.csv
+# début    : 2026-11-04T20:00:37Z
+# ----
+pkg/energy_nowcasting_replication/results/robustness/vif.csv:45
+run/results/robustness/vif.csv:0
+  45 pkg/energy_nowcasting_replication/results/robustness/vif.csv
+  45 run/results/robustness/vif.csv
+  90 total
+# ----
+# code de sortie : 0
+# durée (s)      : 0

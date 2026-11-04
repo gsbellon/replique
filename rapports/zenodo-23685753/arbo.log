@@ -1,0 +1,50 @@
+# commande : ssh sd-92569 cd ~/work/z23685753 && find pkg/energy_nowcasting_replication/results run/results -maxdepth 2 | head -n 60
+# début    : 2026-11-04T20:00:18Z
+# ----
+pkg/energy_nowcasting_replication/results
+pkg/energy_nowcasting_replication/results/robustness
+pkg/energy_nowcasting_replication/results/robustness/window_robustness.csv
+pkg/energy_nowcasting_replication/results/robustness/family_correlations.csv
+pkg/energy_nowcasting_replication/results/robustness/hyperparameter_sensitivity.csv
+pkg/energy_nowcasting_replication/results/robustness/vif.csv
+pkg/energy_nowcasting_replication/results/evaluation
+pkg/energy_nowcasting_replication/results/evaluation/dm_vs_naive.csv
+pkg/energy_nowcasting_replication/results/evaluation/dm_vs_naive_bandwidth.csv
+pkg/energy_nowcasting_replication/results/evaluation/mcs.csv
+pkg/energy_nowcasting_replication/results/evaluation/metrics_all.csv
+pkg/energy_nowcasting_replication/results/evaluation/dm_tests.csv
+pkg/energy_nowcasting_replication/results/environment_report.txt
+pkg/energy_nowcasting_replication/results/models
+pkg/energy_nowcasting_replication/results/models/all_metrics.csv
+pkg/energy_nowcasting_replication/results/models/conditional
+pkg/energy_nowcasting_replication/results/models/unconditional
+pkg/energy_nowcasting_replication/results/midas
+pkg/energy_nowcasting_replication/results/midas/all_metrics.csv
+pkg/energy_nowcasting_replication/results/midas/conditional
+pkg/energy_nowcasting_replication/results/midas/unconditional
+pkg/energy_nowcasting_replication/results/reproduction_summary.txt
+run/results
+run/results/robustness
+run/results/robustness/window_robustness.csv
+run/results/robustness/family_correlations.csv
+run/results/robustness/hyperparameter_sensitivity.csv
+run/results/robustness/vif.csv
+run/results/evaluation
+run/results/evaluation/dm_vs_naive.csv
+run/results/evaluation/dm_vs_naive_bandwidth.csv
+run/results/evaluation/mcs.csv
+run/results/evaluation/metrics_all.csv
+run/results/evaluation/dm_tests.csv
+run/results/environment_report.txt
+run/results/models
+run/results/models/all_metrics.csv
+run/results/models/conditional
+run/results/models/unconditional
+run/results/midas
+run/results/midas/all_metrics.csv
+run/results/midas/conditional
+run/results/midas/unconditional
+run/results/reproduction_summary.txt
+# ----
+# code de sortie : 0
+# durée (s)      : 0

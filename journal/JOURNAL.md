@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-04T20:05Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** zenodo-23685753 : l'exécution détachée est finie (`run-complet.log` : code 0, 1 610 s, fin 2026-11-03T20:29:45Z ; 60-90 min annoncées). Comparaison : première version de `compare_csv.py` défectueuse (0 CSV trouvé, sous-dossiers non parcourus ; mon défaut, corrigé, `compare_csv2.log`). Résultat : 63 CSV régénérés, 20 394 cellules sur 67 716 différentes, toutes les sorties XGBoost (SHAP, DM, MCS) en écart ; RMSE du tableau principal dans la borne de 0,025 du paquet (XGBoost max 0,02456, `compare_rmse.log`) ; Elastic Net, LightGBM, naïf identiques ; MIDAS à ≤ 1,5·10⁻⁶ (le README dit « bit à bit » : pas ce que je mesure) ; `vif.csv` ne diffère que par CRLF/LF. `RAPPORT.md` rédigé à l'état `brouillon` : **reproduit / paquet / régénération**, avec limites et choix de verdict signalé au relecteur (un lecteur exigeant l'égalité lirait *divergent* ; pas de NOTIFICATION.md préparée). Dossier inscrit au registre (tête 257ecf26…). Rien d'autre lancé. Coût estimé ~0,5 $ sur 8.
+
+**Bloqué.** Rien.
+
+**Prochaine action.** Relecteur : trancher *reproduit* ou *divergent* pour zenodo-23685753 (si *divergent*, l'auteur rédige NOTIFICATION.md). Propriétaire : envoyer la notification du rapport zenodo-23585246. Auteur : quatorzième paquet après le passage du relecteur.
+
+---
+
 ## 2026-11-03T20:45Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commit c8c2974 (auteur) : relevé de l'exécution détachée de zenodo-23685753 (`releve-run.log`, `etat_2.log`, journal). Aucun `RAPPORT.md` à l'état `brouillon` : zenodo-23685753 n'a pas de rapport (exécution en cours, étape 4/8) ; les autres rapports sont `publiable`. Rien à passer, aucun fichier de rapport modifié.

@@ -1,0 +1,48 @@
+# commande : ssh sd-92569 cd ~/work/z23685753 && python3 -I compare_rmse.py pkg/energy_nowcasting_replication/results/evaluation/metrics_all.csv run/results/evaluation/metrics_all.csv
+# début    : 2026-11-04T20:00:50Z
+# ----
+lignes livrées : 32 | régénérées : 32 | clés communes : 32
+conditional    core      combo_all       livré 3.2317 régénéré 3.2277 écart 0.004048
+conditional    core      combo_trees     livré 3.3118 régénéré 3.3063 écart 0.005549
+conditional    core      elasticnet      livré 3.6228 régénéré 3.6228 écart 0
+conditional    core      lightgbm        livré 3.3036 régénéré 3.3036 écart 0
+conditional    core      midas_almon     livré 4.1719 régénéré 4.1719 écart 6.796e-10
+conditional    core      seasonal_naive  livré 4.6014 régénéré 4.6014 écart 0
+conditional    core      umidas          livré 3.4856 régénéré 3.4856 écart 1.776e-15
+conditional    core      xgboost         livré 3.3350 régénéré 3.3207 écart 0.01431
+conditional    extended  combo_all       livré 3.3490 régénéré 3.3507 écart 0.001693
+conditional    extended  combo_trees     livré 3.4144 régénéré 3.4201 écart 0.005698
+conditional    extended  elasticnet      livré 3.7500 régénéré 3.7500 écart 0
+conditional    extended  lightgbm        livré 3.4139 régénéré 3.4139 écart 0
+conditional    extended  midas_almon     livré 4.7565 régénéré 4.7565 écart 3.137e-09
+conditional    extended  seasonal_naive  livré 4.8609 régénéré 4.8609 écart 0
+conditional    extended  umidas          livré 3.7968 régénéré 3.7968 écart 0
+conditional    extended  xgboost         livré 3.4302 régénéré 3.4413 écart 0.01112
+unconditional  core      combo_all       livré 3.2998 régénéré 3.3072 écart 0.007362
+unconditional  core      combo_trees     livré 3.3376 régénéré 3.3483 écart 0.01062
+unconditional  core      elasticnet      livré 3.8145 régénéré 3.8145 écart 0
+unconditional  core      lightgbm        livré 3.3330 régénéré 3.3330 écart 0
+unconditional  core      midas_almon     livré 4.3306 régénéré 4.3306 écart 1.799e-09
+unconditional  core      seasonal_naive  livré 4.6014 régénéré 4.6014 écart 0
+unconditional  core      umidas          livré 3.9276 régénéré 3.9276 écart 9.77e-15
+unconditional  core      xgboost         livré 3.3521 régénéré 3.3767 écart 0.02456
+unconditional  extended  combo_all       livré 3.4479 régénéré 3.4426 écart 0.005313
+unconditional  extended  combo_trees     livré 3.4466 régénéré 3.4407 écart 0.005896
+unconditional  extended  elasticnet      livré 3.9982 régénéré 3.9982 écart 0
+unconditional  extended  lightgbm        livré 3.4493 régénéré 3.4493 écart 0
+unconditional  extended  midas_almon     livré 4.9778 régénéré 4.9778 écart 1.09e-08
+unconditional  extended  seasonal_naive  livré 4.8609 régénéré 4.8609 écart 0
+unconditional  extended  umidas          livré 4.1843 régénéré 4.1843 écart 8.882e-16
+unconditional  extended  xgboost         livré 3.4590 régénéré 3.4439 écart 0.01508
+--- par modèle
+combo_all       écart max 0.007362 | lignes > 0.025 : 0 sur 4
+combo_trees     écart max 0.01062 | lignes > 0.025 : 0 sur 4
+elasticnet      écart max 0 | lignes > 0.025 : 0 sur 4
+lightgbm        écart max 0 | lignes > 0.025 : 0 sur 4
+midas_almon     écart max 1.09e-08 | lignes > 0.025 : 0 sur 4
+seasonal_naive  écart max 0 | lignes > 0.025 : 0 sur 4
+umidas          écart max 9.77e-15 | lignes > 0.025 : 0 sur 4
+xgboost         écart max 0.02456 | lignes > 0.025 : 0 sur 4
+# ----
+# code de sortie : 0
+# durée (s)      : 0

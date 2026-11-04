@@ -1,0 +1,17 @@
+# commande : ssh sd-92569 cd ~/work/z23685753 && head -n 4 pkg/energy_nowcasting_replication/results/evaluation/metrics_all.csv run/results/evaluation/metrics_all.csv
+# début    : 2026-11-04T20:00:41Z
+# ----
+==> pkg/energy_nowcasting_replication/results/evaluation/metrics_all.csv <==
+﻿design,sample,model,n,rmse,mae,smape,mase,rmse_gain_vs_naive_pct
+conditional,core,seasonal_naive,96,4.60144892160557,2.7451207807090103,89.45435179914008,2.569960209810079,0.0
+conditional,core,umidas,96,3.4856122804559253,2.233602954108187,78.20938056453953,2.1325918279682923,24.249680049915646
+conditional,core,midas_almon,96,4.171898584319146,2.712191665333125,88.4123426207719,2.538469280420287,9.335110409886783
+
+==> run/results/evaluation/metrics_all.csv <==
+﻿design,sample,model,n,rmse,mae,smape,mase,rmse_gain_vs_naive_pct
+conditional,core,seasonal_naive,96,4.60144892160557,2.7451207807090103,89.45435179914008,2.569960209810079,0.0
+conditional,core,umidas,96,3.485612280455927,2.2336029541081897,78.20938056453969,2.132591827968294,24.24968004991561
+conditional,core,midas_almon,96,4.171898583639499,2.712191664112714,88.4123425643264,2.53846927975187,9.335110424657056
+# ----
+# code de sortie : 0
+# durée (s)      : 1

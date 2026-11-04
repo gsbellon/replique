@@ -1,0 +1,28 @@
+# commande : ssh sd-92569 cd ~/work/z23685753 && head -n 3 pkg/energy_nowcasting_replication/results/robustness/hyperparameter_sensitivity.csv pkg/energy_nowcasting_replication/results/robustness/window_robustness.csv; cut -d, -f1-4 pkg/energy_nowcasting_replication/results/robustness/window_robustness.csv
+# début    : 2026-11-04T20:01:01Z
+# ----
+==> pkg/energy_nowcasting_replication/results/robustness/hyperparameter_sensitivity.csv <==
+﻿design,model,min_leaf,depth_or_leaves,learning_rate,rmse,mae,baseline
+conditional,xgboost,5,1,0.03,3.3922050747955494,2.1619078304475914,False
+conditional,xgboost,5,1,0.05,3.558057013985135,2.2854511848401207,False
+
+==> pkg/energy_nowcasting_replication/results/robustness/window_robustness.csv <==
+﻿design,model,initial_window,n_forecasts,rmse,mae,naive_rmse,rmse_gain_vs_naive_pct
+conditional,xgboost,48,108,3.1461868213069017,1.929832894360717,4.341183755737508,27.52698346047304
+conditional,lightgbm,48,108,3.1166528560752313,1.9404171340007583,4.341183755737508,28.207304011120936
+﻿design,model,initial_window,n_forecasts
+conditional,xgboost,48,108
+conditional,lightgbm,48,108
+conditional,xgboost,60,96
+conditional,lightgbm,60,96
+conditional,xgboost,72,84
+conditional,lightgbm,72,84
+unconditional,xgboost,48,108
+unconditional,lightgbm,48,108
+unconditional,xgboost,60,96
+unconditional,lightgbm,60,96
+unconditional,xgboost,72,84
+unconditional,lightgbm,72,84
+# ----
+# code de sortie : 0
+# durée (s)      : 0

@@ -1,0 +1,12 @@
+# commande : ssh sd-92569 cd ~/work/z23685753 && cmp pkg/energy_nowcasting_replication/results/robustness/vif.csv run/results/robustness/vif.csv; file pkg/energy_nowcasting_replication/results/robustness/vif.csv run/results/robustness/vif.csv; wc -c pkg/energy_nowcasting_replication/results/robustness/vif.csv run/results/robustness/vif.csv
+# début    : 2026-11-04T20:00:32Z
+# ----
+pkg/energy_nowcasting_replication/results/robustness/vif.csv run/results/robustness/vif.csv differ: byte 23, line 1
+pkg/energy_nowcasting_replication/results/robustness/vif.csv: CSV Unicode text, UTF-8 (with BOM) text
+run/results/robustness/vif.csv:                               CSV Unicode text, UTF-8 (with BOM) text
+2132 pkg/energy_nowcasting_replication/results/robustness/vif.csv
+2087 run/results/robustness/vif.csv
+4219 total
+# ----
+# code de sortie : 0
+# durée (s)      : 0

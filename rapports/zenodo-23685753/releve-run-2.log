@@ -1,0 +1,26 @@
+# commande : ssh sd-92569 tail -n 15 ~/work/z23685753/run.log; podman ps -a; date -u
+# début    : 2026-11-04T20:00:09Z
+# ----
+     Exchange rate                0.202              0.040           0.116           5
+
+--- SHAP families unconditional/core/lightgbm (origin-wise vs in-sample) ---
+            family  total_mean_abs_shap  avg_mean_abs_shap  total_insample  n_features
+             EPİAŞ                1.801              0.139           1.731          13
+             Brent                1.395              0.140           1.762          10
+Headline inflation                0.916              0.183           0.431           5
+          Own lags                0.819              0.164           0.791           5
+       Policy rate                0.415              0.083           0.343           5
+     Exchange rate                0.234              0.047           0.140           5
+
+Done. Outputs: results/environment_report.txt, results/reproduction_summary.txt and the results/ folder.
+code python3 reproduce_all.py : 0
+durée (s) : 1610
+fin 2026-11-03T20:29:45Z
+CONTAINER ID  IMAGE                           COMMAND               CREATED     STATUS                 PORTS       NAMES
+87ad71e2299a  localhost/replab-oilecu:latest  bash run_all.sh       8 days ago  Exited (0) 7 days ago              replab-oilecu-run
+160f803cc324  localhost/replab-oilecu:latest  bash run_all.sh       7 days ago  Exited (0) 6 days ago              replab-oilecu-run2
+81f7b0a9aa53  localhost/replab-ai306:latest   sh -c python3 run...  6 days ago  Exited (0) 6 days ago              replab-ai306-run
+Wed Nov  4 08:00:09 PM UTC 2026
+# ----
+# code de sortie : 0
+# durée (s)      : 0

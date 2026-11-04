@@ -15,8 +15,18 @@ def nombre(s):
         return None
 
 
-noms_l = sorted(f for f in os.listdir(livre) if f.endswith(".csv"))
-noms_r = sorted(f for f in os.listdir(regen) if f.endswith(".csv"))
+def liste(racine):
+    # chemins relatifs de tous les CSV, sous-dossiers compris
+    out = []
+    for d, _, fs in os.walk(racine):
+        for f in fs:
+            if f.endswith(".csv"):
+                out.append(os.path.relpath(os.path.join(d, f), racine))
+    return sorted(out)
+
+
+noms_l = liste(livre)
+noms_r = liste(regen)
 print("CSV livrés :", len(noms_l), "| régénérés :", len(noms_r))
 print("seulement livrés :", sorted(set(noms_l) - set(noms_r)))
 print("seulement régénérés :", sorted(set(noms_r) - set(noms_l)))

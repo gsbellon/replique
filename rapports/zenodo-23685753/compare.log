@@ -1,0 +1,167 @@
+# commande : ssh sd-92569 cd ~/work/z23685753 && sh compare.sh
+# début    : 2026-11-04T20:00:14Z
+# ----
+CSV livrés : 0 | régénérés : 0
+seulement livrés : []
+seulement régénérés : []
+TOTAL identiques à l'octet : 0 | différents (comparés) cellules : 0 sur 0 | abs max 0 | rel max 0
+DIFFERENT  figures/Fig1_actual_vs_nowcast_unconditional_core.png
+DIFFERENT  figures/Fig1b_actual_vs_nowcast_conditional_core.png
+DIFFERENT  figures/Fig2b_enet_family_shares_conditional_core.png
+DIFFERENT  figures/Fig2_enet_family_shares_unconditional_core.png
+DIFFERENT  figures/Fig3_enet_dominant_families_unconditional.png
+DIFFERENT  figures/Fig4_shap_top20_lightgbm_unconditional_core.png
+DIFFERENT  figures/Fig5_shap_top20_xgboost_unconditional_core.png
+DIFFERENT  figures/Fig6_shap_family_shares_over_time_lightgbm_unconditional_core.png
+DIFFERENT  figures/FigS_enet_family_shares_unconditional_extended.png
+DIFFERENT  figures/FigS_shap_family_shares_over_time_xgboost_conditional_core.png
+DIFFERENT  figures/FigS_shap_insample_vs_oos_xgboost_conditional_core.png
+DIFFERENT  figures/FigS_shap_top20_lightgbm_conditional_core.png
+DIFFERENT  figures/FigS_shap_top20_lightgbm_unconditional_extended.png
+DIFFERENT  figures/FigS_shap_top20_xgboost_conditional_core.png
+14
+14
+--- txt de results/
+DIFFERENT  reproduction_summary.txt
+DIFFERENT  environment_report.txt
+1,68c1,68
+< REPRODUCTION SUMMARY 20261012_0011
+< ======================================================================
+< RMSE by design/sample/model:
+< model                   combo_all  combo_trees  elasticnet  lightgbm  midas_almon  seasonal_naive  umidas  xgboost
+< design        sample                                                                                              
+< conditional   core         3.2317       3.3118      3.6228    3.3036       4.1719          4.6014  3.4856   3.3350
+<               extended     3.3490       3.4144      3.7500    3.4139       4.7565          4.8609  3.7968   3.4302
+< unconditional core         3.2998       3.3376      3.8145    3.3330       4.3306          4.6014  3.9276   3.3521
+<               extended     3.4479       3.4466      3.9982    3.4493       4.9778          4.8609  4.1843   3.4590
+< 
+< MAE:
+< model                   combo_all  combo_trees  elasticnet  lightgbm  midas_almon  seasonal_naive  umidas  xgboost
+< design        sample                                                                                              
+< conditional   core         2.0766       2.1436      2.3261    2.1492       2.7122          2.7451  2.2336   2.1381
+<               extended     2.1704       2.2084      2.4888    2.2131       3.2818          2.9332  2.6215   2.2074
+< unconditional core         2.1593       2.1432      2.5442    2.1598       2.7997          2.7451  2.5855   2.1309
+<               extended     2.2810       2.1945      2.7378    2.1941       3.5100          2.9332  3.0027   2.2198
+< 
+< --- DM vs naive (MAE loss, HLN p) ---
+< model                   combo_all  combo_trees  elasticnet  lightgbm  midas_almon  umidas  xgboost
+< design        sample                                                                              
+< conditional   core         0.0256       0.0482      0.2094    0.0510       0.9210  0.1152   0.0468
+<               extended     0.0207       0.0398      0.1832    0.0417       0.4152  0.3633   0.0401
+< unconditional core         0.0558       0.0441      0.5886    0.0511       0.8737  0.6403   0.0400
+<               extended     0.0493       0.0308      0.5994    0.0343       0.1697  0.8531   0.0332
+< 
+< --- MCS p-values (MSE loss) ---
+< model                   combo_all  combo_trees  elasticnet  lightgbm  midas_almon  seasonal_naive  umidas  xgboost
+< design        sample                                                                                              
+< conditional   core          1.000        0.657       0.460     0.657        0.206           0.169   0.657    0.622
+<               extended      1.000        0.595       0.143     0.595        0.143           0.143   0.558    0.595
+< unconditional core          1.000        0.925       0.306     0.925        0.188           0.188   0.198    0.577
+<               extended      0.987        1.000       0.143     0.987        0.089           0.143   0.156    0.837
+< 
+< --- SHAP families conditional/core/xgboost (origin-wise vs in-sample) ---
+<             family  total_mean_abs_shap  avg_mean_abs_shap  total_insample  n_features
+<              EPİAŞ                1.925              0.148           1.867          13
+< Headline inflation                1.612              0.269           1.272           6
+<              Brent                0.973              0.097           0.997          10
+<           Own lags                0.702              0.140           0.552           5
+<        Policy rate                0.332              0.066           0.241           5
+<      Exchange rate                0.153              0.031           0.051           5
+< 
+< --- SHAP families conditional/core/lightgbm (origin-wise vs in-sample) ---
+<             family  total_mean_abs_shap  avg_mean_abs_shap  total_insample  n_features
+<              EPİAŞ                1.703              0.131           1.777          13
+< Headline inflation                1.582              0.264           1.228           6
+<              Brent                0.982              0.098           1.060          10
+<           Own lags                0.744              0.149           0.620           5
+<        Policy rate                0.350              0.070           0.347           5
+<      Exchange rate                0.172              0.034           0.073           5
+< 
+< --- SHAP families unconditional/core/xgboost (origin-wise vs in-sample) ---
+<             family  total_mean_abs_shap  avg_mean_abs_shap  total_insample  n_features
+<              EPİAŞ                2.056              0.158           2.124          13
+<              Brent                1.419              0.142           1.480          10
+< Headline inflation                0.879              0.176           0.516           5
+<           Own lags                0.790              0.158           0.508           5
+<        Policy rate                0.376              0.075           0.378           5
+<      Exchange rate                0.199              0.040           0.101           5
+< 
+< --- SHAP families unconditional/core/lightgbm (origin-wise vs in-sample) ---
+<             family  total_mean_abs_shap  avg_mean_abs_shap  total_insample  n_features
+<              EPİAŞ                1.801              0.139           1.731          13
+<              Brent                1.395              0.140           1.762          10
+< Headline inflation                0.916              0.183           0.431           5
+<           Own lags                0.819              0.164           0.791           5
+<        Policy rate                0.415              0.083           0.343           5
+---
+> REPRODUCTION SUMMARY 20261103_2002
+> ======================================================================
+> RMSE by design/sample/model:
+> model                   combo_all  combo_trees  elasticnet  lightgbm  midas_almon  seasonal_naive  umidas  xgboost
+> design        sample                                                                                              
+> conditional   core         3.2277       3.3063      3.6228    3.3036       4.1719          4.6014  3.4856   3.3207
+>               extended     3.3507       3.4201      3.7500    3.4139       4.7565          4.8609  3.7968   3.4413
+> unconditional core         3.3072       3.3483      3.8145    3.3330       4.3306          4.6014  3.9276   3.3767
+>               extended     3.4426       3.4407      3.9982    3.4493       4.9778          4.8609  4.1843   3.4439
+> 
+> MAE:
+> model                   combo_all  combo_trees  elasticnet  lightgbm  midas_almon  seasonal_naive  umidas  xgboost
+> design        sample                                                                                              
+> conditional   core         2.0717       2.1375      2.3261    2.1492       2.7122          2.7451  2.2336   2.1274
+>               extended     2.1662       2.2007      2.4888    2.2131       3.2818          2.9332  2.6215   2.1920
+> unconditional core         2.1681       2.1484      2.5442    2.1598       2.7997          2.7451  2.5855   2.1573
+>               extended     2.2763       2.1759      2.7378    2.1941       3.5100          2.9332  3.0027   2.1893
+> 
+> --- DM vs naive (MAE loss, HLN p) ---
+> model                   combo_all  combo_trees  elasticnet  lightgbm  midas_almon  umidas  xgboost
+> design        sample                                                                              
+> conditional   core         0.0249       0.0469      0.2094    0.0510       0.9210  0.1152   0.0446
+>               extended     0.0200       0.0379      0.1832    0.0417       0.4152  0.3633   0.0363
+> unconditional core         0.0596       0.0463      0.5886    0.0511       0.8737  0.6403   0.0499
+>               extended     0.0483       0.0279      0.5994    0.0343       0.1697  0.8531   0.0283
+> 
+> --- MCS p-values (MSE loss) ---
+> model                   combo_all  combo_trees  elasticnet  lightgbm  midas_almon  seasonal_naive  umidas  xgboost
+> design        sample                                                                                              
+> conditional   core          1.000        0.668       0.439     0.668        0.199           0.166   0.668    0.668
+>               extended      1.000        0.559       0.145     0.559        0.145           0.142   0.559    0.559
+> unconditional core          1.000        0.622       0.305     0.795        0.185           0.185   0.214    0.306
+>               extended      0.983        1.000       0.142     0.881        0.085           0.142   0.143    0.983
+> 
+> --- SHAP families conditional/core/xgboost (origin-wise vs in-sample) ---
+>             family  total_mean_abs_shap  avg_mean_abs_shap  total_insample  n_features
+>              EPİAŞ                1.933              0.149           1.877          13
+> Headline inflation                1.613              0.269           1.321           6
+>              Brent                0.977              0.098           1.062          10
+>           Own lags                0.704              0.141           0.412           5
+>        Policy rate                0.342              0.068           0.297           5
+>      Exchange rate                0.151              0.030           0.080           5
+> 
+> --- SHAP families conditional/core/lightgbm (origin-wise vs in-sample) ---
+>             family  total_mean_abs_shap  avg_mean_abs_shap  total_insample  n_features
+>              EPİAŞ                1.703              0.131           1.777          13
+> Headline inflation                1.582              0.264           1.228           6
+>              Brent                0.982              0.098           1.060          10
+>           Own lags                0.744              0.149           0.620           5
+>        Policy rate                0.350              0.070           0.347           5
+>      Exchange rate                0.172              0.034           0.073           5
+> 
+> --- SHAP families unconditional/core/xgboost (origin-wise vs in-sample) ---
+>             family  total_mean_abs_shap  avg_mean_abs_shap  total_insample  n_features
+>              EPİAŞ                2.047              0.157           2.119          13
+>              Brent                1.422              0.142           1.536          10
+> Headline inflation                0.884              0.177           0.441           5
+>           Own lags                0.783              0.157           0.511           5
+>        Policy rate                0.374              0.075           0.427           5
+>      Exchange rate                0.202              0.040           0.116           5
+> 
+> --- SHAP families unconditional/core/lightgbm (origin-wise vs in-sample) ---
+>             family  total_mean_abs_shap  avg_mean_abs_shap  total_insample  n_features
+>              EPİAŞ                1.801              0.139           1.731          13
+>              Brent                1.395              0.140           1.762          10
+> Headline inflation                0.916              0.183           0.431           5
+>           Own lags                0.819              0.164           0.791           5
+>        Policy rate                0.415              0.083           0.343           5
+# ----
+# code de sortie : 1
+# durée (s)      : 0

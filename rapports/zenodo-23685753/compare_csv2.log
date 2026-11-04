@@ -1,0 +1,73 @@
+# commande : ssh sd-92569 cd ~/work/z23685753 && python3 -I compare_csv.py pkg/energy_nowcasting_replication/results run/results
+# début    : 2026-11-04T20:00:25Z
+# ----
+CSV livrés : 63 | régénérés : 63
+seulement livrés : []
+seulement régénérés : []
+DIFFERENT evaluation/dm_tests.csv : 796/2250 cellules, non numériques 0, abs max 1.08, rel max 43.3
+DIFFERENT evaluation/dm_vs_naive.csv : 156/513 cellules, non numériques 0, abs max 0.096, rel max 0.261
+DIFFERENT evaluation/dm_vs_naive_bandwidth.csv : 155/570 cellules, non numériques 0, abs max 0.111, rel max 0.341
+DIFFERENT evaluation/mcs.csv : 69/390 cellules, non numériques 13, abs max 0.548, rel max 1.29
+DIFFERENT evaluation/metrics_all.csv : 98/297 cellules, non numériques 0, abs max 1.7, rel max 0.0215
+DIFFERENT midas/all_metrics.csv : 37/130 cellules, non numériques 0, abs max 2.83e-07, rel max 9.33e-08
+DIFFERENT midas/conditional/core/almon_weights.csv : 252/679 cellules, non numériques 0, abs max 2.02e+04, rel max 32.9
+DIFFERENT midas/conditional/core/metrics.csv : 10/40 cellules, non numériques 0, abs max 5.64e-08, rel max 1.58e-09
+DIFFERENT midas/conditional/core/predictions.csv : 120/485 cellules, non numériques 0, abs max 6.22e-08, rel max 3.33e-08
+DIFFERENT midas/conditional/extended/almon_weights.csv : 228/595 cellules, non numériques 0, abs max 7.67e+04, rel max 585
+DIFFERENT midas/conditional/extended/metrics.csv : 7/40 cellules, non numériques 0, abs max 6.45e-08, rel max 3e-08
+DIFFERENT midas/conditional/extended/predictions.csv : 96/425 cellules, non numériques 0, abs max 1.8e-07, rel max 6.01e-08
+DIFFERENT midas/unconditional/core/almon_weights.csv : 313/679 cellules, non numériques 0, abs max 1.75e+04, rel max 425
+DIFFERENT midas/unconditional/core/metrics.csv : 10/40 cellules, non numériques 0, abs max 3.91e-08, rel max 6.64e-09
+DIFFERENT midas/unconditional/core/predictions.csv : 120/485 cellules, non numériques 0, abs max 7.46e-08, rel max 6.85e-08
+DIFFERENT midas/unconditional/extended/almon_weights.csv : 162/595 cellules, non numériques 0, abs max 1.22e+03, rel max 35.1
+DIFFERENT midas/unconditional/extended/metrics.csv : 10/40 cellules, non numériques 0, abs max 2.83e-07, rel max 9.33e-08
+DIFFERENT midas/unconditional/extended/predictions.csv : 97/425 cellules, non numériques 0, abs max 1.53e-06, rel max 3.73e-07
+DIFFERENT models/all_metrics.csv : 60/225 cellules, non numériques 0, abs max 1.7, rel max 0.0215
+DIFFERENT models/conditional/core/enet_coef_history.csv : 0/4559 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/conditional/core/enet_selected.csv : 0/180 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/conditional/core/metrics.csv : 15/63 cellules, non numériques 0, abs max 0.633, rel max 0.0113
+DIFFERENT models/conditional/core/predictions.csv : 288/776 cellules, non numériques 0, abs max 0.758, rel max 9.65
+DIFFERENT models/conditional/core/shap_family_lightgbm.csv : 0/35 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/conditional/core/shap_family_xgboost.csv : 18/35 cellules, non numériques 0, abs max 0.14, rel max 0.589
+DIFFERENT models/conditional/core/shap_originwise_lightgbm.csv : 0/4365 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/conditional/core/shap_originwise_xgboost.csv : 4052/4365 cellules, non numériques 0, abs max 0.289, rel max 107
+DIFFERENT models/conditional/core/shap_summary_lightgbm.csv : 0/180 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/conditional/core/shap_summary_xgboost.csv : 120/180 cellules, non numériques 32, abs max 0.141, rel max 8.41
+DIFFERENT models/conditional/extended/enet_coef_history.csv : 0/4420 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/conditional/extended/enet_selected.csv : 0/200 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/conditional/extended/metrics.csv : 15/63 cellules, non numériques 0, abs max 1.03, rel max 0.0137
+DIFFERENT models/conditional/extended/predictions.csv : 252/680 cellules, non numériques 0, abs max 0.677, rel max 19.8
+DIFFERENT models/conditional/extended/shap_family_lightgbm.csv : 0/40 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/conditional/extended/shap_family_xgboost.csv : 23/40 cellules, non numériques 2, abs max 0.189, rel max 0.376
+DIFFERENT models/conditional/extended/shap_originwise_lightgbm.csv : 0/4250 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/conditional/extended/shap_originwise_xgboost.csv : 3855/4250 cellules, non numériques 0, abs max 0.277, rel max 1.11e+03
+DIFFERENT models/conditional/extended/shap_summary_lightgbm.csv : 0/200 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/conditional/extended/shap_summary_xgboost.csv : 158/200 cellules, non numériques 60, abs max 0.28, rel max 12.3
+DIFFERENT models/unconditional/core/enet_coef_history.csv : 0/4462 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/unconditional/core/enet_selected.csv : 0/176 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/unconditional/core/metrics.csv : 15/63 cellules, non numériques 0, abs max 0.534, rel max 0.0197
+DIFFERENT models/unconditional/core/predictions.csv : 288/776 cellules, non numériques 0, abs max 0.546, rel max 2.41
+DIFFERENT models/unconditional/core/shap_family_lightgbm.csv : 0/35 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/unconditional/core/shap_family_xgboost.csv : 18/35 cellules, non numériques 0, abs max 0.0748, rel max 0.147
+DIFFERENT models/unconditional/core/shap_originwise_lightgbm.csv : 0/4268 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/unconditional/core/shap_originwise_xgboost.csv : 3976/4268 cellules, non numériques 0, abs max 0.432, rel max 2.4e+03
+DIFFERENT models/unconditional/core/shap_summary_lightgbm.csv : 0/176 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/unconditional/core/shap_summary_xgboost.csv : 119/176 cellules, non numériques 34, abs max 0.252, rel max 4.38
+DIFFERENT models/unconditional/extended/enet_coef_history.csv : 0/4335 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/unconditional/extended/enet_selected.csv : 0/196 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/unconditional/extended/metrics.csv : 15/63 cellules, non numériques 0, abs max 1.7, rel max 0.0215
+DIFFERENT models/unconditional/extended/predictions.csv : 252/680 cellules, non numériques 0, abs max 0.751, rel max 16.3
+DIFFERENT models/unconditional/extended/shap_family_lightgbm.csv : 0/40 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/unconditional/extended/shap_family_xgboost.csv : 21/40 cellules, non numériques 0, abs max 0.0838, rel max 0.219
+DIFFERENT models/unconditional/extended/shap_originwise_lightgbm.csv : 0/4165 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/unconditional/extended/shap_originwise_xgboost.csv : 3826/4165 cellules, non numériques 0, abs max 0.31, rel max 619
+DIFFERENT models/unconditional/extended/shap_summary_lightgbm.csv : 0/196 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT models/unconditional/extended/shap_summary_xgboost.csv : 146/196 cellules, non numériques 50, abs max 0.28, rel max 8.44
+DIFFERENT robustness/family_correlations.csv : 0/110 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT robustness/hyperparameter_sensitivity.csv : 108/872 cellules, non numériques 0, abs max 0.1, rel max 0.0324
+DIFFERENT robustness/vif.csv : 0/135 cellules, non numériques 0, abs max 0, rel max 0
+DIFFERENT robustness/window_robustness.csv : 18/104 cellules, non numériques 0, abs max 0.535, rel max 0.0197
+TOTAL identiques à l'octet : 0 | différents (comparés) cellules : 20394 sur 67716 | abs max 7.67e+04 | rel max 2.4e+03
+# ----
+# code de sortie : 0
+# durée (s)      : 0

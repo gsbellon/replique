@@ -1,0 +1,440 @@
+# commande : ssh sd-92569 cat ~/work/z23685753/run.log
+# début    : 2026-11-04T20:01:08Z
+# ----
+début 2026-11-03T20:02:55Z
+[0] existing results/ backed up -> results_backup_20261103_2002
+Reproduction run: 20261103_2002
+OS: Linux-6.12.111+deb13-amd64-x86_64-with-glibc2.41
+Machine: x86_64  CPU: 
+Python: 3.12.15  (/usr/local/bin/python3)
+CPU threads: 8
+
+numpy          2.5.3
+pandas         3.0.6
+scipy          1.18.1
+scikit-learn   1.9.1
+xgboost        3.4.1
+lightgbm       4.7.0
+shap           0.53.0
+arch           8.0.0
+yaml           6.0.3
+
+
+
+======================================================================
+[1/8] -m pytest -q tests/
+======================================================================
+.........                                                                [100%]
+9 passed in 1.32s
+
+======================================================================
+[2/8] src/features/build_monthly_features.py
+======================================================================
+         date
+0  2012-01-31
+1  2012-02-29
+2  2012-03-31
+3  2012-04-30
+4  2012-05-31
+5  2012-06-30
+6  2012-07-31
+7  2012-08-31
+8  2012-09-30
+9  2012-10-31
+10 2012-11-30
+11 2012-12-31
+12 2013-01-31
+13 2013-02-28
+14 2013-03-31
+          date
+153 2024-10-31
+154 2024-11-30
+155 2024-12-31
+156 2025-01-31
+157 2025-02-28
+158 2025-03-31
+159 2025-04-30
+160 2025-05-31
+161 2025-06-30
+162 2025-07-31
+163 2025-08-31
+164 2025-09-30
+165 2025-10-31
+166 2025-11-30
+167 2025-12-31
+brent_usd_mean                0
+usdtry_last                   0
+epias_tl_mean                 0
+epias_peak_offpeak_gap        0
+policy_rate                   0
+inflation_expectation_12m    12
+dtype: int64
+Saved: data/processed/monthly_nowcasting_panel.csv
+        date  ...  epias_peak_offpeak_gap_lag12
+0 2012-01-31  ...                           NaN
+1 2012-02-29  ...                           NaN
+2 2012-03-31  ...                           NaN
+3 2012-04-30  ...                           NaN
+4 2012-05-31  ...                           NaN
+
+[5 rows x 78 columns]
+          date  ...  epias_peak_offpeak_gap_lag12
+163 2025-08-31  ...                     39.587095
+164 2025-09-30  ...                     -0.838513
+165 2025-10-31  ...                    -63.903203
+166 2025-11-30  ...                    282.208720
+167 2025-12-31  ...                    445.014780
+
+[5 rows x 78 columns]
+(168, 78)
+['date', 'cpi_energy_index', 'cpi_headline_index', 'inflation_expectation_12m', 'policy_rate', 'target_mom', 'target_yoy', 'headline_mom', 'headline_yoy', 'brent_usd_mean', 'brent_usd_std', 'brent_usd_last', 'brent_try_mean', 'brent_try_std', 'brent_try_last', 'usdtry_mean', 'usdtry_std', 'usdtry_last', 'epias_tl_mean', 'epias_tl_std', 'epias_tl_min', 'epias_tl_max', 'epias_tl_last', 'epias_usd_mean', 'epias_eur_mean', 'epias_tl_peak_mean', 'epias_tl_offpeak_mean', 'epias_peak_offpeak_gap', 'target_mom_lag1', 'target_mom_lag2', 'target_mom_lag3', 'target_mom_lag6', 'target_mom_lag12', 'headline_mom_lag1', 'headline_mom_lag2', 'headline_mom_lag3', 'headline_mom_lag6', 'headline_mom_lag12', 'inflation_expectation_12m_lag1', 'inflation_expectation_12m_lag2', 'inflation_expectation_12m_lag3', 'inflation_expectation_12m_lag6', 'inflation_expectation_12m_lag12', 'policy_rate_lag1', 'policy_rate_lag2', 'policy_rate_lag3', 'policy_rate_lag6', 'policy_rate_lag12', 'usdtry_last_lag1', 'usdtry_last_lag2', 'usdtry_last_lag3', 'usdtry_last_lag6', 'usdtry_last_lag12', 'brent_usd_last_lag1', 'brent_usd_last_lag2', 'brent_usd_last_lag3', 'brent_usd_last_lag6', 'brent_usd_last_lag12', 'brent_try_last_lag1', 'brent_try_last_lag2', 'brent_try_last_lag3', 'brent_try_last_lag6', 'brent_try_last_lag12', 'epias_tl_mean_lag1', 'epias_tl_mean_lag2', 'epias_tl_mean_lag3', 'epias_tl_mean_lag6', 'epias_tl_mean_lag12', 'epias_tl_std_lag1', 'epias_tl_std_lag2', 'epias_tl_std_lag3', 'epias_tl_std_lag6', 'epias_tl_std_lag12', 'epias_peak_offpeak_gap_lag1', 'epias_peak_offpeak_gap_lag2', 'epias_peak_offpeak_gap_lag3', 'epias_peak_offpeak_gap_lag6', 'epias_peak_offpeak_gap_lag12']
+
+======================================================================
+[3/8] src/features/build_midas_features.py
+======================================================================
+Saved /work/data/processed/midas_blocks.csv: (168, 13); NaN per col:
+date            0
+brent_usd_w1    0
+brent_usd_w2    0
+brent_usd_w3    0
+brent_usd_w4    0
+usdtry_w1       0
+usdtry_w2       0
+usdtry_w3       0
+usdtry_w4       0
+epias_tl_w1     0
+epias_tl_w2     0
+epias_tl_w3     0
+epias_tl_w4     0
+
+======================================================================
+[4/8] src/models/run_models.py
+======================================================================
+
+=== conditional / core: 156 obs, 44 features, 96 forecasts ===
+  elasticnet  RMSE 3.6228  MAE 2.3261
+  xgboost     RMSE 3.3207  MAE 2.1274
+  lightgbm    RMSE 3.3036  MAE 2.1492
+         model   rmse    mae   mase  rmse_gain_vs_naive_pct
+    elasticnet 3.6228 2.3261 2.1660                 21.2678
+seasonal_naive 4.6014 2.7451 2.5700                  0.0000
+       xgboost 3.3207 2.1274 2.0423                 27.8341
+      lightgbm 3.3036 2.1492 2.0717                 28.2052
+   combo_trees 3.3063 2.1375 2.0558                 28.1471
+     combo_all 3.2277 2.0717 1.9699                 29.8551
+
+=== conditional / extended: 144 obs, 49 features, 84 forecasts ===
+  elasticnet  RMSE 3.7500  MAE 2.4888
+  xgboost     RMSE 3.4413  MAE 2.1920
+  lightgbm    RMSE 3.4139  MAE 2.2131
+         model   rmse    mae   mase  rmse_gain_vs_naive_pct
+    elasticnet 3.7500 2.4888 1.9714                 22.8543
+seasonal_naive 4.8609 2.9332 2.2956                  0.0000
+       xgboost 3.4413 2.1920 1.7556                 29.2037
+      lightgbm 3.4139 2.2131 1.7829                 29.7673
+   combo_trees 3.4201 2.2007 1.7669                 29.6412
+     combo_all 3.3507 2.1662 1.7113                 31.0680
+
+=== unconditional / core: 156 obs, 43 features, 96 forecasts ===
+  elasticnet  RMSE 3.8145  MAE 2.5442
+  xgboost     RMSE 3.3767  MAE 2.1573
+  lightgbm    RMSE 3.3330  MAE 2.1598
+         model   rmse    mae   mase  rmse_gain_vs_naive_pct
+    elasticnet 3.8145 2.5442 2.3685                 17.1030
+seasonal_naive 4.6014 2.7451 2.5700                  0.0000
+       xgboost 3.3767 2.1573 2.1080                 26.6169
+      lightgbm 3.3330 2.1598 2.1168                 27.5667
+   combo_trees 3.3483 2.1484 2.1045                 27.2349
+     combo_all 3.3072 2.1681 2.0797                 28.1276
+
+=== unconditional / extended: 144 obs, 48 features, 84 forecasts ===
+  elasticnet  RMSE 3.9982  MAE 2.7378
+  xgboost     RMSE 3.4439  MAE 2.1893
+  lightgbm    RMSE 3.4493  MAE 2.1941
+         model   rmse    mae   mase  rmse_gain_vs_naive_pct
+    elasticnet 3.9982 2.7378 2.1272                 17.7477
+seasonal_naive 4.8609 2.9332 2.2956                  0.0000
+       xgboost 3.4439 2.1893 1.7924                 29.1504
+      lightgbm 3.4493 2.1941 1.8024                 29.0396
+   combo_trees 3.4407 2.1759 1.7850                 29.2170
+     combo_all 3.4426 2.2763 1.8212                 29.1774
+
+Saved results/models/all_metrics.csv
+
+======================================================================
+[5/8] src/models/run_midas.py
+======================================================================
+
+=== MIDAS conditional/core: 96 forecasts; U-MIDAS regressors=40 ===
+         model   rmse    mae   mase  rmse_gain_vs_naive_pct
+        umidas 3.4856 2.2336 2.1326                 24.2497
+   midas_almon 4.1719 2.7122 2.5385                  9.3351
+seasonal_naive 4.6014 2.7451 2.5700                  0.0000
+
+=== MIDAS conditional/extended: 84 forecasts; U-MIDAS regressors=45 ===
+         model   rmse    mae   mase  rmse_gain_vs_naive_pct
+        umidas 3.7968 2.6215 2.1253                 21.8910
+   midas_almon 4.7565 3.2818 2.6817                  2.1483
+seasonal_naive 4.8609 2.9332 2.2956                  0.0000
+
+=== MIDAS unconditional/core: 96 forecasts; U-MIDAS regressors=39 ===
+         model   rmse    mae   mase  rmse_gain_vs_naive_pct
+        umidas 3.9276 2.5855 2.4455                 14.6434
+   midas_almon 4.3306 2.7997 2.6537                  5.8871
+seasonal_naive 4.6014 2.7451 2.5700                  0.0000
+
+=== MIDAS unconditional/extended: 84 forecasts; U-MIDAS regressors=44 ===
+         model   rmse    mae   mase  rmse_gain_vs_naive_pct
+        umidas 4.1843 3.0027 2.3844                 13.9193
+   midas_almon 4.9778 3.5100 2.8036                 -2.4045
+seasonal_naive 4.8609 2.9332 2.2956                  0.0000
+
+======================================================================
+[6/8] src/models/run_evaluation.py
+======================================================================
+model                   combo_all  combo_trees  elasticnet  lightgbm  midas_almon  seasonal_naive  umidas  xgboost
+design        sample                                                                                              
+conditional   core          3.228        3.306       3.623     3.304        4.172           4.601   3.486    3.321
+              extended      3.351        3.420       3.750     3.414        4.756           4.861   3.797    3.441
+unconditional core          3.307        3.348       3.814     3.333        4.331           4.601   3.928    3.377
+              extended      3.443        3.441       3.998     3.449        4.978           4.861   4.184    3.444
+
+DM vs naive (HLN p, MAE loss):
+model                   combo_all  combo_trees  elasticnet  lightgbm  midas_almon  umidas  xgboost
+design        sample                                                                              
+conditional   core          0.025        0.047       0.209     0.051        0.921   0.115    0.045
+              extended      0.020        0.038       0.183     0.042        0.415   0.363    0.036
+unconditional core          0.060        0.046       0.589     0.051        0.874   0.640    0.050
+              extended      0.048        0.028       0.599     0.034        0.170   0.853    0.028
+
+MCS 90% membership (MSE loss):
+model                   combo_all  combo_trees  elasticnet  lightgbm  midas_almon  seasonal_naive  umidas  xgboost
+design        sample                                                                                              
+conditional   core          1.000        0.668       0.439     0.668        0.199           0.166   0.668    0.668
+              extended      1.000        0.559       0.145     0.559        0.145           0.142   0.559    0.559
+unconditional core          1.000        0.622       0.305     0.795        0.185           0.185   0.214    0.306
+              extended      0.983        1.000       0.142     0.881        0.085           0.142   0.143    0.983
+
+======================================================================
+[7/8] src/models/run_robustness.py
+======================================================================
+[hyperparameters]
+  conditional xgb min_child_weight=5 depth=1 lr=0.03: 3.3867
+  conditional xgb min_child_weight=5 depth=1 lr=0.05: 3.5818
+  conditional xgb min_child_weight=5 depth=1 lr=0.1: 3.7594
+  conditional xgb min_child_weight=5 depth=2 lr=0.03: 3.5208
+  conditional xgb min_child_weight=5 depth=2 lr=0.05: 3.7060
+  conditional xgb min_child_weight=5 depth=2 lr=0.1: 3.8204
+  conditional xgb min_child_weight=5 depth=3 lr=0.03: 3.5204
+  conditional xgb min_child_weight=5 depth=3 lr=0.05: 3.7711
+  conditional xgb min_child_weight=5 depth=3 lr=0.1: 3.9345
+  conditional xgb min_child_weight=10 depth=1 lr=0.03: 3.1624
+  conditional xgb min_child_weight=10 depth=1 lr=0.05: 3.3161
+  conditional xgb min_child_weight=10 depth=1 lr=0.1: 3.5079
+  conditional xgb min_child_weight=10 depth=2 lr=0.03: 3.2505
+  conditional xgb min_child_weight=10 depth=2 lr=0.05: 3.3930
+  conditional xgb min_child_weight=10 depth=2 lr=0.1: 3.5244
+  conditional xgb min_child_weight=10 depth=3 lr=0.03: 3.2943
+  conditional xgb min_child_weight=10 depth=3 lr=0.05: 3.4880
+  conditional xgb min_child_weight=10 depth=3 lr=0.1: 3.6770
+  conditional xgb min_child_weight=20 depth=1 lr=0.03: 3.1989
+  conditional xgb min_child_weight=20 depth=1 lr=0.05: 3.2496
+  conditional xgb min_child_weight=20 depth=1 lr=0.1: 3.3496
+  conditional xgb min_child_weight=20 depth=2 lr=0.03: 3.2179
+  conditional xgb min_child_weight=20 depth=2 lr=0.05: 3.3353
+  conditional xgb min_child_weight=20 depth=2 lr=0.1: 3.4679
+  conditional xgb min_child_weight=20 depth=3 lr=0.03: 3.2052
+  conditional xgb min_child_weight=20 depth=3 lr=0.05: 3.3207
+  conditional xgb min_child_weight=20 depth=3 lr=0.1: 3.5367
+  conditional lgb min_child_samples=5 leaves=3 lr=0.03: 3.4130
+  conditional lgb min_child_samples=5 leaves=3 lr=0.05: 3.5814
+  conditional lgb min_child_samples=5 leaves=3 lr=0.1: 3.7070
+  conditional lgb min_child_samples=5 leaves=7 lr=0.03: 3.6290
+  conditional lgb min_child_samples=5 leaves=7 lr=0.05: 3.8717
+  conditional lgb min_child_samples=5 leaves=7 lr=0.1: 4.2445
+  conditional lgb min_child_samples=5 leaves=15 lr=0.03: 3.6045
+  conditional lgb min_child_samples=5 leaves=15 lr=0.05: 3.9315
+  conditional lgb min_child_samples=5 leaves=15 lr=0.1: 4.2195
+  conditional lgb min_child_samples=10 leaves=3 lr=0.03: 3.2758
+  conditional lgb min_child_samples=10 leaves=3 lr=0.05: 3.4607
+  conditional lgb min_child_samples=10 leaves=3 lr=0.1: 3.6108
+  conditional lgb min_child_samples=10 leaves=7 lr=0.03: 3.3038
+  conditional lgb min_child_samples=10 leaves=7 lr=0.05: 3.5165
+  conditional lgb min_child_samples=10 leaves=7 lr=0.1: 3.8144
+  conditional lgb min_child_samples=10 leaves=15 lr=0.03: 3.3042
+  conditional lgb min_child_samples=10 leaves=15 lr=0.05: 3.5292
+  conditional lgb min_child_samples=10 leaves=15 lr=0.1: 3.8239
+  conditional lgb min_child_samples=20 leaves=3 lr=0.03: 3.1890
+  conditional lgb min_child_samples=20 leaves=3 lr=0.05: 3.2733
+  conditional lgb min_child_samples=20 leaves=3 lr=0.1: 3.3630
+  conditional lgb min_child_samples=20 leaves=7 lr=0.03: 3.1889
+  conditional lgb min_child_samples=20 leaves=7 lr=0.05: 3.3036
+  conditional lgb min_child_samples=20 leaves=7 lr=0.1: 3.4597
+  conditional lgb min_child_samples=20 leaves=15 lr=0.03: 3.1889
+  conditional lgb min_child_samples=20 leaves=15 lr=0.05: 3.3036
+  conditional lgb min_child_samples=20 leaves=15 lr=0.1: 3.4597
+  unconditional xgb min_child_weight=5 depth=1 lr=0.03: 3.7515
+  unconditional xgb min_child_weight=5 depth=1 lr=0.05: 3.9489
+  unconditional xgb min_child_weight=5 depth=1 lr=0.1: 4.1363
+  unconditional xgb min_child_weight=5 depth=2 lr=0.03: 3.9184
+  unconditional xgb min_child_weight=5 depth=2 lr=0.05: 4.1079
+  unconditional xgb min_child_weight=5 depth=2 lr=0.1: 4.2498
+  unconditional xgb min_child_weight=5 depth=3 lr=0.03: 3.9261
+  unconditional xgb min_child_weight=5 depth=3 lr=0.05: 4.1653
+  unconditional xgb min_child_weight=5 depth=3 lr=0.1: 4.2488
+  unconditional xgb min_child_weight=10 depth=1 lr=0.03: 3.5391
+  unconditional xgb min_child_weight=10 depth=1 lr=0.05: 3.7077
+  unconditional xgb min_child_weight=10 depth=1 lr=0.1: 3.8953
+  unconditional xgb min_child_weight=10 depth=2 lr=0.03: 3.5686
+  unconditional xgb min_child_weight=10 depth=2 lr=0.05: 3.7621
+  unconditional xgb min_child_weight=10 depth=2 lr=0.1: 3.8758
+  unconditional xgb min_child_weight=10 depth=3 lr=0.03: 3.6124
+  unconditional xgb min_child_weight=10 depth=3 lr=0.05: 3.7727
+  unconditional xgb min_child_weight=10 depth=3 lr=0.1: 3.9908
+  unconditional xgb min_child_weight=20 depth=1 lr=0.03: 3.3310
+  unconditional xgb min_child_weight=20 depth=1 lr=0.05: 3.3809
+  unconditional xgb min_child_weight=20 depth=1 lr=0.1: 3.4752
+  unconditional xgb min_child_weight=20 depth=2 lr=0.03: 3.3029
+  unconditional xgb min_child_weight=20 depth=2 lr=0.05: 3.3627
+  unconditional xgb min_child_weight=20 depth=2 lr=0.1: 3.4861
+  unconditional xgb min_child_weight=20 depth=3 lr=0.03: 3.2953
+  unconditional xgb min_child_weight=20 depth=3 lr=0.05: 3.3767
+  unconditional xgb min_child_weight=20 depth=3 lr=0.1: 3.5369
+  unconditional lgb min_child_samples=5 leaves=3 lr=0.03: 3.9355
+  unconditional lgb min_child_samples=5 leaves=3 lr=0.05: 4.1289
+  unconditional lgb min_child_samples=5 leaves=3 lr=0.1: 4.2465
+  unconditional lgb min_child_samples=5 leaves=7 lr=0.03: 4.1620
+  unconditional lgb min_child_samples=5 leaves=7 lr=0.05: 4.4692
+  unconditional lgb min_child_samples=5 leaves=7 lr=0.1: 4.7433
+  unconditional lgb min_child_samples=5 leaves=15 lr=0.03: 4.1088
+  unconditional lgb min_child_samples=5 leaves=15 lr=0.05: 4.4328
+  unconditional lgb min_child_samples=5 leaves=15 lr=0.1: 4.7549
+  unconditional lgb min_child_samples=10 leaves=3 lr=0.03: 3.5233
+  unconditional lgb min_child_samples=10 leaves=3 lr=0.05: 3.7319
+  unconditional lgb min_child_samples=10 leaves=3 lr=0.1: 3.9322
+  unconditional lgb min_child_samples=10 leaves=7 lr=0.03: 3.6026
+  unconditional lgb min_child_samples=10 leaves=7 lr=0.05: 3.8762
+  unconditional lgb min_child_samples=10 leaves=7 lr=0.1: 4.1726
+  unconditional lgb min_child_samples=10 leaves=15 lr=0.03: 3.5878
+  unconditional lgb min_child_samples=10 leaves=15 lr=0.05: 3.8640
+  unconditional lgb min_child_samples=10 leaves=15 lr=0.1: 4.2145
+  unconditional lgb min_child_samples=20 leaves=3 lr=0.03: 3.2715
+  unconditional lgb min_child_samples=20 leaves=3 lr=0.05: 3.3182
+  unconditional lgb min_child_samples=20 leaves=3 lr=0.1: 3.4191
+  unconditional lgb min_child_samples=20 leaves=7 lr=0.03: 3.2600
+  unconditional lgb min_child_samples=20 leaves=7 lr=0.05: 3.3330
+  unconditional lgb min_child_samples=20 leaves=7 lr=0.1: 3.4272
+  unconditional lgb min_child_samples=20 leaves=15 lr=0.03: 3.2600
+  unconditional lgb min_child_samples=20 leaves=15 lr=0.05: 3.3330
+  unconditional lgb min_child_samples=20 leaves=15 lr=0.1: 3.4272
+[windows]
+  conditional xgboost window=48: 3.1327 (gain 27.84%)
+  conditional lightgbm window=48: 3.1167 (gain 28.21%)
+  conditional xgboost window=60: 3.3207 (gain 27.83%)
+  conditional lightgbm window=60: 3.3036 (gain 28.21%)
+  conditional xgboost window=72: 3.4967 (gain 28.06%)
+  conditional lightgbm window=72: 3.4805 (gain 28.40%)
+  unconditional xgboost window=48: 3.1858 (gain 26.61%)
+  unconditional lightgbm window=48: 3.1451 (gain 27.55%)
+  unconditional xgboost window=60: 3.3767 (gain 26.62%)
+  unconditional lightgbm window=60: 3.3330 (gain 27.57%)
+  unconditional xgboost window=72: 3.5553 (gain 26.86%)
+  unconditional lightgbm window=72: 3.5067 (gain 27.86%)
+[collinearity]
+robustness done
+
+======================================================================
+[8/8] src/figures/make_figures.py
+======================================================================
+saved Fig1_actual_vs_nowcast_unconditional_core
+saved Fig1b_actual_vs_nowcast_conditional_core
+saved Fig2_enet_family_shares_unconditional_core
+saved Fig2b_enet_family_shares_conditional_core
+saved Fig3_enet_dominant_families_unconditional
+saved Fig4_shap_top20_lightgbm_unconditional_core
+saved Fig5_shap_top20_xgboost_unconditional_core
+saved Fig6_shap_family_shares_over_time_lightgbm_unconditional_core
+saved FigS_shap_insample_vs_oos_xgboost_conditional_core
+saved FigS_enet_family_shares_unconditional_extended
+saved FigS_shap_top20_xgboost_conditional_core
+saved FigS_shap_top20_lightgbm_conditional_core
+saved FigS_shap_top20_lightgbm_unconditional_extended
+saved FigS_shap_family_shares_over_time_xgboost_conditional_core
+
+REPRODUCTION SUMMARY 20261103_2002
+======================================================================
+RMSE by design/sample/model:
+model                   combo_all  combo_trees  elasticnet  lightgbm  midas_almon  seasonal_naive  umidas  xgboost
+design        sample                                                                                              
+conditional   core         3.2277       3.3063      3.6228    3.3036       4.1719          4.6014  3.4856   3.3207
+              extended     3.3507       3.4201      3.7500    3.4139       4.7565          4.8609  3.7968   3.4413
+unconditional core         3.3072       3.3483      3.8145    3.3330       4.3306          4.6014  3.9276   3.3767
+              extended     3.4426       3.4407      3.9982    3.4493       4.9778          4.8609  4.1843   3.4439
+
+MAE:
+model                   combo_all  combo_trees  elasticnet  lightgbm  midas_almon  seasonal_naive  umidas  xgboost
+design        sample                                                                                              
+conditional   core         2.0717       2.1375      2.3261    2.1492       2.7122          2.7451  2.2336   2.1274
+              extended     2.1662       2.2007      2.4888    2.2131       3.2818          2.9332  2.6215   2.1920
+unconditional core         2.1681       2.1484      2.5442    2.1598       2.7997          2.7451  2.5855   2.1573
+              extended     2.2763       2.1759      2.7378    2.1941       3.5100          2.9332  3.0027   2.1893
+
+--- DM vs naive (MAE loss, HLN p) ---
+model                   combo_all  combo_trees  elasticnet  lightgbm  midas_almon  umidas  xgboost
+design        sample                                                                              
+conditional   core         0.0249       0.0469      0.2094    0.0510       0.9210  0.1152   0.0446
+              extended     0.0200       0.0379      0.1832    0.0417       0.4152  0.3633   0.0363
+unconditional core         0.0596       0.0463      0.5886    0.0511       0.8737  0.6403   0.0499
+              extended     0.0483       0.0279      0.5994    0.0343       0.1697  0.8531   0.0283
+
+--- MCS p-values (MSE loss) ---
+model                   combo_all  combo_trees  elasticnet  lightgbm  midas_almon  seasonal_naive  umidas  xgboost
+design        sample                                                                                              
+conditional   core          1.000        0.668       0.439     0.668        0.199           0.166   0.668    0.668
+              extended      1.000        0.559       0.145     0.559        0.145           0.142   0.559    0.559
+unconditional core          1.000        0.622       0.305     0.795        0.185           0.185   0.214    0.306
+              extended      0.983        1.000       0.142     0.881        0.085           0.142   0.143    0.983
+
+--- SHAP families conditional/core/xgboost (origin-wise vs in-sample) ---
+            family  total_mean_abs_shap  avg_mean_abs_shap  total_insample  n_features
+             EPİAŞ                1.933              0.149           1.877          13
+Headline inflation                1.613              0.269           1.321           6
+             Brent                0.977              0.098           1.062          10
+          Own lags                0.704              0.141           0.412           5
+       Policy rate                0.342              0.068           0.297           5
+     Exchange rate                0.151              0.030           0.080           5
+
+--- SHAP families conditional/core/lightgbm (origin-wise vs in-sample) ---
+            family  total_mean_abs_shap  avg_mean_abs_shap  total_insample  n_features
+             EPİAŞ                1.703              0.131           1.777          13
+Headline inflation                1.582              0.264           1.228           6
+             Brent                0.982              0.098           1.060          10
+          Own lags                0.744              0.149           0.620           5
+       Policy rate                0.350              0.070           0.347           5
+     Exchange rate                0.172              0.034           0.073           5
+
+--- SHAP families unconditional/core/xgboost (origin-wise vs in-sample) ---
+            family  total_mean_abs_shap  avg_mean_abs_shap  total_insample  n_features
+             EPİAŞ                2.047              0.157           2.119          13
+             Brent                1.422              0.142           1.536          10
+Headline inflation                0.884              0.177           0.441           5
+          Own lags                0.783              0.157           0.511           5
+       Policy rate                0.374              0.075           0.427           5
+     Exchange rate                0.202              0.040           0.116           5
+
+--- SHAP families unconditional/core/lightgbm (origin-wise vs in-sample) ---
+            family  total_mean_abs_shap  avg_mean_abs_shap  total_insample  n_features
+             EPİAŞ                1.801              0.139           1.731          13
+             Brent                1.395              0.140           1.762          10
+Headline inflation                0.916              0.183           0.431           5
+          Own lags                0.819              0.164           0.791           5
+       Policy rate                0.415              0.083           0.343           5
+     Exchange rate                0.234              0.047           0.140           5
+
+Done. Outputs: results/environment_report.txt, results/reproduction_summary.txt and the results/ folder.
+code python3 reproduce_all.py : 0
+durée (s) : 1610
+fin 2026-11-03T20:29:45Z
+# ----
+# code de sortie : 0
+# durée (s)      : 0
