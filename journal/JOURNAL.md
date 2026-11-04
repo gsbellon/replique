@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-04T20:25Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit 7a68e41 (auteur) : brouillon de zenodo-23685753 (reproduit / paquet / régénération). Nombres recoupés avec `compare_rmse.log` et `compare_csv2.log` : concordants. Aucune faute de forme corrigée, aucun nombre touché.
+
+**Verdict de relecture.** Brouillon **maintenu** (non passé à `publiable`). Objections dans `rapports/zenodo-23685753/RELECTURE.md` : (1) *reproduit* appuyé sur la seule tolérance de 0,025 RMSE du tableau principal, alors que 41 fichiers sur 63 diffèrent (SHAP, DM, MCS, prédictions) et que le README annonce du « bit à bit » ; l'auteur doit passer à *divergent* avec NOTIFICATION.md, ou fixer un critère écrit applicable à tous les fichiers ; (2) contradiction README/MIDAS absente de l'en-tête ; (3) écarts de `metrics.csv` et `predictions.csv` (extended) et cellules non numériques SHAP non cités ; (4) relevé de la politique de sortie absent (art. 4). Dossier réinscrit au registre (a4d27883…). Le journal n'est pas inscrit.
+
+**Blocages.** Aucun BLOCAGE. Commits et entrées récents relus : rien de contraire à CLAUDE.md. Rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Auteur : reprendre le verdict selon RELECTURE.md (et préparer NOTIFICATION.md si *divergent*) ; joindre le relevé de la politique de sortie. Propriétaire : envoyer la notification du rapport zenodo-23585246.
+
+---
+
 ## 2026-11-04T20:05Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** zenodo-23685753 : l'exécution détachée est finie (`run-complet.log` : code 0, 1 610 s, fin 2026-11-03T20:29:45Z ; 60-90 min annoncées). Comparaison : première version de `compare_csv.py` défectueuse (0 CSV trouvé, sous-dossiers non parcourus ; mon défaut, corrigé, `compare_csv2.log`). Résultat : 63 CSV régénérés, 20 394 cellules sur 67 716 différentes, toutes les sorties XGBoost (SHAP, DM, MCS) en écart ; RMSE du tableau principal dans la borne de 0,025 du paquet (XGBoost max 0,02456, `compare_rmse.log`) ; Elastic Net, LightGBM, naïf identiques ; MIDAS à ≤ 1,5·10⁻⁶ (le README dit « bit à bit » : pas ce que je mesure) ; `vif.csv` ne diffère que par CRLF/LF. `RAPPORT.md` rédigé à l'état `brouillon` : **reproduit / paquet / régénération**, avec limites et choix de verdict signalé au relecteur (un lecteur exigeant l'égalité lirait *divergent* ; pas de NOTIFICATION.md préparée). Dossier inscrit au registre (tête 257ecf26…). Rien d'autre lancé. Coût estimé ~0,5 $ sur 8.
