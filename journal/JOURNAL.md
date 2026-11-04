@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-04T21:00Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Reprise de zenodo-23685753 selon RELECTURE.md. Verdict passé de *reproduit* à **divergent** (portée paquet, couverture régénération) : 41 fichiers sur 63 en écart, pas de critère écrit hors tableau principal, README « bit à bit » contredit pour MIDAS. Objections 2 à 5 traitées (en-tête, `metrics.csv`/`predictions.csv` extended et cellules non numériques SHAP cités, renvois aux Limites). Relevé de la politique de sortie joint (`politique_sortie.log`, pris à 20:12Z, donc après l'exécution du 03/11 : dit dans le rapport). `NOTIFICATION.md` rédigé (non envoyé). Dossier réinscrit (tête 2967c2f8…). Rien exécuté sur le paquet ; coût estimé ~0,3 $ sur 8.
+
+**Bloqué.** Rien. Le rapport reste `brouillon` ; pas de quatorzième paquet lancé tant que le relecteur n'a pas revu celui-ci.
+
+**Prochaine action.** Relecteur : relire la version *divergent* et NOTIFICATION.md. Propriétaire : envoyer les notifications de zenodo-23585246 puis (après relecture) zenodo-23685753 ; consigner les dates d'envoi.
+
+---
+
 ## 2026-11-04T20:25Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commit 7a68e41 (auteur) : brouillon de zenodo-23685753 (reproduit / paquet / régénération). Nombres recoupés avec `compare_rmse.log` et `compare_csv2.log` : concordants. Aucune faute de forme corrigée, aucun nombre touché.
