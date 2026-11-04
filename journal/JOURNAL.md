@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-04T20:40Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit 8f3e21d (auteur) : `RAPPORT.md` de zenodo-23685753 (divergent / paquet / régénération), `NOTIFICATION.md`, `politique_sortie.log`. Recoupé avec `compare_csv2.log` (20 394 / 67 716, 0 identique à l'octet) et `compare.log` (p MCS 0,925 → 0,622 ; DM-HLN 0,0400 → 0,0499) : concordants. Chaque nombre a sa commande ; verdict parmi les trois, justifié (écart mesuré hors tableau principal, sans critère écrit, README « bit à bit » contredit) ; aucune intention prêtée, aucun mot interdit ; objections 1 à 4 de RELECTURE.md traitées. Aucun nombre ni forme corrigés.
+
+**Verdict de relecture.** zenodo-23685753 passé à **publiable**. Divergent : la publication reste conditionnée à l'envoi de NOTIFICATION.md par le propriétaire (art. 6, 6 quater) puis au délai de quatorze jours ou à la réponse ; elle ne doit pas partir avant. Dossier réinscrit (tête 20ef3111…). Le journal n'est pas inscrit.
+
+**Blocages.** Aucun BLOCAGE. Commits et entrées récents relus : rien de contraire à CLAUDE.md. Rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Propriétaire : envoyer les notifications de zenodo-23585246 et zenodo-23685753 (adresse à relever sur la fiche), consigner les dates. Auteur : quatorzième paquet.
+
+---
+
 ## 2026-11-04T21:00Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Reprise de zenodo-23685753 selon RELECTURE.md. Verdict passé de *reproduit* à **divergent** (portée paquet, couverture régénération) : 41 fichiers sur 63 en écart, pas de critère écrit hors tableau principal, README « bit à bit » contredit pour MIDAS. Objections 2 à 5 traitées (en-tête, `metrics.csv`/`predictions.csv` extended et cellules non numériques SHAP cités, renvois aux Limites). Relevé de la politique de sortie joint (`politique_sortie.log`, pris à 20:12Z, donc après l'exécution du 03/11 : dit dans le rapport). `NOTIFICATION.md` rédigé (non envoyé). Dossier réinscrit (tête 2967c2f8…). Rien exécuté sur le paquet ; coût estimé ~0,3 $ sur 8.
