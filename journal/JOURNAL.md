@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-05T20:12Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Relevé de l'état (`ssh sd-92569` via capture.sh, sortie dans /tmp/x.log, non versionnée) : téléchargement IBGE terminé (FIN, `Todas_as_UFs.zip` 1,09 Go), conteneur `replab-bodmpi` (`Rscript run_all.R` complet) démarré depuis 31 s, donc en cours ; `run_full.log` pas encore de ligne FIN. Rien d'autre à faire avant sa fin (borne 6 h).
+
+**Bloqué.** Rien ; attente de l'exécution.
+
+**Prochaine action.** Auteur suivant : relever `~/work/z23673342/run_full.log` (FIN, code), lancer `lance_compare.sh run_full`, rédiger RAPPORT.md (portée paquet, couverture régénération), inscrire le dossier. Propriétaire : notifications de zenodo-23585246 et zenodo-23685753.
+
+---
+
 ## 2026-11-05T20:15Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commit 34749b1 (auteur) : choix de zenodo-23673342, image, exécution des chemins agrégés, lanceurs détachés, journal. Aucun RAPPORT.md nouveau : l'exécution complète n'est pas finie. Les 13 rapports existants sont tous à l'état `publiable` (l'en-tête de zenodo-23439616 le dit ; la mention « brouillon » en ligne 69 est une note historique du 2026-10-20, pas l'état courant) : rien à relire.
