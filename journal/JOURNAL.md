@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-05T20:10Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Quatorzième paquet : **zenodo-23673342** (indice BOD à référence fixe sur les déficits Alkire-Foster, Brésil ; R, MIT, 0,5 Mo ; recherche page 4 capturée dans `rapports/zenodo-recherche-20261105/recherche.json`). Choix sur la taille et la nature du paquet, pas sur les auteurs. Microdonnées IBGE non incluses mais en accès public direct (art. 1 : admis). Archive téléchargée, MD5 conforme, extraite par `python3 -I` (74 fichiers). Image `replab-bodmpi` construite (R 4.6.1, data.table 1.18.6.1, lpSolve 5.6.23, rDEA 1.2.8, Benchmarking 0.33 ; réseau à la construction seulement ; `haven` non installé, étape 09 facultative). Relevé de la politique de sortie pris (`politique_sortie.log`). **Chemins « sans microdonnées » du README exécutés en conteneur sans réseau** (`run_agg.log`, code 0) : `check_results.R` 17 PASS, `review_v4.R` PASS ; `run_all.R 05 08 10 11` : 41 fichiers de `output/` sur 49 identiques à l'octet, écart relatif max 9,3e-14 sur les 5 CSV de scores différents (`comparaison_agg.log`) ; `Figura_1.png`, `session_info.txt`, `outputs_sha256.csv` diffèrent (hachages des fichiers précédents). Téléchargement IBGE (curl seul, hôte) lancé détaché le 20:02Z, puis `lance_run.sh` (attend la fin du téléchargement, puis `Rscript run_all.R` complet en conteneur, borne 6 h) lancé détaché à 20:05Z. Aucun RAPPORT.md encore : l'exécution complète n'est pas finie.
+
+**Incident.** Premier lancement de `lance_agg.sh` : code 125 partout (`timeout` dans le conteneur, cause non établie, diagnostics `diag125*.log`) ; remplacé par `timeout` hôte devant `podman run`. Un `sed -i` a été refusé (remplacé par l'outil d'édition), une écriture hors dépôt refusée (erreur de ma part, sans effet).
+
+**Bloqué.** Rien.
+
+**Prochaine action.** Auteur suivant : relever `~/work/z23673342/run_full.log` (ligne FIN, code) et `telechargement_ibge.log` via `bin/capture.sh`, lancer `bash`-`scp` de `lance_compare.sh run_full` (comparaison_full.log), rédiger RAPPORT.md (portée paquet ; couverture régénération), inscrire le dossier (`bin/inscrit_dossier.sh`). Propriétaire : notifications de zenodo-23585246 et zenodo-23685753.
+
+---
+
 ## 2026-11-04T20:40Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commit 8f3e21d (auteur) : `RAPPORT.md` de zenodo-23685753 (divergent / paquet / régénération), `NOTIFICATION.md`, `politique_sortie.log`. Recoupé avec `compare_csv2.log` (20 394 / 67 716, 0 identique à l'octet) et `compare.log` (p MCS 0,925 → 0,622 ; DM-HLN 0,0400 → 0,0499) : concordants. Chaque nombre a sa commande ; verdict parmi les trois, justifié (écart mesuré hors tableau principal, sans critère écrit, README « bit à bit » contredit) ; aucune intention prêtée, aucun mot interdit ; objections 1 à 4 de RELECTURE.md traitées. Aucun nombre ni forme corrigés.
