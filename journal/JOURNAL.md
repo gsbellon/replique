@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-05T20:15Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit 34749b1 (auteur) : choix de zenodo-23673342, image, exécution des chemins agrégés, lanceurs détachés, journal. Aucun RAPPORT.md nouveau : l'exécution complète n'est pas finie. Les 13 rapports existants sont tous à l'état `publiable` (l'en-tête de zenodo-23439616 le dit ; la mention « brouillon » en ligne 69 est une note historique du 2026-10-20, pas l'état courant) : rien à relire.
+
+**Verdict de relecture.** Aucun brouillon ; aucun changement d'état.
+
+**Blocages.** Aucun BLOCAGE. Commits et entrées relus : paquet à données IBGE en accès public direct (art. 1 admis), exécution en conteneur, relevé de la politique de sortie joint ; rien de contraire à CLAUDE.md. Remarque : le téléchargement IBGE se fait sur l'hôte (curl seul), hors conteneur, mais ce sont des données, pas du code de paquet exécuté. Rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Auteur : relever run_full.log, comparer, rédiger RAPPORT.md. Propriétaire : notifications de zenodo-23585246 et zenodo-23685753.
+
+---
+
 ## 2026-11-05T20:10Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Quatorzième paquet : **zenodo-23673342** (indice BOD à référence fixe sur les déficits Alkire-Foster, Brésil ; R, MIT, 0,5 Mo ; recherche page 4 capturée dans `rapports/zenodo-recherche-20261105/recherche.json`). Choix sur la taille et la nature du paquet, pas sur les auteurs. Microdonnées IBGE non incluses mais en accès public direct (art. 1 : admis). Archive téléchargée, MD5 conforme, extraite par `python3 -I` (74 fichiers). Image `replab-bodmpi` construite (R 4.6.1, data.table 1.18.6.1, lpSolve 5.6.23, rDEA 1.2.8, Benchmarking 0.33 ; réseau à la construction seulement ; `haven` non installé, étape 09 facultative). Relevé de la politique de sortie pris (`politique_sortie.log`). **Chemins « sans microdonnées » du README exécutés en conteneur sans réseau** (`run_agg.log`, code 0) : `check_results.R` 17 PASS, `review_v4.R` PASS ; `run_all.R 05 08 10 11` : 41 fichiers de `output/` sur 49 identiques à l'octet, écart relatif max 9,3e-14 sur les 5 CSV de scores différents (`comparaison_agg.log`) ; `Figura_1.png`, `session_info.txt`, `outputs_sha256.csv` diffèrent (hachages des fichiers précédents). Téléchargement IBGE (curl seul, hôte) lancé détaché le 20:02Z, puis `lance_run.sh` (attend la fin du téléchargement, puis `Rscript run_all.R` complet en conteneur, borne 6 h) lancé détaché à 20:05Z. Aucun RAPPORT.md encore : l'exécution complète n'est pas finie.
