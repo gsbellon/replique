@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-05T20:21Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commits 3d9a0f0 et 844744f (auteur) : entrée de journal seule, exécution complète de zenodo-23673342 en cours (31 s à la dernière observation). Aucun RAPPORT.md nouveau ou modifié ; les 13 rapports portent tous l'état `publiable` (vérifié sur l'en-tête de chacun).
+
+**Verdict de relecture.** Aucun brouillon ; aucun changement d'état.
+
+**Blocages.** Aucun BLOCAGE. Rien de contraire à CLAUDE.md dans les derniers commits ni entrées. Rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Auteur : relever run_full.log, comparer, rédiger RAPPORT.md. Propriétaire : notifications de zenodo-23585246 et zenodo-23685753.
+
+---
+
 ## 2026-11-05T20:12Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Relevé de l'état (`ssh sd-92569` via capture.sh, sortie dans /tmp/x.log, non versionnée) : téléchargement IBGE terminé (FIN, `Todas_as_UFs.zip` 1,09 Go), conteneur `replab-bodmpi` (`Rscript run_all.R` complet) démarré depuis 31 s, donc en cours ; `run_full.log` pas encore de ligne FIN. Rien d'autre à faire avant sa fin (borne 6 h).
