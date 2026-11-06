@@ -1,29 +1,26 @@
-# Notification — zenodo-23585246 (art. 6 et 6 quater)
+To: non établie
+Source: aucune adresse établie par commande ; grep d'adresses dans le paquet extrait (rapports/zenodo-23585246/adresse.log, code 1, aucune occurrence) ; la fiche Zenodo et le PDF de l'article n'ont pas été lus pour l'adresse
+Subject: Re-execution of your replication package (Zenodo 23585246) - measured differences, 14 days before publication
 
-Brouillon rédigé par le mainteneur le 2026-11-02. Envoi par le propriétaire, depuis l'adresse du projet ; la date d'envoi est consignée au journal et le délai de quatorze jours court à partir d'elle.
+Dear Author,
 
-**Destinataire** : auteur correspondant du dépôt Zenodo 23585246. Son adresse ne figure pas au dossier (`fichiers.json` ne donne que la liste des fichiers) ; le propriétaire la relève sur la fiche publique https://zenodo.org/records/23585246 ou dans l'article. Le mainteneur n'a contacté personne.
+Réplique is a project that re-executes publicly archived replication packages and publishes one report per package. We re-executed yours, "Oil Price Shocks, Sovereign Risk, and Bank Interest Rates Under Full Dollarization" (OIL_ECU_replication_package_v1.0.0.zip, Zenodo record 23585246). Before publication we send you the facts. You have fourteen days from the date of this message to reply; your reply, if any, will be attached to the report without modification. The absence of a reply is not interpreted in any way: at the end of the period the report will be published as it stands, and a reply received afterwards can still be attached to it.
 
-**Objet** : Réexécution du paquet de réplication Zenodo 23585246 — écarts constatés
+What was done. The full pipeline `bash run_all.sh` with `SKIP_DOWNLOAD=1`, in a container without network access (R 4.6.1, seasonal 1.11.0, x13binary 1.1.61.2, urca 1.3.4, strucchange 1.6.0, ggplot2 4.0.3; Python 3.14.8, pandas 2.3.3, numpy 2.4.6). The VIX series was downloaded separately (FRED, through 2026-09-22) and renamed as `01_fetch_fred.py` does. The run finished with exit code 0 (`run_conteneur.log`, `etat_6.log`).
 
-Bonjour,
+What was measured.
+- Each of the 31 CSV tables in `output/tables/` has a regenerated counterpart. Over 104,628 cells compared (relative tolerance 1e-6): 47,958 identical character for character, 12,121 within tolerance, 44,549 outside tolerance. At 1e-2: 6,381 outside tolerance; at 1e-1: 3,170 (`comparaison_tolerance.log`, `comparaison_tolerance_1e-2.log`, `comparaison_tolerance_1e-1.log`; command `python3 -I compare_tolerance.py <package tables> <regenerated tables> <tolerance>`).
+- Agreeing (no cell outside 1e-6): `descriptives.csv`, `unit_roots.csv`, `kpss_breaks.csv`, `lag_selection_{deposit,lending}_rate.csv`, `lp_iv_firststage.csv`, `instrument_relevance.csv`, `x13_diagnostics.csv`.
+- Differing: the other tables, for example `bvar_hyper_*.csv` (10 of 33 cells outside tolerance, maximum relative difference 0.35%), `irf_C0_*.csv` (740 and 741 of 4,152 cells), `vix_freeze.csv` (120 of 200, maximum 0.76%), `lp_iv_irfs.csv` (4 of 5,010, maximum 4.9e-5).
+- A second run, same image, same VIX file, gives exactly the same 104,628 cells as the first (`repet_1e-6.log`).
+- The checksum of the downloaded VIX file differs from the one recorded for the vintage used in the paper (`check_vix.log`); the number of non-missing observations is identical, 9,279 (`diag_vix.log`).
 
-Le projet Réplique réexécute des paquets de réplication publics et publie un rapport par paquet. Nous avons réexécuté le vôtre, « Oil Price Shocks, Sovereign Risk, and Bank Interest Rates Under Full Dollarization » (OIL_ECU_replication_package_v1.0.0.zip). Avant publication, nous vous communiquons les faits. Vous disposez de quatorze jours à compter de la date de cet envoi pour répondre ; votre réponse, si elle vient, sera jointe au rapport sans modification.
+What is not established. The cause of the differences. The VIX vintage, software versions, numerical libraries in the image and random draws were all considered; no lead was isolated. The report does not compare the tables with the numbers in the article (scope: package) and takes no position on its conclusions.
 
-**Ce qui a été fait.** Pipeline complet `bash run_all.sh` avec `SKIP_DOWNLOAD=1`, dans un conteneur sans réseau (R 4.6.1, seasonal 1.11.0, x13binary 1.1.61.2, urca 1.3.4, strucchange 1.6.0, ggplot2 4.0.3 ; Python 3.14.8, pandas 2.3.3, numpy 2.4.6). La série VIX a été téléchargée à part (FRED, jusqu'au 22/09/2026) et renommée comme le fait `01_fetch_fred.py`. Exécution terminée avec le code 0 (`run_conteneur.log`, `etat_6.log`).
+Proposed verdict: divergent, scope: package. Coverage: regeneration.
 
-**Ce qui a été constaté.**
-- Les 31 tables CSV de `output/tables/` ont chacune un homologue régénéré. Sur 104 628 cellules comparées (tolérance relative 10⁻⁶) : 47 958 égales au caractère près, 12 121 dans la tolérance, 44 549 hors tolérance. À 10⁻² : 6 381 hors tolérance ; à 10⁻¹ : 3 170 (`comparaison_tolerance.log`, `comparaison_tolerance_1e-2.log`, `comparaison_tolerance_1e-1.log`, commande `python3 -I compare_tolerance.py <tables du paquet> <tables régénérées> <tolérance>`).
-- Concordent (aucune cellule hors 10⁻⁶) : `descriptives.csv`, `unit_roots.csv`, `kpss_breaks.csv`, `lag_selection_{deposit,lending}_rate.csv`, `lp_iv_firststage.csv`, `instrument_relevance.csv`, `x13_diagnostics.csv`.
-- Divergent : les autres, par exemple `bvar_hyper_*.csv` (10 cellules sur 33 hors tolérance, écart relatif max 0,35 %), `irf_C0_*.csv` (740 et 741 cellules sur 4 152), `vix_freeze.csv` (120 sur 200, écart max 0,76 %), `lp_iv_irfs.csv` (4 sur 5 010, écart max 4,9×10⁻⁵).
-- Une seconde exécution, même image, même fichier VIX, redonne exactement les mêmes 104 628 cellules (`repet_1e-6.log`).
-- L'empreinte du fichier VIX téléchargé diffère de celle du millésime de l'article (`check_vix.log`) ; le nombre d'observations non manquantes est identique, 9 279 (`diag_vix.log`).
+The full report, with all commands and logs, is at https://github.com/gsbellon/replique/tree/main/rapports/zenodo-23585246. If you have information that explains the differences (seeds, versions, data vintage), we will gladly attach it.
 
-**Ce qui n'est pas établi.** La cause de l'écart. Millésime du VIX, versions logicielles, bibliothèques numériques de l'image, tirages aléatoires : aucune piste n'a été isolée. Le rapport ne compare pas les tables aux nombres de l'article (portée *paquet*) et ne se prononce pas sur ses conclusions.
-
-Verdict proposé : **divergent**, portée **paquet**. Couverture : *régénération*.
-
-Le rapport complet, avec toutes les commandes et tous les journaux, se trouve dans `rapports/zenodo-23585246/` du dépôt du projet. Si vous disposez d'éléments qui expliquent l'écart (graines, versions, millésime des données), nous les joindrons volontiers.
-
-Cordialement,
-Réplique
+Réplique — a replication lab for computational results
+A project run by G. Bellon. Re-executions and reports are produced by an automated maintainer (Claude, by Anthropic) under a public charter: https://github.com/gsbellon/replique/blob/main/CLAUDE.md
+contact@replique-lab.org · https://github.com/gsbellon/replique
