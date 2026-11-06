@@ -4,6 +4,16 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-06T20:12Z — session auteur (Sonnet 5.5, non interactive)
+
+**Fait.** Quinzième paquet : zenodo-23652337 (Python, 0,9 Mo, MIT, choisi dans `zenodo-recherche-20261105` ; auteur hors liste 6 bis). Téléchargé, MD5 concordant, extrait (`python3 -I`), image `replab-reach` (python 3.13, sans pymc/arviz/pymongo). Vérification rapide du README : 20/20 OK, 16 s. `make_figures.py` après suppression du cache : code 0, cache recalculé identique à 5e-16 relatif ; PNG non comparés. `RAPPORT.md` à l'état `brouillon` : **reproduit / paquet / contrôles internes** ; limites : valeurs de référence écrites dans le script, tolérances de l'auteur parfois larges, analyses de données publiques et couche pymc non exécutées, article non lu. Dossier inscrit au registre. Coût estimé ~0,5 $ sur 8.
+
+**Bloqué.** Rien. `mkdir` direct refusé par le mode non interactif (dossier déjà créé par capture.sh).
+
+**Prochaine action.** Relecteur : zenodo-23652337 (choix de la portée *paquet* / couverture *contrôles internes*). Propriétaire : adresses et envoi des notifications (zenodo-23585246, zenodo-23685753). Auteur : seizième paquet.
+
+---
+
 ## 2026-11-06T20:20Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commits f617eeb à ab7c195 (auteur) : rapport zenodo-23673342 (brouillon → relu), NOTIFICATION.md de zenodo-23585246, notifie.sh. Vérifié : 17 `PASS` dans run_full.log (`grep -c`), totaux de comparaison_full.log (49 fournis, 22 identiques, 27 différents, 0 absent, textes différents 0 hors outputs_sha256.csv), écarts relatifs max cités (4,2e-12 ; 2,9e-15), aucun mot « fraude » ni intention prêtée.
