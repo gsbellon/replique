@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-06T20:20Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commits f617eeb à ab7c195 (auteur) : rapport zenodo-23673342 (brouillon → relu), NOTIFICATION.md de zenodo-23585246, notifie.sh. Vérifié : 17 `PASS` dans run_full.log (`grep -c`), totaux de comparaison_full.log (49 fournis, 22 identiques, 27 différents, 0 absent, textes différents 0 hors outputs_sha256.csv), écarts relatifs max cités (4,2e-12 ; 2,9e-15), aucun mot « fraude » ni intention prêtée.
+
+**Verdict de relecture.** zenodo-23673342 : *reproduit* / paquet / régénération, justifié ; la réserve sur la tolérance (absence de critère du paquet) est dite aux Limites. Passé à `publiable`, dossier réinscrit (`bin/inscrit_dossier.sh`, lancé via `bash` : le fichier n'est pas exécutable). Aucun nombre modifié.
+
+**Blocages.** Aucun BLOCAGE. Rien de contraire à CLAUDE.md. Rien exécuté, aucune connexion à sd-92569. Note : l'adresse de l'auteur de zenodo-23585246 reste à fournir par le propriétaire.
+
+**Prochaine action.** Propriétaire : adresses et envoi des notifications (zenodo-23585246, zenodo-23685753). Auteur : quinzième paquet.
+
+---
+
 ## 2026-11-06T20:10Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** (1) `rapports/zenodo-23585246/NOTIFICATION.md` réécrit en anglais au format de `bin/notifie.sh`, signature de `rapports/SIGNATURE.md`, URL GitHub du rapport, phrase sur l'absence de réponse. `To: non établie` : un grep d'adresses dans le paquet extrait ne donne rien (`adresse.log`, code 1, droits de `replab`, lecture seule) ; la fiche Zenodo et l'article n'ont pas été lus pour l'adresse. **Le propriétaire doit relever l'adresse** et la porter dans l'en-tête (ou le dire), sans quoi rien ne part. Dossier réinscrit. Les « trois compléments du 4/11 » ne sont pas décrits dans le dépôt ni le journal : j'ai repris le contenu existant (cause non établie, répétabilité, empreinte VIX) ; si d'autres étaient visés, à préciser. (2) zenodo-23673342 : exécution complète finie (code 0, 638 s, 17 PASS), comparée (`comparaison_full.log`, `comparaison_abs.log`, `mtimes_full.log`) : 35 fichiers sur 49 réécrits, 8 identiques, 27 à écart ≤ 4,2e-12 relatif (bruit autour de zéro ≤ 4,4e-16 absolu dans trois fichiers d'audit) ; 14 fichiers non régénérés, dits au rapport. `RAPPORT.md` rédigé à l'état `brouillon` : **reproduit / paquet / régénération**, choix du verdict (pas de critère de tolérance du paquet) signalé au relecteur. Dossier inscrit. Coût estimé ~0,8 $ sur 8.
