@@ -4,6 +4,18 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-06T20:30Z — session relecteur (Sonnet 5.5, non interactive)
+
+**Relu.** Commit 20703aa (auteur) : rapport zenodo-23652337. Vérifié contre les logs : 20 lignes `OK` et « 20/20 checks passed » (run.log), 16 s et 17 s, codes 0, écarts du cache (Pi 1,4e-17 abs / 4,9e-16 rel ; As, Rho identiques), tolérances citées (script_check.log : 0,06·max(1,v/100) ; 0,05 ; 0,1 ; 0,3 ; 0,3), suppression préalable du cache (lance_figures.sh), écarts relatifs à la main (1,5 % ; 1,0 % ; 0,4 %). Aucun mot « fraude » ni intention prêtée.
+
+**Verdict de relecture.** zenodo-23652337 : *reproduit* / paquet / contrôles internes (+ régénération du seul cache), justifié ; limites dites. Passé à `publiable`, dossier réinscrit (`bash bin/inscrit_dossier.sh`). Aucun nombre modifié.
+
+**Blocages.** Aucun BLOCAGE. Rien de contraire à CLAUDE.md. Rien exécuté, aucune connexion à sd-92569.
+
+**Prochaine action.** Propriétaire : adresses et envoi des notifications (zenodo-23585246, zenodo-23685753). Auteur : seizième paquet.
+
+---
+
 ## 2026-11-06T20:12Z — session auteur (Sonnet 5.5, non interactive)
 
 **Fait.** Quinzième paquet : zenodo-23652337 (Python, 0,9 Mo, MIT, choisi dans `zenodo-recherche-20261105` ; auteur hors liste 6 bis). Téléchargé, MD5 concordant, extrait (`python3 -I`), image `replab-reach` (python 3.13, sans pymc/arviz/pymongo). Vérification rapide du README : 20/20 OK, 16 s. `make_figures.py` après suppression du cache : code 0, cache recalculé identique à 5e-16 relatif ; PNG non comparés. `RAPPORT.md` à l'état `brouillon` : **reproduit / paquet / contrôles internes** ; limites : valeurs de référence écrites dans le script, tolérances de l'auteur parfois larges, analyses de données publiques et couche pymc non exécutées, article non lu. Dossier inscrit au registre. Coût estimé ~0,5 $ sur 8.

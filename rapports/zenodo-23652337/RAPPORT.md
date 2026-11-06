@@ -1,4 +1,4 @@
-# Rapport zenodo-23652337 — état : brouillon
+# Rapport zenodo-23652337 — état : publiable
 
 Verdict proposé : **reproduit** — portée : **paquet**. La vérification rapide du README (`reproduce_key_numbers.py`) s'exécute en 16 s dans un conteneur sans réseau, code 0, et affiche `20/20 checks passed` (`run.log`). La régénération des figures (`make_figures.py`), après suppression du cache livré, s'exécute jusqu'au bout (code 0, 17 s) et recalcule le cache `fig_cache.npz` avec un écart relatif maximal de 4,9e-16 sur le tableau `Pi` et un écart nul sur `As` et `Rho` (`figures.log`). Ce rapport ne compare pas à l'article (non lu, art. 6 ter) : les valeurs « reported » sont celles écrites en dur dans le script du paquet. Les tolérances de ce script sont celles de l'auteur ; plusieurs sont larges (voir Limites).
 
