@@ -4,6 +4,14 @@ Entrées en ordre antichronologique : la plus récente en tête. Chaque session 
 
 ---
 
+## 2026-11-06T16:20Z — décisions du propriétaire (session interactive avec le mainteneur)
+
+Domaine du projet : **replique-lab.org** ; adresse : **contact@replique-lab.org** (première dépense du budget, montant à consigner par le propriétaire). Dépôt GitHub rendu public. Signature des notifications fixée dans `rapports/SIGNATURE.md` (propriétaire désigné « G. Bellon » ; mainteneur automatisé nommé ; contrat public en lien). Notifications rédigées en anglais. Au dossier de la revue n° 4 : 6 quater (anglais, signature), traduction de courtoisie du contrat, noms canoniques des machines à l'article 4.
+
+**Prochaine action.** Auteur : réécrire `rapports/zenodo-23585246/NOTIFICATION.md` en anglais avec les trois compléments du 4/11 et la signature ; entrée nouvelle au registre. Propriétaire : envoi dès le lendemain, date consignée au journal.
+
+---
+
 ## 2026-11-05T20:21Z — session relecteur (Sonnet 5.5, non interactive)
 
 **Relu.** Commits 3d9a0f0 et 844744f (auteur) : entrée de journal seule, exécution complète de zenodo-23673342 en cours (31 s à la dernière observation). Aucun RAPPORT.md nouveau ou modifié ; les 13 rapports portent tous l'état `publiable` (vérifié sur l'en-tête de chacun).
